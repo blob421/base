@@ -1,6 +1,9 @@
 .navbar_main{
- height: 8vh; background-color: rgb(172, 210, 243); display: flex;
+ background-color: rgb(172, 210, 243); 
 }
 .nav_btn_0{
- width: 8vw !important;
+ min-width: 4.3em !important; background-color: grey; border: 0px; height: 6vh;
+}
+.company_logo{
+    height: 8vh;
 }

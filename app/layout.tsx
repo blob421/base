@@ -5,6 +5,8 @@ import "./styles/navbar.css"
 import "./styles/landing_page/landing_page.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./styles/landing_page/big_carousel.css"
+
+
 import Navbar from "./components/navbar"
 
 const geistSans = Geist({
@@ -31,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className="container-fluid p-0">
-            <Navbar/>
+            <Navbar home={true} products={true} about={true} contact={true}/>
             {children}
         </div>
        

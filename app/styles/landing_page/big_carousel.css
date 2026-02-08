@@ -1,9 +1,9 @@
 
 .big_carousel_image{
-    height: 80vh;
+     width: 100%; max-height: 72vh; min-height: 33vh;
 }
 .carousel_border{
-    background-color: rgb(228, 228, 228); display: flex; justify-content: center;
+    display: flex; justify-content: center;
     
 }
 
@@ -11,8 +11,8 @@
    
 }
 .carousel_border_text{
-    width: 80%; font-size: medium;
+    font-size: medium; background-color: rgb(228, 228, 228);
 }
 .big_carousel_main{
- background-color: rgb(228, 228, 228); 
+ 
 }

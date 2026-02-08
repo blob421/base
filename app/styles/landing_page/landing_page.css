@@ -1,5 +1,5 @@
 .top_banner_landing{
-    background-color: white; height: 9vh; display: flex; justify-content: center;
+    background-color: white; display: flex; justify-content: center;
     align-items: center; color: black; font-size: larger; 
 }
 .top_banner_landing_text{
@@ -27,13 +27,21 @@
 }
 
 
-.carousel_banner_landing{
-    background-color: blueviolet; height: 55vh;
+.tail_banner{
+    background-color: rgb(169, 217, 251); 
+    
 }
-
+.tail_banner_inner{
+display: flex; justify-content: center;
+    align-items: center; font-size: larger; gap: 2vw; 
+   
+}
+.tail_img{
+    max-height: 40px
+}
 /***************** Banners ******************/
 
 .banner_medium{
-    height: 11vh; display: flex; justify-content: center; align-items: center;
+    height: 12vh; display: flex; justify-content: center; align-items: center;
     font-size: larger;
 }
