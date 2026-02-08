@@ -1,0 +1,39 @@
+.top_banner_landing{
+    background-color: white; height: 9vh; display: flex; justify-content: center;
+    align-items: center; color: black; font-size: larger; 
+}
+.top_banner_landing_text{
+    width: fit-content;
+}
+.second_banner_landing{
+     background-color: rgb(246, 246, 246); 
+}
+
+.second_banner_landing_text{
+   display: flex; align-items: center; 
+}
+.second_banner_landing_text_content{
+    height: fit-content;padding-left: 2%;
+}
+.second_banner_landing_image{
+    height: 100%;
+}
+
+.top_banner_landing_text{
+ border: 1px solid black;
+}
+.top_banner_landing_image{
+  border: 1px solid red; height: 100%;
+}
+
+
+.carousel_banner_landing{
+    background-color: blueviolet; height: 55vh;
+}
+
+/***************** Banners ******************/
+
+.banner_medium{
+    height: 11vh; display: flex; justify-content: center; align-items: center;
+    font-size: larger;
+}

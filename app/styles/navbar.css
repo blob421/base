@@ -1,0 +1,6 @@
+.navbar_main{
+ height: 8vh; background-color: rgb(172, 210, 243); display: flex;
+}
+.nav_btn_0{
+ width: 8vw !important;
+}
