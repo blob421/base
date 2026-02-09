@@ -1,0 +1,41 @@
+.contact_form_frame{
+    border: 1px solid rgb(23, 23, 23);  display: flex; align-items: center;
+    flex-direction: column; border-radius: 12px; position: relative; justify-content: end;
+    background-color: rgb(243, 242, 234); 
+    
+}
+.contact_form_frame :is(input, label){
+margin-top: 2vh; width: 9vw; 
+}
+
+.contact_form_frame select{
+   background-color: rgb(255, 255, 255); color: black;
+    border: 1px solid black; border-radius: 2px; 
+}
+.contact_form_frame input{
+    width: 20vw; background-color: rgb(255, 255, 255); color: black;
+    border: 1px solid black; border-radius: 2px;
+}
+.contact_form_frame textarea{
+    width: 27vw; margin-top: 2vh; height: 30vh;
+    background-color: rgb(255, 255, 255); color: black;
+    border: 1px solid black; border-radius: 2px;
+}
+.contact_form_btn{
+    width: 150px !important;
+}
+.form_sent_msg{
+    align-self: center; margin-top: 2vh;
+}
+
+@media(max-width:992px){
+   .contact_form_frame input{
+    width: 50vw; 
+}
+.contact_form_frame textarea{
+    width: 58vw; margin-top: 2vh; height: 23vh; 
+} 
+.contact_form_frame label{
+    width: 25vw;
+}
+}

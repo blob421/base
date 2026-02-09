@@ -11,7 +11,7 @@ type CarouselProps = {
   images: Image[], postId? : string, big?: boolean
 }
 
-export default function Carousel({ images, postId, big }: CarouselProps) {
+export default function Carousel_base({ images, postId, big }: CarouselProps) {
       const [enlarged, setEnlarged] = useState(false);
 
   return (

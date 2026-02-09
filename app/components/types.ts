@@ -4,3 +4,7 @@ export type Image  ={
 export type BigCarouselProps = {
  images : Image[]
 }
+
+export type BannerProps = {
+    text: string, img?: string
+}

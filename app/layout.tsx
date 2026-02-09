@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "./styles/navbar.css"
-import "./styles/landing_page/landing_page.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import "./styles/landing_page/big_carousel.css"
-import "./styles/components/stacked_cards.css"
 
-import Navbar from "./components/navbar"
+import "./components/forms/contact_form.css"
+import "./components/text_and_image/text_left_img_right.css"
+import "./components/navbar/navbar.css"
+import "./components/carousel/carousel.css"
+import "./components/cards/stacked_cards.css"
+import "./components/base.css"
+import "./components/banners/banners.css"
+
+import Navbar from "./components/navbar/navbar"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

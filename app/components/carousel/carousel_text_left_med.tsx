@@ -1,8 +1,8 @@
-import Carousel from "../carousel"
+import Carousel_base from "./carousel_base"
 
-import type {BigCarouselProps} from "@/app/types"
+import type {BigCarouselProps} from "@/app/components/types"
 
-export default function Big_carousel({images}:BigCarouselProps){
+export default function Carousel_text_left_med({images}:BigCarouselProps){
     return (
         <div className="row d-flex justify-content-center">
           <div className="col-lg-9 carousel_border">
@@ -15,7 +15,7 @@ export default function Big_carousel({images}:BigCarouselProps){
                         Made for you and your family , without pesticides or GMO .
                     </div>
                     <div className="col-lg-9">
-                        <Carousel images={images} big={true}/>
+                        <Carousel_base images={images} big={true}/>
                     </div>
                     
                 </div>

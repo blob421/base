@@ -1,0 +1,34 @@
+/***************** TAIL BANNER ******************/
+.tail_banner{
+    background-color: rgb(169, 217, 251); 
+    
+}
+.tail_banner_inner{
+display: flex; justify-content: center;
+    align-items: center; font-size: larger; gap: 2vw; 
+   
+}
+.tail_img{
+    max-height: 40px
+}
+/***************** Sizes ******************/
+
+.banner_medium{
+    height: 12vh; display: flex; justify-content: center; align-items: center;
+    font-size: larger;
+}
+
+/*************************** SMALLER *************************/
+
+.top_banner_landing{
+    background-color: white; display: flex; justify-content: center;
+    align-items: center; color: black; font-size: larger; 
+}
+
+.top_banner_landing_text{
+ border: 1px solid black;
+}
+.top_banner_landing_image{
+  border: 1px solid red; height: 100%;
+}
+
