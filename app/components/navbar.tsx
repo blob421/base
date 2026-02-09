@@ -18,7 +18,7 @@ export default function Navbar({home, about, products, contact}:NavbarProps){
                 </button>
                 }
                 { products && 
-                  <button className="nav_btn_0" onClick={()=> window.location.href='/'}>
+                  <button className="nav_btn_0" onClick={()=> window.location.href='/products'}>
                     Products
                 </button>
 

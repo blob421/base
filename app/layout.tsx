@@ -5,7 +5,7 @@ import "./styles/navbar.css"
 import "./styles/landing_page/landing_page.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./styles/landing_page/big_carousel.css"
-
+import "./styles/components/stacked_cards.css"
 
 import Navbar from "./components/navbar"
 

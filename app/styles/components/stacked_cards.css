@@ -1,0 +1,43 @@
+.stacked_cards_main{
+    background-color: rgb(217, 217, 210); height: 77vh; position: relative;
+}
+.card_top{
+    border: 1px solid black; height: 80%; border-radius: 7%; width: 75%;
+    background-color: rgb(255, 255, 255); position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%,-50%); z-index: 1000; 
+
+    opacity: 1;
+    transition: opacity ease 0.2s;
+}
+
+.card_middle{
+     border: 1px solid black; height: 80%; border-radius: 7%; width: 75%;
+    background-color: rgb(228, 228, 228); position: absolute;
+    left: 50%; top: 50%;transform: translate(-46%,-47%);
+    transition: transform 1s ease, color 0.4s ease;
+}
+/*********************** Cards content ************************/
+.title_card{
+  border-bottom: 1px solid black;  height: 15%;
+  display: flex; justify-content: center; align-items: center;
+}
+.stacked_cards_main_content{
+    height: 70%; padding: 4%;
+}
+.arrows_stacked_cards{
+    height: 15%; border-top: 1px solid black; position: relative;
+    
+}
+.arrow_left_cards{
+  height: 100%;position: absolute; left: 15px;
+}
+.arrow_right_cards{
+height: 100%; position: absolute; right: 15px;
+}
+
+.fadout_card{
+    opacity: 0 !important;
+}
+.flipped_middle{
+    background-color: aliceblue !important;  transform: translate(-50%,-50%) !important;
+}
