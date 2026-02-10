@@ -11,7 +11,7 @@ export default function Carousel_text_left_med({images}:BigCarouselProps){
                 
                     <div className="col-lg-2 pt-lg-5 p-3 carousel_border_text d-flex 
                     justify-content-center align-items-center align-items-lg-start text-center
-                    text-lg-start">
+                    text-lg-start txt_md">
                         Made for you and your family , without pesticides or GMO .
                     </div>
                     <div className="col-lg-9">

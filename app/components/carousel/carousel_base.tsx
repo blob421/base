@@ -1,7 +1,7 @@
 "use client"
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import {useState} from 'react'
 
+import {useState} from 'react'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 export type Image = {
   url: string
@@ -13,7 +13,7 @@ type CarouselProps = {
 
 export default function Carousel_base({ images, postId, big }: CarouselProps) {
       const [enlarged, setEnlarged] = useState(false);
-
+      
   return (
    
     <div id={"carousel"} className="carousel" data-bs-ride="carousel">

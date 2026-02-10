@@ -36,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {typeof window !== 'undefined' && require("./components/bootstrap_js").default()}
         <div className="container-fluid p-0">
             <Navbar home={true} products={true} about={true} contact={true}/>
             {children}
