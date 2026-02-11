@@ -3,10 +3,10 @@ export const runtime = "nodejs";
 import { NextResponse } from "next/server";
 import nodemailer from 'nodemailer'
 
-const EMAIL_HOST_USER ="go.team.xyz@gmail.com"
-const SMTP_HOST = 'smtp.gmail.com'
-const SMTP_PORT = 587
-const EMAIL_HOST_PASSWORD = "efwd uyxp issf xuef"
+const EMAIL_HOST_USER=process.env.EMAIL_HOST_USER
+const SMTP_HOST = process.env.SMTP_HOST
+const SMTP_PORT = process.env.SMTP_PORT
+const EMAIL_HOST_PASSWORD = process.env.EMAIL_HOST_PASSWORD
 
 export async function POST(req: Request) {
     
