@@ -1,6 +1,6 @@
 
 
-import type { BannerProps } from "@/app/components/types"
+import type { BannerProps } from "@/app/components/0_required_base/types"
 
 export default function Large_banner_img({text, img}:BannerProps){
 

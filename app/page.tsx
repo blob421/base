@@ -5,7 +5,7 @@ import Big_carousel from "./components/carousel/carousel_text_left_med"
 import Tail_banner from "./components/banners/large_banner_img"
 import Top_banner from "./components/banners/small_banner"
 import Mid_banner from "./components/banners/med_banner"
-import type { BigCarouselProps, Image } from "@/app/components/types"
+import type { BigCarouselProps, Image } from "@/app/components/0_required_base/types"
 
 export default function LandingPage(){
     const car_images:Image[] = [{url: "landing_image.jpg"},

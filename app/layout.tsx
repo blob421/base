@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
 
+import "./components/text_and_image/dropdown_text_img.css"
 import "./components/forms/contact_form.css"
 import "./components/text_and_image/text_left_img_right.css"
 import "./components/navbar/navbar.css"
 import "./components/carousel/carousel.css"
 import "./components/cards/stacked_cards.css"
-import "./components/base.css"
+import "./components/0_required_base/base.css"
 import "./components/banners/banners.css"
 
+import BootstrapClient from "./components/0_required_base/bootstrap_js";
 import Navbar from "./components/navbar/navbar"
 
 const geistSans = Geist({
@@ -36,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {typeof window !== 'undefined' && require("./components/bootstrap_js").default()}
+       <BootstrapClient/>
         <div className="container-fluid p-0">
             <Navbar home={true} products={true} about={true} contact={true}/>
             {children}

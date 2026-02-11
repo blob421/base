@@ -1,8 +1,8 @@
 .stacked_cards_main{
-    background-color: rgb(217, 217, 210); height: 77vh; position: relative;
+   height: 70vh; position: relative;
 }
 .card_top{
-    border: 1px solid black; height: 80%; border-radius: 7%; width: 75%;
+    border: 1px solid black; height: 100%; border-radius: 7%; width: 90%;
     background-color: rgb(255, 255, 255); position: absolute; left: 50%; top: 50%;
     transform: translate(-50%,-50%); z-index: 1000; 
 
@@ -11,8 +11,8 @@
 }
 
 .card_middle{
-     border: 1px solid black; height: 80%; border-radius: 7%; width: 75%;
-    background-color: rgb(228, 228, 228); position: absolute;
+     border: 1px solid black; height: 100%; border-radius: 7%; width: 90%;
+    background-color: #f1f9fe; position: absolute;
     left: 50%; top: 50%;transform: translate(-46%,-47%);
     transition: transform 1s ease, color 0.4s ease;
 }
@@ -40,4 +40,9 @@ height: 100%; position: absolute; right: 15px;
 }
 .flipped_middle{
     background-color: aliceblue !important;  transform: translate(-50%,-50%) !important;
+}
+
+/******************** TEXT *************************/
+.stacked_cards_text{
+     background-color: antiquewhite; border-radius: 14px;
 }

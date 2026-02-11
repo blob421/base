@@ -1,5 +1,5 @@
 
-import type { BannerProps } from "@/app/components/types"
+import type { BannerProps } from "@/app/components/0_required_base/types"
 
 export default function Small_banner({text}:BannerProps){
     return (

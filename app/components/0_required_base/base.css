@@ -1,0 +1,23 @@
+html, body {
+    user-select: none;
+}
+.txt_lg{
+    font-size: max(1.5vw, 2.5vh) !important; 
+}
+.txt_md{
+font-size: max(1.3vw, 2.3vh);
+}
+.txt_sm{
+font-size: max(1.3vw, 2vh);
+}
+@media (orientation: portrait) and (min-width: 992px) { 
+    .dropdown_text_img_main > [class*="col-lg"] 
+    { 
+        flex: 0 0 100%; max-width: 100%;   padding: 4% !important;
+    } 
+    .stacked_cards_row > [class*="col-lg"] 
+    { 
+        flex: 0 0 100%; max-width: 100%; margin: 3vh; padding: 7% !important;
+    } 
+
+}

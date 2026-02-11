@@ -1,7 +1,7 @@
 "use client"
 
-import {useState} from 'react'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import {useState, useEffect} from 'react'
+
 
 export type Image = {
   url: string

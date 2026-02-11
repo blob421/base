@@ -1,6 +1,6 @@
 import Carousel_base from "./carousel_base"
 
-import type {BigCarouselProps} from "@/app/components/types"
+import type {BigCarouselProps} from "@/app/components/0_required_base/types"
 
 export default function Carousel_text_left_med({images}:BigCarouselProps){
     return (

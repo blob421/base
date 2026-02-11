@@ -1,0 +1,25 @@
+.dropdown_text_img_main{
+    background-color: antiquewhite; height: fit-content;
+}
+.dropdown_text_img_image{
+     background-color: antiquewhite; 
+    
+}
+.dropdown_text_img_text{
+    background-color: antiquewhite;
+}
+/****************** OPTIONS *******************/
+.dropdown_text_img_option{
+ border: 2px solid black; height: 6vh; border-radius: 6px; display: flex;
+ justify-content: center; align-items: center; cursor: pointer;
+ width: 50%; max-width: 13em;
+}
+.dropdown_text_img_option:hover{
+ background-color: rgba(132, 102, 62, 0.269);
+}
+
+@media(max-width:992px){
+    .dropdown_text_img_image{
+        max-height: 33vh;
+    }
+}
