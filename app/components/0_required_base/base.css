@@ -17,7 +17,17 @@ font-size: max(1.3vw, 2vh);
     } 
     .stacked_cards_row > [class*="col-lg"] 
     { 
-        flex: 0 0 100%; max-width: 100%; margin: 3vh; padding: 7% !important;
+        flex: 0 0 100%; max-width: 100%; margin: 3vh; padding: 7% !important; 
     } 
+    .stacked_cards_main {
+        max-height: 50vh; max-width: 70vw !important; 
+    }
+    .contact_form_row > [class*="col-lg"] {
+         flex: 0 0 93%; max-width: 93%;  
+    }
+    .text_left_img_right_main > [class*="col-lg"] 
+    { 
+        flex: 0 0 100%; max-width: 100%;   padding: 4% !important;
+    }
 
 }

@@ -1,5 +1,5 @@
 .stacked_cards_main{
-   height: 70vh; position: relative;
+   height: 70vh; position: relative; max-width: 75vw !important; 
 }
 .card_top{
     border: 1px solid black; height: 100%; border-radius: 7%; width: 90%;
@@ -46,3 +46,7 @@ height: 100%; position: absolute; right: 15px;
 .stacked_cards_text{
      background-color: antiquewhite; border-radius: 14px;
 }
+
+@media(max-width:992px){.stacked_cards_main{
+   max-height: 50vh; position: relative;
+}}

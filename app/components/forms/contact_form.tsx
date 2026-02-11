@@ -33,14 +33,14 @@ export default function Contact_form({phone}:contact_form_props){
 
     return (
 
-        <div className="row d-flex justify-content-center">
+        <div className="row d-flex justify-content-center contact_form_row mt-1">
 
-          <div className="col-lg-5 col-11 contact_form_frame p-lg-5 pb-lg-4 p-3 pt-5 pb-4">
+          <div className="col-lg-5 col-11 contact_form_frame p-lg-5 pb-lg-4 p-3 pt-5 pb-4 txt_md">
 
             {!formSent && 
             <form  onSubmit={handleSubmit}>
 
-                <div className='d-flex gap-3'>
+                <div className='d-flex gap-3 w-100'>
 
                     <label htmlFor="contact_form_select"><strong>Reason:</strong>
                     </label>
@@ -60,26 +60,26 @@ export default function Contact_form({phone}:contact_form_props){
                     </select>
                 </div>
                 
-                <div className='d-flex gap-3'>
+                <div className='d-flex gap-3 w-100'>
                     <label htmlFor='contact_form_name'><strong>Full name:</strong></label>
                      <input type='text' onChange={(e)=> setName(e.target.value)} name='name' 
-                     id='contact_form_name' required/>
+                     id='contact_form_name' required placeholder='name ...'/>
                 </div>
 
-               <div className='d-flex gap-3'>
+               <div className='d-flex gap-3 w-100'>
                     <label htmlFor='contact_form_email'><strong>Email:</strong></label>
                     <input type='email' name='email' onChange={(e)=> setEmail(e.target.value)}
-                    id={'contact_form_email'} required/>
+                    id={'contact_form_email'} required placeholder='example@email.com'/>
                </div>
 
-                <div className='d-flex gap-3'>
+                <div className='d-flex gap-3 w-100'>
                 
-                    <label htmlFor='contact_form_content'><strong>Description:</strong></label>
+                    <label htmlFor='contact_form_content'><strong>Details:</strong></label>
                     <textarea onChange={(e)=> setContent(e.target.value)} name='content' 
                     id='contact_form_content' required/>
 
                 </div>
-                <div className='d-flex justify-content-end pr-3 pt-3'>
+                <div className='d-flex justify-content-end pr-3 pt-3 w-100'>
                          <input type='submit' value={"Send"} className='contact_form_btn'/>
                 </div>
             </form>

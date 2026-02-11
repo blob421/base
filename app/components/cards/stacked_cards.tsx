@@ -42,7 +42,7 @@ useEffect(() => {
 
     return (
       <>
-        <div className="col-lg-4 stacked_cards_main">
+        <div className="col-lg-4 col-xxl-5 stacked_cards_main mb-4">
 
            <div className={slideChanged ? "card_top fadout_card ": "card_top"}>
 
