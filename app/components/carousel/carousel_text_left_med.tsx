@@ -16,7 +16,7 @@ export default function Carousel_med_center({images, textLeft, textRight}:Carous
                             </div>
                     }
              
-                    <div className="col-lg-9">
+                    <div className="col-lg-9 mt-4 mt-lg-0">
                         <Carousel_base images={images} big={true}/>
                     </div>
 

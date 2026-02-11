@@ -1,5 +1,5 @@
 .navbar_main{
- background-color: rgb(172, 210, 243) !important; 
+ background-color: rgb(172, 210, 243) !important; border-bottom: 1.5px solid black;
 }
 .nav_btn_0{
  min-width: 4.3em !important; background-color: grey; border: 0px; height: 6vh;

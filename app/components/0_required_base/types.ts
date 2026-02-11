@@ -1,6 +1,9 @@
 export type Image  ={
     url: string
 }
+export type options = {
+    img: string, name: string, txt:string
+}
 export type CarouselProps = {
  images : Image[], textLeft?: string, textRight?:string
 }
@@ -10,4 +13,7 @@ export type BannerProps = {
 }
 export type TextProps = {
     text: string, bgColor?:string , color?:string
+}
+export type ChoiceTextImageProps = {
+    options: options[]
 }

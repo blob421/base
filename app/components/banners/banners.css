@@ -14,7 +14,7 @@ display: flex; font-size: larger; gap: max(1.5vw, 1vh);
 
 .banner_medium{
     display: flex; justify-content: center; align-items: center;
-    font-size: larger;
+    font-size: larger; 
 }
 
 /*************************** SMALLER *************************/

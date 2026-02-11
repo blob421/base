@@ -15,20 +15,18 @@ export default function LandingPage(){
       {url: "car_img_0.jpg"}
     ]
 
-    const txt_left_img_right_txt = `The European languages are members of the same family. Their 
-    separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. 
-    The languages only differ in their grammar, their pronunciation and their most common words. 
-    Everyone realizes why a new common language would be desirable: one could refuse to pay expensive 
-    translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more 
-    common words. If several languages coalesce, the grammar of the resulting language is more simple and
-     regular than that of the individual languages. The new common language will be more simple and 
-     regular than the existing European languages. 
-`
+    const txt_left_img_right_txt = `Every morning at sunrise, our team heads into the barn to 
+    gather eggs that are still warm from the nest. Each one is picked by hand, 
+    ensuring only the freshest, most natural eggs make their way to your table. 
+    It’s a simple routine rooted in care, tradition, and respect for the animals that make 
+    it all possible.. 
+    `
     return (      
       <>
-        <Banner text="At fresh market , we ensure you get the freshest products"/>
+        <Banner text="At fresh market , we ensure you get the freshest products" height="large"/>
    
-        <Text_left_img_right image="/landing_image.jpg" text={txt_left_img_right_txt}/>
+        <Text_left_img_right image="/landing_image.jpg" text={txt_left_img_right_txt}
+        textBgColor="rgb(246, 246, 246)" text_img="text_left_img_right_image.png" text_bubbles={false}/>
 
         <Banner text="Explore our products"/>
 
