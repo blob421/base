@@ -4,17 +4,16 @@
     
 }
 .tail_banner_inner{
-display: flex; justify-content: center;
-    align-items: center; font-size: larger; gap: 2vw; 
+display: flex; font-size: larger; gap: max(1.5vw, 1vh);
    
 }
 .tail_img{
-    max-height: 40px
+   max-height: 6vh;
 }
 /***************** Sizes ******************/
 
 .banner_medium{
-    height: 12vh; display: flex; justify-content: center; align-items: center;
+    display: flex; justify-content: center; align-items: center;
     font-size: larger;
 }
 

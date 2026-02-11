@@ -1,10 +1,10 @@
 export type Image  ={
     url: string
 }
-export type BigCarouselProps = {
- images : Image[]
+export type CarouselProps = {
+ images : Image[], textLeft?: string, textRight?:string
 }
 
 export type BannerProps = {
-    text: string, img?: string
+    text: string, img?: string , bgColor?:string , color?:string, height?:string
 }

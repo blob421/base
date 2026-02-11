@@ -3,6 +3,7 @@
 }
 .nav_btn_0{
  min-width: 4.3em !important; background-color: grey; border: 0px; height: 6vh;
+ border-radius: 3px;
 }
 .nav_btn_1{
      min-width: 100vw !important; background-color: rgba(35, 35, 35, 0); border: 0px; height: 7vh;
