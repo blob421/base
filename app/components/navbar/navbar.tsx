@@ -42,7 +42,7 @@ export default function Navbar({home, about, products, contact}:NavbarProps){
 
                 }
                 { about && 
-                  <button className="nav_btn_0" onClick={()=> window.location.href='/'}>
+                  <button className="nav_btn_0" onClick={()=> window.location.href='/about'}>
                     About
                   </button>
 

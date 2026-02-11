@@ -8,3 +8,6 @@ export type CarouselProps = {
 export type BannerProps = {
     text: string, img?: string , bgColor?:string , color?:string, height?:string
 }
+export type TextProps = {
+    text: string, bgColor?:string , color?:string
+}
