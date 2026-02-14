@@ -1,7 +1,8 @@
 
 export const runtime = "nodejs";
 import { NextResponse } from "next/server";
-import nodemailer from 'nodemailer'
+import nodemailer from "nodemailer";
+
 
 const EMAIL_HOST_USER=process.env.EMAIL_HOST_USER
 const SMTP_HOST = process.env.SMTP_HOST
@@ -14,16 +15,16 @@ export async function POST(req: Request) {
     const { name, subject, content, email } =
       await req.json();
 
-    const transporter = nodemailer.createTransport({
+    const transporter = SMTP_PORT && nodemailer.createTransport({
       host: SMTP_HOST,
-      port: SMTP_PORT,
+      port: parseInt(SMTP_PORT),
       secure: false,
       auth: {
         user: EMAIL_HOST_USER,
         pass: EMAIL_HOST_PASSWORD,
       },
     });
-
+    if (transporter)
     await transporter.sendMail({
     from: EMAIL_HOST_USER, 
     to: EMAIL_HOST_USER,    

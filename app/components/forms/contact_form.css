@@ -1,3 +1,7 @@
+
+/*************************** Classic *********************************/
+
+
 .contact_form_frame{
     border: 1px solid rgb(23, 23, 23);  
      border-radius: 12px; position: relative; 
@@ -25,6 +29,28 @@ margin-top: 2vh; width: 26%;
     width: 150px !important;
 }
 .form_sent_msg{
-    align-self: center; margin-top: 2vh;
+     margin-top: 2vh; justify-content: center; align-items: center;
+    display: flex;
 }
+/****************************  MODERN *******************************************/
 
+.contact_form_frame_modern{
+    display: flex; flex-direction: column; gap: 2vh;
+}
+.contact_form_frame_modern :is(input, textarea, select){
+    padding:1%;
+    background-color: rgb(77, 77, 77); border: 1px solid black;
+    color: white; padding-left: max(0.4vw, 0.6vh); border-radius: 2px;
+
+}
+.contact_form_frame_modern :is(input, textarea, select)::placeholder{
+   
+    color: rgb(220, 220, 220);
+
+}
+.contact_form_frame_modern textarea{
+    height: 25vh;
+}
+.contact_form_frame_modern input[type='submit']{
+    min-width: 6em; background-color: rgb(138, 179, 220); min-height: 2em;
+}
