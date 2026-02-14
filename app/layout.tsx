@@ -41,7 +41,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
        <BootstrapClient/>
         <div className="container-fluid p-0">
-            <Navbar home={true} products={true} about={true} contact={true}/>
+            <Navbar sections={['Home', 'Products', 'About', 'Contact']} style="modern"/>
             {children}
         </div>
        

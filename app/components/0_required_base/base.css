@@ -33,4 +33,22 @@ font-size: max(1.3vw, 2vh);
         flex: 0 0 90%; max-width: 90%;
     }
 
+
+}
+
+@media (orientation: portrait){
+    .navbar_main{
+       justify-content: end !important; display: flex !important; padding-right: 2.5vw !important;
+    }
+    .navbar_main_modern{
+        justify-content: end !important; display: flex !important;padding-right: 6vw !important;
+    }
+}
+@media (orientation: portrait) and (max-width:992px){
+    .navbar_main{
+       justify-content: end !important; display: flex !important; 
+    }
+    .navbar_main_modern{
+        justify-content: end !important; display: flex !important;
+    }
 }
