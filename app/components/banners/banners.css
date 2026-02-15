@@ -4,11 +4,11 @@
     
 }
 .tail_banner_inner{
-display: flex; font-size: larger; gap: max(1.5vw, 1vh);
+display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
    
 }
 .tail_img{
-   max-height: 6vh;
+   max-height: 6vh; 
 }
 /***************** Sizes ******************/
 

@@ -44,6 +44,9 @@ font-size: max(1.3vw, 2vh);
     .text_tabs_row > [class*='col-lg']{
         flex: 0 0 90%; max-width: 90%;
     }
+    .txt_img_float_row > [class*='col-lg']{
+        flex: 0 0 90%
+    }
 
 
 }

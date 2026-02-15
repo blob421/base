@@ -6,6 +6,7 @@ import Tail_banner_image from "./components/banners/tail_banner_image"
 
 import Banner from "./components/banners/banner"
 import type { Image } from "@/app/components/0_required_base/types"
+import Text_image_float from "./components/text_and_image/text_image_float"
 
 export default function LandingPage(){
 
@@ -28,11 +29,17 @@ export default function LandingPage(){
         <Text_left_img_right image="/landing_image.jpg" text={txt_left_img_right_txt}
         textBgColor="rgb(246, 246, 246)" text_img="text_left_img_right_image.png" text_bubbles={false}/>
 
-        <Banner text="Explore our products"/>
+        <Banner text="Explore our products" height="large"/>
 
         <Carousel_med_center images={carousel_images} 
         textLeft="Made for you and your family , without pesticides or GMO ."/>
- 
+
+        <Banner text="In the depth of our farms" height="large"/>
+        
+        <Text_image_float 
+        text={txt_left_img_right_txt + txt_left_img_right_txt + txt_left_img_right_txt}
+         position="left" image="/landing_image.jpg"/>
+
          <Tail_banner_image 
           text="By buying local , you can make a real difference and encourage farmers that grows 
                real healty food"
