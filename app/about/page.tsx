@@ -3,6 +3,7 @@
 import Text_centered from "../components/text/text_centered"
 import Banner from "../components/banners/banner"
 import Text_center_stacked from "../components/cards/text_center_stacked"
+import Text_tabs from "../components/cards/text_tabs"
 
 export default function About(){
     
@@ -28,6 +29,9 @@ They approach technology like watchmakers — precise, patient, obsessed with th
          <Text_centered text={TextCenteredContent}/>
          <Banner text="About our company" height="large"></Banner>
          <Text_center_stacked cards={stacked_text_cards}/>
+         <Banner text="About our company" height="large"></Banner>
+         <Text_tabs cards={stacked_text_cards}/>
+
         </>
     )
 }
