@@ -22,7 +22,7 @@
   display: flex; justify-content: center; align-items: center;
 }
 .stacked_cards_main_content{
-    height: 70%; padding: 4%;
+    height: 70%; padding: 4%; 
 }
 .arrows_stacked_cards{
     height: 15%; border-top: 1px solid black; position: relative;
@@ -50,3 +50,32 @@ height: 100%; position: absolute; right: 15px;
 @media(max-width:992px){.stacked_cards_main{
    max-height: 50vh; position: relative;
 }}
+
+
+/*********************** Text center stacked ****************************/
+.text_center_stacked_container{
+    min-height: 45vh; display: flex; border: 1px solid rgba(0, 0, 255, 0); position: relative;
+}
+.text_center_stacked_card_top{
+     width: 93%; height: 95%; border: 1px solid black; border-radius: 5px;
+    padding: 9%; background-color: aliceblue; z-index: 1000;
+    opacity: 100; transition: opacity ease 0.7s; padding-top: 5.5vh;
+    display: flex; flex-direction: column; gap: 2vh;
+
+}
+.text_center_stacked_card_bot{
+     width: 89%; height: 95%; border: 1px solid black; border-radius: 5px;
+    padding: 9%; position: absolute; bottom: 0; right: 0; background-color: grey;
+}
+.text_center_stacked_arrows{
+    height: min(12%, 12vw); aspect-ratio: 1/1;
+}
+.arrows_cont_text_center_stacked{
+    display: flex; flex-direction: column; height: 100%; position: absolute; right: 3;
+    width: fit-content; border: 1px solid rgba(255, 0, 0, 0);  justify-self: end; justify-content: center;
+    gap: 2%; z-index: 10000;
+}
+
+.invisible_card {
+    opacity: 0;
+}

@@ -17,3 +17,12 @@ export type TextProps = {
 export type ChoiceTextImageProps = {
     options: options[]
 }
+
+////////////////// CARDS ////////////////////////
+
+export type text_center_stacked_props = {
+    cards:text_center_stacked_cards[]
+}
+export type text_center_stacked_cards = {
+    title?: string, content:string
+}
