@@ -9,7 +9,9 @@ export type CarouselProps = {
 }
 
 export type BannerProps = {
-    text: string, img?: string , bgColor?:string , color?:string, height?:string
+    text: string, img?: string , bgColor?:string , color?:string,  shape?: "square" | "round"
+    height?: "small" | "medium" | "large",
+    fontSize?: "larger" | "large" | "medium" | "small"
 }
 export type TextProps = {
     text: string, bgColor?:string , color?:string

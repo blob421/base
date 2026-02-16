@@ -16,7 +16,9 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
     display: flex; justify-content: center; align-items: center;
     font-size: larger; 
 }
-
+.banner_inner{
+    width: 90vw !important;
+}
 /*************************** SMALLER *************************/
 
 .top_banner_landing{
@@ -32,13 +34,15 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
 }
 
 /************************** SCALED ********************************/
-.scaled_banner{
 
-}
 .growing_text_content{
-    transition: transform 0.65s ease; text-align: center; 
+    transition: transform 0.65s ease; 
+    text-align: center; display: flex;justify-content: center; align-items: center;
    
 
+}
+.scaled_banner{
+   justify-self: center;
 }
 
 

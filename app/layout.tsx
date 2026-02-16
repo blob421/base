@@ -42,6 +42,7 @@ export default function RootLayout({
        <BootstrapClient/>
         <div className="container-fluid p-0">
             <Navbar sections={['Home', 'Products', 'About', 'Contact']} style="modern"/>
+            <div style={{height: '1vh'}}></div>
             {children}
         </div>
        

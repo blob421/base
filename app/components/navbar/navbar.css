@@ -1,6 +1,6 @@
 .navbar_main{
  background-color: rgb(172, 210, 243) !important; border: 1.5px solid black;
- padding: 1rem;
+ padding: 1rem; 
  border-radius: 23px; position: relative;justify-content: center; display: flex;
 }
 .nav_btn_0{

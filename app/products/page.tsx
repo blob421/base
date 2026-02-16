@@ -30,7 +30,8 @@ export default function Products(){
   return (
     <>
 
-    <Banner text="Always an amazing selection of products" bgColor="rgb(240, 248, 250)"/>
+    <Banner text="Always an amazing selection of products" bgColor="rgb(240, 248, 250)"
+    height="small"/>
       <div className="row p-4 d-flex justify-content-center stacked_cards_row mb-3">
         <Stacked_cards/>
       </div>

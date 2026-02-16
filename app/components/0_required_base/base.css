@@ -16,7 +16,9 @@ font-size: max(1.3vw, 2vh);
 .txt_xl{
     font-size: max(2.3vw, 3vh);
 }
+
 @media (orientation: portrait) and (min-width: 992px) { 
+
     .dropdown_text_img_main > [class*="col-lg"] 
     { 
         flex: 0 0 100%; max-width: 100%;   padding: 4% !important;
@@ -50,7 +52,11 @@ font-size: max(1.3vw, 2vh);
 
 
 }
-
+@media(min-width: 1600px){
+    .row:not([class*='tail_banner']){
+        margin-bottom: 2vh !important;
+    }
+}
 @media (orientation: portrait){
     .navbar_main{
        justify-content: end !important; display: flex !important; padding-right: 2.5vw !important;

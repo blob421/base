@@ -25,7 +25,7 @@ They approach technology like watchmakers — precise, patient, obsessed with th
                                 {title: 'An innovative take', content:TextCenteredContent}]
     return (
         <>
-        <Banner text="About our company" height="large"></Banner>
+        <Banner text="About our company" height="small"></Banner>
          <Text_centered text={TextCenteredContent}/>
          <Banner text="About our company" height="large"></Banner>
          <Text_center_stacked cards={stacked_text_cards}/>

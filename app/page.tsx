@@ -24,7 +24,7 @@ export default function LandingPage(){
     `
     return (      
       <>
-        <Banner text="At fresh market , we ensure you get the freshest products" height="large"/>
+        <Banner text="At fresh market , we ensure you get the freshest products" height="small"/>
    
         <Text_left_img_right image="/landing_image.jpg" text={txt_left_img_right_txt}
         textBgColor="rgb(246, 246, 246)" text_img="text_left_img_right_image.png" text_bubbles={false}/>
