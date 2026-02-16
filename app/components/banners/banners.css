@@ -31,3 +31,14 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
   border: 1px solid red; height: 100%;
 }
 
+/************************** SCALED ********************************/
+.scaled_banner{
+
+}
+.growing_text_content{
+    transition: transform 0.65s ease; text-align: center; 
+   
+
+}
+
+
