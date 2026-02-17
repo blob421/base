@@ -46,3 +46,44 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
 }
 
 
+/**************** SLIDE IN BANNER *******************/ 
+.sliding_banner_row{
+    
+}
+.sliding_banner_main{
+    height: 100vh; position: fixed; right: -15vw; background-color: rgb(132, 189, 219);
+    width: 15vw; transition: right 2s ease; top: 0; z-index: 100000; display: flex;
+    padding: 2%; flex-direction: column; gap: 5%; justify-content: center;
+    border: 1px solid black; border-radius: 4px;
+}
+.slide_visible{
+    right: 0 !important;
+}
+.sliding_banner_text{
+    
+     
+   
+}
+.img_slide_banner{
+   float: right; max-width: 2em;  margin-top: 2vh;
+}
+@media(max-width:992px){
+    .sliding_banner_main{
+        height: 20vh !important; bottom: 0; right: -100vw; top: unset;
+        width: 100vw;  padding-left: 6%; padding-right: 4%; margin-top: 2vh;
+    }
+    .slide_visible{
+    right:0 !important;
+}
+
+
+}
+@media (orientation: portrait) and (min-width: 992px){
+        .sliding_banner_main{
+        height: 20vh !important; bottom: 0; right: -100vw; top: unset;
+        width: 100vw;  padding-left: 7%; padding-right: 4%;
+    }
+    .slide_visible{
+    right:0 !important;
+}
+}
