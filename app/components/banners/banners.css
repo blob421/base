@@ -87,3 +87,19 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
     right:0 !important;
 }
 }
+
+/***************** SLIDE IN BANNER ROW ********************/
+.banner_sliding_inner_right{
+    width: 100%; height: 100%; position: relative; right: -100%; background-color: blue;
+    transition: right 2s ease;
+}
+.banner_sliding_inner_left{
+    width: 100%; height: 100%; position: relative; left: -100%; background-color: blue;
+    transition: left 2s ease;
+}
+.banner_sliding_active_right{
+    right: 0% !important;
+}
+.banner_sliding_active_left{
+  left: 0% !important
+}

@@ -3,7 +3,7 @@
 import Text_left_img_right from "./components/text_and_image/text_left_img_right"
 import Carousel_med_center from "./components/carousel/carousel_text_left_med"
 import Tail_banner_image from "./components/banners/tail_banner_image"
-
+import Slide_in_banner_row from "./components/banners/slide-in-banner"
 import Banner from "./components/banners/banner"
 import type { Image } from "@/app/components/0_required_base/types"
 import Text_image_float from "./components/text_and_image/text_image_float"
@@ -29,7 +29,8 @@ export default function LandingPage(){
         <Text_left_img_right image="/landing_image.jpg" text={txt_left_img_right_txt}
         textBgColor="rgb(246, 246, 246)" text_img="text_left_img_right_image.png" text_bubbles={false}/>
 
-        <Banner text="Explore our products" height="large"/>
+        <Slide_in_banner_row text="Explore our products" height="large" direction="left"
+        bgColor="skyblue"/>
 
         <Carousel_med_center images={carousel_images} 
         textLeft="Made for you and your family , without pesticides or GMO ."/>
