@@ -49,6 +49,9 @@ font-size: max(1.3vw, 2vh);
     .txt_img_float_row > [class*='col-lg']{
         flex: 0 0 90%
     }
+    .navbar_2 > [class*=col-lg] {
+         flex: 0 0 15%;
+    }
 
 
 }
@@ -64,6 +67,7 @@ font-size: max(1.3vw, 2vh);
     .navbar_main_modern{
         justify-content: end !important; display: flex !important;padding-right: 6vw !important;
     }
+
 }
 @media (orientation: portrait) and (max-width:992px){
     .navbar_main{

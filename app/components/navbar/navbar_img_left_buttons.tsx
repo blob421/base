@@ -3,7 +3,7 @@ import {useState, useEffect} from "react"
 type NavbarProps = {
     sections: string[], style: string
 }
-export default function Navbar({sections, style}:NavbarProps){
+export default function Navbar_img_left_buttons({sections, style}:NavbarProps){
    const [hamTriggered, setHamTriggered] = useState(false)
    const [hamEnlarging, setHamEnlarging] = useState(false)
    

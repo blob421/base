@@ -4,7 +4,7 @@
  border-radius: 23px; position: relative;justify-content: center; display: flex;
 }
 .nav_btn_0{
- min-width: 4.3em !important; background-color: grey; height: 6vh;
+ min-width: 4.3em !important; background-color: grey; height: 7vh;
  border-radius: 3px;border: 0.5px solid white; max-height: 85%;
  
 }
@@ -48,7 +48,7 @@
      height: 7vh; 
 }
 .nav_btn_0_modern{
-     min-width: 4.3em !important; background-color: grey; height: 6vh;
+     min-width: 4.3em !important; background-color: grey; height: 7vh;
      border: 0px; max-height: 80%;
 
 }
@@ -63,4 +63,35 @@
     display: flex; flex-direction: column; overflow: hidden;
     height: 30vh !important; 
 
+}
+
+/**************** NAVBAR 2***************/
+.navbar_2{
+   display: flex; align-items: center; justify-content: center;
+}
+.nav2_logo{
+     max-height: 7vh; justify-self: center;
+}
+  .nav2_text{
+     display: flex; justify-content: center; cursor: pointer; z-index: 1000;
+  }
+  .nav2_ham_icon{
+     height: 6.5vh; display: none;  position: absolute; right: 0;
+  }
+  .nav2_ham_icon_image{
+     display: none; 
+  }
+@media (max-width:450px){
+     .nav2_logo{
+          position: absolute; align-self: center; left: 5%;
+     }
+     .nav2_text{
+          display: none;
+     }
+     .nav2_ham_icon{
+          display: flex !important; align-items: center; 
+     }
+     .nav2_ham_icon_image{
+            max-height: 6vh; display: flex !important;
+     }
 }
