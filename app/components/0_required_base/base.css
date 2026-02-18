@@ -52,6 +52,9 @@ font-size: max(1.3vw, 2vh);
     .navbar_2 > [class*=col-lg] {
          flex: 0 0 15%;
     }
+    .row_text_grid_image > [class*='col-lg-7']{
+        flex: 0 0 90%;
+    }
 
 
 }
