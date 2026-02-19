@@ -62,6 +62,7 @@ font-size: max(1.3vw, 2vh);
     .row:not([class*='tail_banner']){
         margin-bottom: 2vh !important;
     }
+
 }
 @media (orientation: portrait){
     .navbar_main{
@@ -70,6 +71,7 @@ font-size: max(1.3vw, 2vh);
     .navbar_main_modern{
         justify-content: end !important; display: flex !important;padding-right: 6vw !important;
     }
+
 
 }
 @media (orientation: portrait) and (max-width:992px){

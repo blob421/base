@@ -1,18 +1,26 @@
 
 type Text_left_image_right_props = {
   image? : string, text?: string, textBgColor?: string, color?: string, text_img?: string,
-  text_bubbles?: boolean
+  text_bubbles?: boolean, imagePosition?: "left-top" | "left-bottom" | "right-top" | "right-bottom"
 }
 
 export default function Text_left_img_right({image, text, textBgColor, color,
-   text_img, text_bubbles}:Text_left_image_right_props){
+   text_img, text_bubbles, imagePosition}:Text_left_image_right_props){
     return (
-          <div className="row text_left_img_right_main d-flex justify-content-center">
+          <div className={ imagePosition == "right-top" || imagePosition == "left-bottom" ? 'row text_left_img_right_main d-flex justify-content-center flex-row-reverse'
+                         
+                                                    :"row text_left_img_right_main d-flex justify-content-center"}>
 
+    { (imagePosition == "right-top" || imagePosition == "left-top" || !imagePosition)  &&                                                
+    <div className="col-lg-6 col-11 text_left_img_right_image">
+                  <img src={image} className="img-fluid h-100"></img>
+            </div>
+}  
             <div className="col-lg-5 col-11 text_left_img_right_text">
 
               <div className="text_left_img_right_text_content txt_md
                 mb-lg-2 mb-3"
+
               style={{color: color? color : "black", backgroundColor: textBgColor? textBgColor: "white"}}>
                 <div>
                    {text}
@@ -29,12 +37,13 @@ export default function Text_left_img_right({image, text, textBgColor, color,
               
           
             </div>
-
-
-            <div className="col-lg-6 col-11 text_left_img_right_image">
+    {(imagePosition == "right-bottom" || imagePosition  == "left-bottom")  &&                                                
+    <div className="col-lg-6 col-11 text_left_img_right_image">
                   <img src={image} className="img-fluid h-100"></img>
             </div>
+} 
 
+        
         </div>
     )
 }

@@ -7,7 +7,7 @@ import Slide_in_banner_row from "./components/banners/slide-in-banner"
 import Banner from "./components/banners/banner"
 import type { Image } from "@/app/components/0_required_base/types"
 import Text_image_float from "./components/text_and_image/text_image_float"
-
+import Big_image from "./components/images/big_image"
 export default function LandingPage(){
 
     const carousel_images:Image[] = [
@@ -25,9 +25,10 @@ export default function LandingPage(){
     return (      
       <>
         <Banner text="At fresh market , we ensure you get the freshest products" height="small"/>
-   
+        <Big_image image="/main_image.png"/>
         <Text_left_img_right image="/landing_image.jpg" text={txt_left_img_right_txt}
-        textBgColor="rgb(246, 246, 246)" text_img="text_left_img_right_image.png" text_bubbles={false}/>
+        textBgColor="rgb(246, 246, 246)" text_img="text_left_img_right_image.png" 
+        text_bubbles={false} imagePosition="right-bottom"/>
 
         <Slide_in_banner_row text="Explore our products" height="large" direction="left"
         bgColor="skyblue"/>
