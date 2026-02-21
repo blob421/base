@@ -47,7 +47,11 @@ useEffect(() => {
                 return (
                     <div className="navbar_cat_col p-1 txt_md" key={idx} 
                     style={{backgroundColor: hoveredId == idx ? 'skyblue': ""}}
-
+                         onTouchEnd={()=>{
+                            hoveredId == idx ? window.location.href=`/${s.key.toLocaleLowerCase()}`
+                                             : setHovered(`cat_${idx}`);
+                                               setHoveredId(idx)
+                         }}
                          onMouseEnter={() =>{
                             setHovered(`cat_${idx}`);
                             setHoveredId(idx)
