@@ -55,6 +55,15 @@ font-size: max(1.3vw, 2vh);
     .row_text_grid_image > [class*='col-lg-7']{
         flex: 0 0 90%;
     }
+    .submenu_nav_row > [class*="col-lg"]{
+        flex: 0 0 90%;
+    }
+    .navbar_cat_row > [class*='col-lg']{
+        flex: 0 0 80%; 
+    }
+      .navbar_cat_row > [class*='image_grid_nav']{
+        width: 11% !important;
+    }
 
 
 }

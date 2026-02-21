@@ -95,3 +95,60 @@
             max-height: 6vh; display: flex !important;
      }
 }
+
+/******************** CATEGORIES HOVER NAVBAR ***********************/
+.navbar_cat_col{
+     display: flex; justify-content: center; cursor: pointer;
+     justify-self: center; border: 1px solid grey; width: 90%;
+    
+}
+.grid_nav_cat_main_btn{
+     display: grid; grid-template-columns: repeat(3, 1fr); justify-self: center;
+     row-gap: 2vh; 
+}
+.navbar_cat_row{
+    background-color: rgb(65, 65, 65); color: white; padding-bottom: 4vh; padding-top: 4vh;
+    position: relative;
+}
+.categories_frame_navbar{
+     display: none; border: 1px solid black; position: absolute;
+     padding-bottom: 2%; padding: 1%; 
+     z-index: 10000; border-radius: 4px;
+}
+
+.image_grid_nav{
+  right:10; bottom:20; position: absolute;
+}
+.nav_grid_logo{
+    max-width: max(5vw, 5vh) ; 
+}
+
+.submenu_nav_row{
+  height: 0; max-height: 0vh; transition: max-height 2s ease; background-color: rgb(255, 255, 255);
+}
+.submenu_nav_row_expanded{
+ height: fit-content; overflow: hidden; max-height: 60vh !important; overflow-y: scroll; 
+ border-bottom: 3px solid black; border-top: 3px solid black;
+}
+.sub_category_expanded{
+  
+}
+.grid_sub_category{
+     display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 33%)); 
+     padding-top: 6vh; padding-bottom:6vh; justify-content: center; row-gap: 1.5vh;
+     width: 100%;
+     
+     
+     
+     
+}
+
+.sub_category{
+    position: relative; border-bottom: 1px solid black;
+    text-decoration: none;   justify-self: center;
+    max-height: 4em; color: black; text-align: center; padding-bottom: min(2vh, 3vw);
+    display: flex; justify-content: center; align-items: center; 
+}
+.sub_category:hover{
+    background-color: rgba(168, 205, 225, 0.1); cursor: pointer;
+}

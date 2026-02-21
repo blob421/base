@@ -16,6 +16,7 @@ import "./components/text_and_image/text_image_float.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import BootstrapClient from "./components/0_required_base/bootstrap_js";
 import Navbar_img_left_buttons from "./components/navbar/navbar_img_left_buttons";
+import Navbar_categories_hover from "./components/navbar/navbar_categories_hover";
 import Navbar_img_any_flat from "./components/navbar/navbar_img_any_flat";
 
 const geistSans = Geist({
@@ -36,6 +37,11 @@ export const metadata: Metadata = {
 
 const navbarSections = [{text:'Home'}, {text:'Products'}, 
   {image: '/bell.png'}, {text:'About'}, {text:'Contact'}]
+
+const navbarCat = [{key: 'Home', val: ['Home2', 'Home3', 'home6']}, 
+                   {key: 'Products', val: ['Garden', 'Seeds', 'Veggies', 'Home appliances', 'Tools', 'Bird food', 'Garden', 'Seeds', 'Veggies', 'Home appliances', 'Tools', 'Bird food']},
+                   {key: 'About', val:['Our company', 'The origins', 'Some history']},
+                   {key: 'Contact', val:[]}]
   
 export default function RootLayout({
   children,
@@ -47,9 +53,8 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
        <BootstrapClient/>
         <div className="container-fluid p-0">
-   
-            <Navbar_img_any_flat sections={navbarSections} height="large" decoration="modern" 
-            hamBgColor="rgb(158, 191, 222)" hamColor="black"/>
+            <Navbar_categories_hover sections={navbarCat} image="/bell.png"/>
+     
             <div style={{height: '1vh'}}></div>
             {children}
         </div>
