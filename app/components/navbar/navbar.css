@@ -117,7 +117,7 @@
 }
 
 .image_grid_nav{
-  right:10; bottom:20; position: absolute;
+  right:20; bottom:20; position: absolute;
 }
 .nav_grid_logo{
     max-width: max(5vw, 5vh) ; 
@@ -151,4 +151,11 @@
 }
 .sub_category:hover{
     background-color: rgba(168, 205, 225, 0.1); cursor: pointer;
+}
+.image_grid_nav_short{
+     bottom: 1vh; right: 5px;
+}
+.navbar_cat_row_short{
+     background-color: rgb(65, 65, 65); color: white; padding-bottom: 8vh; padding-top: 4vh;
+    position: relative;
 }

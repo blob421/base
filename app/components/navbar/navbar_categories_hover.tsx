@@ -21,11 +21,14 @@ useEffect(() => {
     const target = e.target as HTMLElement | null
 
     // If the mouse is NOT inside the navbar or submenu, close it
-    if (!target?.closest('.navbar_cat_row') &&
-        !target?.closest('.submenu_nav_row_expanded')) {
-      setHovered(undefined)
-      setHoveredId(undefined)
-    }
+if (
+  !target?.closest('.navbar_cat_row') &&
+  !target?.closest('.navbar_cat_row_short') &&
+  !target?.closest('.submenu_nav_row_expanded')
+) {
+  setHovered(undefined)
+  setHoveredId(undefined)
+}
   }
 
   document.addEventListener('mousemove', handleMove)
@@ -34,10 +37,11 @@ useEffect(() => {
 
     return (
         <>
-        <div className="row d-flex justify-content-center
-        navbar_cat_row align-items-center">
+        <div className={sections.length < 4 ? 'row d-flex justify-content-center navbar_cat_row_short align-items-center'
+             :"row d-flex justify-content-center navbar_cat_row align-items-center"}>
             {image && 
-            <div className="image_grid_nav col-2 position-absolute d-flex justify-content-center">
+            <div className={sections.length < 4 ? "image_grid_nav_short col-2 position-absolute d-flex justify-content-center"
+                                      :"image_grid_nav col-2 position-absolute d-flex justify-content-center"}>
                 <img src={image} className="nav_grid_logo"/>
             </div>
             }
@@ -47,14 +51,18 @@ useEffect(() => {
                 return (
                     <div className="navbar_cat_col p-1 txt_md" key={idx} 
                     style={{backgroundColor: hoveredId == idx ? 'skyblue': ""}}
-                         onTouchEnd={()=>{
-                            hoveredId == idx ? window.location.href=`/${s.key.toLocaleLowerCase()}`
-                                             : setHovered(`cat_${idx}`);
+                
+                    onClick={()=>{
+                    hoveredId == idx || sections[idx].val.length < 1 ? window.location.href=`/${idx == 0 ? ""
+                                                                     : s.key.toLocaleLowerCase()}`
+                                                                     
+                                              : setHovered(`cat_${idx}`);
                                                setHoveredId(idx)
                          }}
                          onMouseEnter={() =>{
                             setHovered(`cat_${idx}`);
                             setHoveredId(idx)
+                            
                           
                         }}
 
