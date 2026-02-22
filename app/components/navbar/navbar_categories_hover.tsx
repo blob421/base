@@ -4,9 +4,7 @@ type catNavbarProps = {
     sections : category[], image?: string
 }
 
-type category = {
-    key:string , val:string[]
-}
+import type { category } from "../0_required_base/types"
 
 import {useEffect, useState} from "react"
 
@@ -55,7 +53,7 @@ if (
                     onClick={()=>{
                     hoveredId == idx || sections[idx].val.length < 1 ? window.location.href=`/${idx == 0 ? ""
                                                                      : s.key.toLocaleLowerCase()}`
-                                                                     
+
                                               : setHovered(`cat_${idx}`);
                                                setHoveredId(idx)
                          }}

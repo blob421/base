@@ -18,6 +18,7 @@ import BootstrapClient from "./components/0_required_base/bootstrap_js";
 import Navbar_img_left_buttons from "./components/navbar/navbar_img_left_buttons";
 import Navbar_categories_hover from "./components/navbar/navbar_categories_hover";
 import Navbar_img_any_flat from "./components/navbar/navbar_img_any_flat";
+import NavbarSearch from "./components/navbar/navbar_search";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,7 +54,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
        <BootstrapClient/>
         <div className="container-fluid p-0">
-            <Navbar_categories_hover sections={navbarCat} image="/bell.png"/>
+            <NavbarSearch sections={navbarCat} image="/bell.png" image2="/cart.png"/>
      
             <div style={{height: '1vh'}}></div>
             {children}

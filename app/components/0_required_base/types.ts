@@ -28,3 +28,11 @@ export type text_center_stacked_props = {
 export type text_center_stacked_cards = {
     title?: string, content:string
 }
+export type category = {
+    key:string , val:string[]
+}
+///////////////// Debounce result /////////////////
+
+export type Result ={
+    name:string, label:string, url?:string, img?:string, id:number
+}
