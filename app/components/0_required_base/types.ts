@@ -36,3 +36,9 @@ export type category = {
 export type Result ={
     name:string, label:string, url?:string, img?:string, id:number
 }
+
+//////////////// CART //////////////////////
+
+export type item = {
+    name:string, quantity:number, image:string, price: number, id:number
+}

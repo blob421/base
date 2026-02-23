@@ -14,6 +14,8 @@ import "./components/banners/banners.css"
 import "./components/text_and_image/image_contact_card.css"
 import "./components/text_and_image/text_image_float.css"
 import "bootstrap/dist/css/bootstrap.min.css"
+import "./components/text_and_image/items_list_img.css"
+
 import BootstrapClient from "./components/0_required_base/bootstrap_js";
 import Navbar_img_left_buttons from "./components/navbar/navbar_img_left_buttons";
 import Navbar_categories_hover from "./components/navbar/navbar_categories_hover";

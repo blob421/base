@@ -73,7 +73,8 @@ useEffect(()=>{
               </div>
 
 
-              <div className="col-2 d-flex justify-content-end position-relative">
+              <div className="col-2 d-flex justify-content-end position-relative" 
+              onClick={()=> window.location.href = '/cart'}>
                   <span className="cart_n_items_bubble txt_xs">1</span>
                   <img src={cart_img} className="nav_search_cart_image p-2"/>
               </div>

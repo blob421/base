@@ -64,6 +64,12 @@ font-size: max(1.3vw, 2vh);
       .navbar_cat_row > [class*='image_grid_nav']{
         width: 11% !important;
     }
+    .row_items_list > [class*='col-lg']{
+        flex: 0 0 90%;
+    }
+    .total_row_items_list > [class*='col-lg']{
+        flex: 0 0 90%;
+    }
 
 
 }
