@@ -2,12 +2,14 @@
 import handle_debounce from "../1_utilities/debounce_input"
 import type { category } from "../0_required_base/types"
 import { useMemo, useState, useEffect } from "react"
+
 type NavSearchProps = {
-    sections: category[], image: string, image2:string, bgColor?: string
+    sections: category[], company_logo: string, cart_img:string, bgColor?: string, color?:string
 }
+
 import type { Result } from "../0_required_base/types"
 
-export default function NavbarSearch({sections, bgColor, image, image2}:NavSearchProps){
+export default function NavbarSearch({sections, bgColor, company_logo, cart_img, color}:NavSearchProps){
 
 const [catTriggered, setCatTriggered] = useState(false)
 const [results, setResults] = useState<Result[]| []>([])
@@ -46,28 +48,34 @@ useEffect(()=>{
         <>
         <div className="row navbar_search_row d-flex justify-content-center align-items-center 
         pb-4 pt-4 pb-lg-3 pt-lg-3" 
-             style={{backgroundColor: bgColor? bgColor: 'grey'}}>
+             style={{color: color? color:'black'}}>
 
               <div className="col-2 d-flex justify-content-center">
-                 <img src={image} className="nav_search_logo p-2"/>
+                 <img src={company_logo} className="nav_search_logo p-2" 
+                 onClick={()=> window.location.href="/"}/>
               </div>
 
 
-              <div className="col-7 d-flex flex-column gap-2 align-items-center position-relative txt_md">
+              <div className="col-7 d-flex flex-column gap-2 align-items-center position-relative txt_sm">
                   <input type="search" placeholder="Search products ..." style={{width: '100%'}}
                          onChange={(e)=> {debouncedSearch(e.target.value, (results:any) => {
                                                                           setResults(results)}
                    ); setCatTriggered(false)}}/>
-                   <button className="btn_categories_searchbar_nav txt_xs" 
-                   onClick={()=>{setCatTriggered(true); setResults([])}}>Shop by category</button>
+                   <div className="btn_below_seach_nav_container">
+                       <button className="btn_categories_searchbar_nav txt_xs" 
+                       onClick={()=>{setCatTriggered(!catTriggered); setResults([])}}>Shop by category</button>
+                      <button className="btn_categories_searchbar_nav txt_xs">Promotions</button>
+                   </div>
+     
 
       
 
               </div>
 
 
-              <div className="col-2 d-flex justify-content-center">
-                  <img src={image2} className="nav_search_cart_image p-2"/>
+              <div className="col-2 d-flex justify-content-end position-relative">
+                  <span className="cart_n_items_bubble txt_xs">1</span>
+                  <img src={cart_img} className="nav_search_cart_image p-2"/>
               </div>
 
         </div>

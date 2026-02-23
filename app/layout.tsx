@@ -54,7 +54,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
        <BootstrapClient/>
         <div className="container-fluid p-0">
-            <NavbarSearch sections={navbarCat} image="/bell.png" image2="/cart.png"/>
+            <NavbarSearch sections={navbarCat} company_logo="/bell.png" cart_img="/cart.png"/>
      
             <div style={{height: '1vh'}}></div>
             {children}
