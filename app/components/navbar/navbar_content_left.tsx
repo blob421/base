@@ -1,12 +1,18 @@
 "use client"
+
 import {useState, useEffect} from "react"
+
 type NavbarProps = {
-    sections: string[], style: string
+    sections: string[], style?: 'round' | 'fill', image: string, bg_color?: string,
+    color?: string
 }
-export default function Navbar_img_left_buttons({sections, style}:NavbarProps){
+
+export default function Navbar_Left({sections, style, image, 
+   bg_color, color}:NavbarProps){
    const [hamTriggered, setHamTriggered] = useState(false)
    const [hamEnlarging, setHamEnlarging] = useState(false)
-   
+  
+
    useEffect(()=>{
     const timeout = setTimeout(()=>{
      if(hamTriggered){
@@ -21,27 +27,33 @@ export default function Navbar_img_left_buttons({sections, style}:NavbarProps){
    }, [hamTriggered])
     return (
       <>
-        <div className={style == 'classic' ? "row d-flex justify-content-center mt-1 mt-lg-0": 'row'}>
-            <div className={style == 'classic' ?
-            "col-11  navbar_main d-flex gap-lg-5 gap-1 align-items-center txt_md": 
-            'col-12  navbar_main_modern d-flex gap-lg-5 gap-1 align-items-center txt_md'}>
+        <div className={style == 'round' ? "row d-flex justify-content-center mt-1 mt-lg-1"
+                                         : 'row'}>
+
+            <div className={style == 'round' ?
+            "col-11 navbar_main d-flex gap-lg-5 gap-5 txt_md justify-content-start align-items-center": 
+            'col-12 navbar_main_modern d-flex gap-lg-5 gap-5 ps-4 justify-content-start align-items-center txt_md'}
+             style={{color: color? color: 'black', backgroundColor: bg_color? bg_color:  'rgb(172, 210, 243)'}}
+            >
+
+
                 <img src={"/hamburger_menu_black.png"}
-                 className={hamTriggered? "hamburger_menu_icon_selected hamburger_menu_icon" :"hamburger_menu_icon"} 
+                 className={hamTriggered ? "hamburger_menu_icon_selected hamburger_menu_icon position-absolute" 
+                                         :"hamburger_menu_icon"} 
+
                  onClick={() => setHamTriggered(!hamTriggered)}/>
             
-                <img src={"/company_logo.jpg"} className={style=='classic'?"company_logo position-absolute start-0 ms-lg-5 ms-4"
-                 : "company_logo position-absolute start-0 ms-lg-3 ms-4"
-                }/>
+                <img src={image} className={"company_logo"}/>
                {sections && sections.map((s, idx) => {
                 return (
                 idx == 0 ?
-                  <button key={idx} className={style == 'classic' ?"nav_btn_0" 
+                  <button key={idx} className={style == 'round' ?"nav_btn_0" 
                                                                   : 'nav_btn_0_modern'
                   } onClick={()=> window.location.href='/'}>
                     {s}
                   </button>
                          :
-                  <button key={idx} className={style == 'classic' ?"nav_btn_0" 
+                  <button key={idx} className={style == 'round' ?"nav_btn_0" 
                                                                   : 'nav_btn_0_modern'
                   } 
                                     onClick={()=> window.location.href=`/${s.toLocaleLowerCase()}`}>
@@ -55,9 +67,9 @@ export default function Navbar_img_left_buttons({sections, style}:NavbarProps){
         </div>
 
            {hamTriggered && 
-         <div className={hamEnlarging && style == 'modern' ? 
+         <div className={hamEnlarging && style == 'fill' ? 
          "hamburger_menu_expanded_modern hamburger_menu_initial txt_md": 
-         style == 'classic' && hamEnlarging ? 
+         style == 'round' && hamEnlarging ? 
          "hamburger_menu_expanded hamburger_menu_initial txt_md"
                                                                 :"hamburger_menu_initial txt_md"
           }>
@@ -65,13 +77,13 @@ export default function Navbar_img_left_buttons({sections, style}:NavbarProps){
                    {sections && sections.map((s, idx) => {
                 return (
                 idx == 0 ?
-                  <button key={idx} className={style == 'classic' ?"nav_btn_1" 
+                  <button key={idx} className={style == 'round' ?"nav_btn_1" 
                                                                   : 'nav_btn_1_modern'
                   } onClick={()=> window.location.href='/'}>
                     {s}
                   </button>
                          :
-                  <button key={idx} className={style == 'classic' ?"nav_btn_1" 
+                  <button key={idx} className={style == 'round' ?"nav_btn_1" 
                                                                   : 'nav_btn_1_modern'
                   } 
                                     onClick={()=> window.location.href=`/${s.toLocaleLowerCase()}`}>

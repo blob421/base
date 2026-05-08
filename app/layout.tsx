@@ -17,9 +17,9 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./components/text_and_image/items_list_img.css"
 
 import BootstrapClient from "./components/0_required_base/bootstrap_js";
-import Navbar_img_left_buttons from "./components/navbar/navbar_img_left_buttons";
+import Navbar_Left from "./components/navbar/navbar_content_left";
 import Navbar_categories_hover from "./components/navbar/navbar_categories_hover";
-import Navbar_img_any_flat from "./components/navbar/navbar_img_any_flat";
+import NavbarCentered from "./components/navbar/navbar_content_centered";
 import NavbarSearch from "./components/navbar/navbar_search";
 
 const geistSans = Geist({
@@ -38,14 +38,14 @@ export const metadata: Metadata = {
 };
 
 
-const navbarSections = [{text:'Home'}, {text:'Products'}, 
-  {image: '/bell.png'}, {text:'About'}, {text:'Contact'}]
+
 
 const navbarCat = [{key: 'Home', val: ['Home2', 'Home3', 'home6']}, 
                    {key: 'Products', val: ['Garden', 'Seeds', 'Veggies', 'Home appliances', 'Tools', 'Bird food', 'Garden', 'Seeds', 'Veggies', 'Home appliances', 'Tools', 'Bird food']},
                    {key: 'About', val:['Our company', 'The origins', 'Some history']},
                    {key: 'Contact', val:[]}]
-  
+                   
+const navbarSections = ['Home', 'Products', '/cart.png', 'About', 'Contact']  
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -56,7 +56,10 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
        <BootstrapClient/>
         <div className="container-fluid p-0">
-            <NavbarSearch sections={navbarCat} company_logo="/bell.png" cart_img="/cart.png"/>
+          
+            <NavbarCentered pair_sections_with_img_path_middle={navbarSections} 
+            
+             style="modern"/>
      
             <div style={{height: '1vh'}}></div>
             {children}

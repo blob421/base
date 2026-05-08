@@ -1,11 +1,12 @@
 .navbar_main{
  background-color: rgb(172, 210, 243) !important; border: 1.5px solid black;
  padding: 1rem; 
- border-radius: 23px; position: relative;justify-content: center; display: flex;
+ border-radius: 23px; position: relative;justify-content: left; display: flex;
 }
 .nav_btn_0{
  min-width: 4.3em !important; background-color: grey; height: 7vh;
  border-radius: 3px;border: 0.5px solid white; max-height: 85%;
+ padding-left: 20px; padding-right: 20px;
  
 }
 .nav_btn_1{
@@ -16,21 +17,25 @@
     
 }
 .company_logo{
-     margin-left: 2vw; max-height: 65%; height: 6vh;
+     margin-left: 2vw; max-height: 75%; height: 6vh;
 }
 .hamburger_menu_icon{
     height:6vh; display: none; margin-right: 5vw; opacity: 0.7;
+    position: absolute; right:0
 }
 .hamburger_menu_icon_selected{
      opacity: 0.6;
 }
-.hamburger_menu_initial { height: 0vh; overflow: hidden; transition: height 0.5s ease; }
+.hamburger_menu_initial { max-height: 0vh; height: 0; overflow: hidden; transition: max-height 1s ease-out; 
+      display: flex; flex-direction: column;
+
+}
 .hamburger_menu_expanded{
-   padding-top: 1vh; 
+ 
     display: flex; flex-direction: column; overflow: hidden;
-    height: 30vh !important;  width: 92vw;
+    max-height: 70vh !important;  width: 90vw; margin-top: 1vh;
     justify-self: center;border-bottom: 1px solid black; border-top: 1px solid black;
-    margin-top: 1.5vh;
+    margin-top: 1.5vh; align-items: center; height: fit-content;
 }
 @media(max-width:772px){
     .nav_btn_0{display: none;}
@@ -44,24 +49,27 @@
 
 .nav_btn_1_modern{
      min-width: 100vw !important; background-color: rgba(35, 35, 35, 0); 
-    border: 0px; 
+    border: 0px; padding-bottom: 7vh; padding-top: 4vh;
      height: 7vh; 
 }
 .nav_btn_0_modern{
      min-width: 4.3em !important; background-color: grey; height: 7vh;
-     border: 0px; max-height: 80%;
+     border: 0px; max-height: 80%;padding-left: 20px; padding-right: 20px;
+    
 
 }
 .navbar_main_modern{
-  justify-content: center; display: flex; padding: 1rem;
+  justify-content: center; display: flex; padding: 1rem; padding-left: 2vw;
  background-color: rgb(172, 210, 243) !important; 
  
 }
 .hamburger_menu_expanded_modern{
- 
-    background-color: rgba(0, 0, 0, 0.642);  padding-top: 1vh;
-    display: flex; flex-direction: column; overflow: hidden;
-    height: 30vh !important; 
+   display: flex; flex-direction: column; overflow: hidden;
+    max-height: 70vh !important; margin-top: 0.1vh; 
+    justify-self: center;border-bottom: 1px solid black; border-top: 1px solid black;
+     align-items: center; height: fit-content; background-color: rgb(80, 80, 80);
+    
+    
 
 }
 
@@ -70,7 +78,7 @@
    display: flex; align-items: center; justify-content: center;
 }
 .nav2_logo{
-     max-height: 7vh; justify-self: center;
+     max-height: 7vh; justify-self: center; z-index: 1000; cursor: pointer;
 }
   .nav2_text{
      display: flex; justify-content: center; cursor: pointer; z-index: 1000;

@@ -1,0 +1,48 @@
+  Example for the main page.tsx
+ 
+  <>
+        <Banner text="" height="small"/>
+
+
+        <Big_image image="/path_in_public/>
+
+
+        <Text_left_img_right 
+            image="" 
+            text="" 
+            textBgColor="rgb(246, 246, 246)" 
+            text_img="/small_image_in_text/" 
+            text_bubbles={false} 
+            imagePosition="right-bottom"
+        />
+
+
+        <Slide_in_banner_row 
+            text="Explore our products" 
+            height="large" 
+            direction="left"
+            bgColor="skyblue"
+        />
+
+
+        <Carousel_med_center 
+            images={carousel_images} 
+            textLeft=""
+        />
+
+    
+        <Text_image_float 
+            text=""
+            position="left" 
+            image=""
+         />
+
+        <Tail_banner_image 
+          text=""
+          img=""
+          bgColor="rgb(169, 217, 251)"
+          
+          />
+
+
+ </>
