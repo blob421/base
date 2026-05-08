@@ -138,9 +138,7 @@
  height: fit-content; overflow: hidden; max-height: 60vh !important; overflow-y: scroll; 
  border-bottom: 3px solid black; border-top: 3px solid black;
 }
-.sub_category_expanded{
-  
-}
+
 .grid_sub_category{
      display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 33%)); 
      padding-top: 6vh; padding-bottom:6vh; justify-content: center; row-gap: 1.5vh;

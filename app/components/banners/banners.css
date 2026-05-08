@@ -8,13 +8,13 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
    
 }
 .tail_img{
-   max-height: 6vh; 
+   max-height: 6vh; margin-left: 1vw;
 }
 /***************** Sizes ******************/
 
 .banner_medium{
     display: flex; justify-content: center; align-items: center;
-    font-size: larger; 
+  
 }
 .banner_inner{
     width: 90vw !important;
@@ -42,13 +42,13 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
 
 }
 .scaled_banner{
-   justify-self: center;
+   justify-self: center; 
 }
 
 
 /**************** SLIDE IN BANNER *******************/ 
-.sliding_banner_row{
-    
+.sliding_banner_text{
+    display: flex; flex-direction: column; margin-left: 0.6vw;
 }
 .sliding_banner_main{
     height: 100vh; position: fixed; right: -15vw; background-color: rgb(132, 189, 219);
@@ -59,13 +59,9 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
 .slide_visible{
     right: 0 !important;
 }
-.sliding_banner_text{
-    
-     
-   
-}
+
 .img_slide_banner{
-   float: right; max-width: 2em;  margin-top: 2vh;
+   max-width: 2em;  margin-top: 8vh; align-self: center; 
 }
 @media(max-width:992px){
     .sliding_banner_main{
@@ -90,7 +86,7 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
 
 /***************** SLIDE IN BANNER ROW ********************/
 .banner_sliding_inner_right{
-    width: 100%; height: 100%; position: relative; right: -100%; background-color: blue;
+    width: 100%; position: relative; right: -100%; background-color: blue;
     transition: right 2s ease;
 }
 .banner_sliding_inner_left{

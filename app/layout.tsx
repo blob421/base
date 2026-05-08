@@ -45,7 +45,8 @@ const navbarCat = [{key: 'Home', val: ['Home2', 'Home3', 'home6']},
                    {key: 'About', val:['Our company', 'The origins', 'Some history']},
                    {key: 'Contact', val:[]}]
                    
-const navbarSections = ['Home', 'Products', '/cart.png', 'About', 'Contact']  
+const navCentered = ['Banners', 'Products', '/cart.png', 'About', 'Contact']  
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,7 +58,7 @@ export default function RootLayout({
        <BootstrapClient/>
         <div className="container-fluid p-0">
           
-            <NavbarCentered pair_sections_with_img_path_middle={navbarSections} 
+            <NavbarCentered pair_sections_with_img_path_middle={navCentered} 
             
              style="modern"/>
      

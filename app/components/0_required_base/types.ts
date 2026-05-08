@@ -9,9 +9,14 @@ export type CarouselProps = {
 }
 
 export type BannerProps = {
-    text: string, img?: string , bgColor?:string , color?:string,  shape?: "square" | "round"
+    text: string, img?: string , bgColor?:string , color?:string,  
+    shape?: "square" | "round"
     height?: "small" | "medium" | "large",
-    fontSize?: "larger" | "large" | "medium" | "small"
+    fontSize?: "txt_xl" | "txt_lg" | "txt_md" | "txt_sm"
+}
+export type VertSlideBanner = {
+    text:string, image?: string, bgColor?:string, color?:string, persistence?: "long" | "short",
+    fontSize?: "txt_xl" | "txt_lg" | "txt_md" | "txt_sm"
 }
 export type TextProps = {
     text: string, bgColor?:string , color?:string
