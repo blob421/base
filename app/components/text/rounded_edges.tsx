@@ -1,7 +1,7 @@
        
 
 type textProps = {
-    text: string, bgColor?: string, color?:string, fontSize: string
+    text: string, bgColor?: string, color?:string, fontSize?: string
 }
 export default function Text_Round({text, bgColor, color, fontSize}:textProps){
     return (

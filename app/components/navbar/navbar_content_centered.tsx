@@ -1,7 +1,8 @@
 "use client"
 
 type NavbarProps = {
-    nav_sections: string[] | '/image.png'[], bgColor?:string, color?: string , 
+    nav_sections: string[] | '/image.png'[] | 'image must be in the middle of floor(len/2)'[], 
+    bgColor?:string, color?: string , 
     style?: "classic" | "modern",
     hamBgColor?:string, hamColor?: string
 
