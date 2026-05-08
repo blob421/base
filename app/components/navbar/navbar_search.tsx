@@ -1,10 +1,12 @@
 "use client"
 import handle_debounce from "../1_utilities/debounce_input"
-import type { category } from "../0_required_base/types"
+
 import { useMemo, useState, useEffect } from "react"
 
 type NavSearchProps = {
-    sections: category[], company_logo: string, cart_img:string, bgColor?: string, color?:string
+    sections : {main_cat: string, sub_cats: string[]}[], 
+
+    company_logo: string, cart_img:string, bgColor?: string, color?:string
 }
 
 import type { Result } from "../0_required_base/types"
@@ -105,10 +107,10 @@ useEffect(()=>{
         <div className="col-12 nav_search_cat_grid">
             {sections && sections.map((s, idx)=>{
                 return (
-                    sections[idx].val.length > 0 ?
+                    sections[idx].sub_cats.length > 0 ?
                     <div className="navbar_search_grid_element d-flex flex-column" key={idx}>
-                        <div className="txt_md nav_search_cat_title">{s.key}</div>
-                        {s.val.length > 0 && s.val.map((v, index)=>{
+                        <div className="txt_md nav_search_cat_title">{s.main_cat}</div>
+                        {s.sub_cats.length > 0 && s.sub_cats.map((v, index)=>{
                             return (
                             <div className="navbar_search_grid_element_unit txt_sm" key={`subsub_${index}`}>
                                 <a href={`/products/${v.toLocaleLowerCase()}`} 

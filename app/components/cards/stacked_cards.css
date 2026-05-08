@@ -44,7 +44,7 @@ height: 100%; position: absolute; right: 15px;
 
 /******************** TEXT *************************/
 .stacked_cards_text{
-     background-color: antiquewhite; border-radius: 14px;
+      border-radius: 14px;
 }
 
 @media(max-width:992px){.stacked_cards_main{

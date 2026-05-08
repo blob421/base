@@ -1,10 +1,8 @@
 
 "use client"
 type catNavbarProps = {
-    sections : category[], image?: string
+    sections : {main_cat: string, sub_cats: string[]}[], image?: string
 }
-
-import type { category } from "../0_required_base/types"
 
 import {useEffect, useState} from "react"
 
@@ -51,8 +49,8 @@ if (
                     style={{backgroundColor: hoveredId == idx ? 'skyblue': ""}}
                 
                     onClick={()=>{
-                    hoveredId == idx || sections[idx].val.length < 1 ? window.location.href=`/${idx == 0 ? ""
-                                                                     : s.key.toLocaleLowerCase()}`
+                    hoveredId == idx || sections[idx].sub_cats.length < 1 ? window.location.href=`/${idx == 0 ? ""
+                                                                     : s.main_cat.toLocaleLowerCase()}`
 
                                               : setHovered(`cat_${idx}`);
                                                setHoveredId(idx)
@@ -66,7 +64,7 @@ if (
 
                 >
 
-                      {s.key}
+                      {s.main_cat}
                         <div className={hovered == `cat_${idx}`? 'categories_frame_navbar category_visible' 
                                    : "categories_frame_navbar"} id={`cat_${idx}`}
                       
@@ -80,19 +78,19 @@ if (
 
         </div>
        
-         <div className={hovered && hoveredId !== undefined && sections[hoveredId].val.length > 0? "row d-flex justify-content-center submenu_nav_row submenu_nav_row_expanded"
+         <div className={hovered && hoveredId !== undefined && sections[hoveredId].sub_cats.length > 0? "row d-flex justify-content-center submenu_nav_row submenu_nav_row_expanded"
                                  : "row d-flex justify-content-center submenu_nav_row"}>
        
       
             <div className="grid_sub_category col-lg-6 col-10">
 
              
-               {(hoveredId !== undefined && hovered) && sections[hoveredId].val.map((sb, idx) => {
+               {(hoveredId !== undefined && hovered) && sections[hoveredId].sub_cats.map((sb, idx) => {
                 
                 return (
                 
                    <a className={"sub_category txt_md txt_sm"} key={`sub_${idx}`} 
-                   href={`/${sections[hoveredId].key.toLocaleLowerCase()}/${sb.toLocaleLowerCase()}`}>
+                   href={`/${sections[hoveredId].main_cat.toLocaleLowerCase()}/${sb.toLocaleLowerCase()}`}>
                                             {sb}
                     </a>
                   

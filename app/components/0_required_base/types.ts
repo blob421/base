@@ -26,13 +26,10 @@ export type ChoiceTextImageProps = {
 }
 
 ////////////////// CARDS ////////////////////////
+export type Cards = {
+    cards: {title:string, content:string}[]
+}
 
-export type text_center_stacked_props = {
-    cards:text_center_stacked_cards[]
-}
-export type text_center_stacked_cards = {
-    title?: string, content:string
-}
 export type category = {
     key:string , val:string[]
 }

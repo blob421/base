@@ -3,7 +3,7 @@
 import {useState, useEffect} from "react"
 
 type NavbarProps = {
-    sections: string[], style?: 'round' | 'fill', image: string, bg_color?: string,
+    sections: string[], style?: 'round' | 'fill', image: string | '/img.png', bg_color?: string,
     color?: string
 }
 

@@ -1,7 +1,7 @@
 "use client"
 
 type NavbarProps = {
-    pair_sections_with_img_path_middle: string[], bgColor?:string, color?: string , 
+    nav_sections: string[] | '/image.png'[], bgColor?:string, color?: string , 
     style?: "classic" | "modern",
     hamBgColor?:string, hamColor?: string
 
@@ -9,7 +9,7 @@ type NavbarProps = {
 
 import {useState, useEffect} from "react"
 
-export default function NavbarCentered({pair_sections_with_img_path_middle, bgColor, color, style, 
+export default function NavbarCentered({nav_sections, bgColor, color, style, 
     hamBgColor, hamColor}:NavbarProps){
 
    const [hamTriggered, setHamTriggered] = useState(false)
@@ -37,12 +37,12 @@ export default function NavbarCentered({pair_sections_with_img_path_middle, bgCo
              }}>
                 
                 
-               {pair_sections_with_img_path_middle.map((s, idx)=> {
+               {nav_sections.map((s, idx)=> {
                 return(
 
                     
                     <div key={idx} className="col-2 col-lg-1 txt_sm d-flex justify-content-center">
-                        {idx == (Math.floor(pair_sections_with_img_path_middle.length / 2))    ? 
+                        {idx == (Math.floor(nav_sections.length / 2))    ? 
                          <img src={s} className="nav2_logo" onClick={() => window.location.href = '/'}/>
                                                                      : 
                         <div className="nav2_text" style={{
@@ -75,9 +75,9 @@ export default function NavbarCentered({pair_sections_with_img_path_middle, bgCo
                                                                 :"hamburger_menu_initial txt_md"
           } style={{backgroundColor: 'rgba(0, 0, 0, 0)'}}>
           
-                   {pair_sections_with_img_path_middle && 
-                   pair_sections_with_img_path_middle.map((s, idx) => {
-                if (idx == (Math.floor(pair_sections_with_img_path_middle.length / 2))) return;
+                   {nav_sections && 
+                   nav_sections.map((s, idx) => {
+                if (idx == (Math.floor(nav_sections.length / 2))) return;
                 return (
             
             

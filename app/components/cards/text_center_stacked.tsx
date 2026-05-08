@@ -1,7 +1,11 @@
 import {useState} from "react"
 
-import type {text_center_stacked_props} from "../0_required_base/types"
-export default function Text_center_stacked({cards}:text_center_stacked_props){
+import type { Cards } from "../0_required_base/types"
+
+
+
+
+export default function Text_center_stacked({cards}:Cards){
     const [current_idx, setCurrentIdx] = useState(0)
     const [animationTriggered, setAnimationTriggered] = useState(false)
 
