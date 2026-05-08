@@ -3,7 +3,10 @@ import Stacked_cards from "../components/cards/stacked_cards"
 import Dropdown_text_img from "../components/text_and_image/dropdown_text_img"
 import Banner from "../components/banners/banner"
 import Slide_in_banner from "../components/banners/slide-in_info_banner"
+import Animated_Canvas from "../components/backgrounds/animated_canvas"
+
 export default function Products(){
+
 
   const options = [
     
@@ -30,7 +33,9 @@ export default function Products(){
    ]
   return (
     <>
-
+    <Animated_Canvas imgs_folder="/ball/" frames_length={135} file_substring="ballv5.mkv" 
+    file_extension="webp"/>
+    
     <Banner text="Always an amazing selection of products" bgColor="rgb(240, 248, 250)"
     height="small"/>
       <div className="row p-4 d-flex justify-content-center stacked_cards_row mb-3">

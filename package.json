@@ -11,7 +11,7 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "lodash": "^4.17.23",
-    "next": "16.1.6",
+    "next": "^16.2.5",
     "nodemailer": "^8.0.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
