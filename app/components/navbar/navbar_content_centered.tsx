@@ -31,7 +31,7 @@ export default function NavbarCentered({nav_sections, bgColor, color, style,
 
     return (
     <>
-        <div className="row navbar_2" 
+        <div className="navbar_2" 
              style={{backgroundColor: bgColor? bgColor : 'rgb(68, 68, 68)',
                     height: '14vh', color: color ? color : 'white'
                             
@@ -42,7 +42,7 @@ export default function NavbarCentered({nav_sections, bgColor, color, style,
                 return(
 
                     
-                    <div key={idx} className="col-2 col-lg-1 txt_sm d-flex justify-content-center">
+                    <div key={idx} className="nav_btn_centered txt_sm d-flex justify-content-center">
                         {idx == (Math.floor(nav_sections.length / 2))    ? 
                          <img src={s} className="nav2_logo" onClick={() => window.location.href = '/'}/>
                                                                      : 
@@ -61,7 +61,7 @@ export default function NavbarCentered({nav_sections, bgColor, color, style,
                 )
                })}
                
-                <div className="col-11 nav2_ham_icon d-flex justify-content-end">
+                <div className="col-2 nav2_ham_icon d-flex justify-content-end">
                     <img src={'./hamburger_menu_black.png'} className="nav2_ham_icon_image"
                     onClick={() => setHamTriggered(!hamTriggered)}/>
                 </div>

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 };
 
                    
-const navCentered = ['Banners', 'Cards', '/cart.png', 'Text', 'Contact']  
+const navCentered = ['Banners', 'Cards', "Carousel", '/cart.png', 'Text', 'Images', 'Forms']  
 
 export default function RootLayout({
   children,
