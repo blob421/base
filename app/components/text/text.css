@@ -1,6 +1,15 @@
 .text_block{
     line-height: 2em; border: 1px solid black; border-radius: 5px;
 }
+
+.slide_in_text{
+ right: 0vw !important;
+}
+
+.hidden_slide_in{
+    right: -100vw; width: 100vw; transition: right 2s ease; z-index: 1000000;
+    background-color: rgba(76, 0, 76, 0); height: 8vh; display: flex; align-items: center; justify-content: center;
+}
 @media(min-width:1500px){
     .text_block{
      border-radius: 19px;
