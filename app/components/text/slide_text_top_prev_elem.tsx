@@ -71,10 +71,10 @@ export default function SlideInText({text, fontSize, style, color}:SlideInText){
 
 
     return (
-        <div id='slide_in_text' className={slide ? ` mt-3 position-absolute hidden_slide_in slide_in_text 
+        <div id='slide_in_text' className={slide ? ` position-absolute hidden_slide_in slide_in_text 
                                                     ${fontSize? fontSize : 'txt_lg'}` 
                                                     
-                                                 : `mt-3 position-absolute hidden_slide_in 
+                                                 : `position-absolute hidden_slide_in 
                                                    ${fontSize? fontSize : 'txt_lg'}`}
 
             style={{color: color ? color: 'black',

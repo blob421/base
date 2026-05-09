@@ -3,18 +3,15 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import "./components/text/text.css"
-import "./components/text_and_image/dropdown_text_img.css"
 import "./components/forms/contact_form.css"
-import "./components/text_and_image/text_left_img_right.css"
+import "./components/text_and_image/text_img.css"
 import "./components/navbar/navbar.css"
 import "./components/carousel/carousel.css"
 import "./components/cards/stacked_cards.css"
 import "./components/0_required_base/base.css"
 import "./components/banners/banners.css"
-import "./components/text_and_image/image_contact_card.css"
-import "./components/text_and_image/text_image_float.css"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "./components/text_and_image/items_list_img.css"
+
 
 import BootstrapClient from "./components/0_required_base/bootstrap_js";
 import Navbar_Left from "./components/navbar/navbar_content_left";

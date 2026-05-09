@@ -1,0 +1,75 @@
+
+/*************************** Separated****************************/
+
+.text_left_img_right_main{
+    height: fit-content;
+}
+
+.text_left_img_right_text{
+    position: relative;
+   
+}
+.text_left_img_right_text_content{
+    padding-left: 2%;
+    border-radius: 8px; border: 1px solid black; min-height: 75%; position: relative;
+    padding: 10%;
+    padding-bottom:  max(5vw, 9vh); 
+}
+.text_left_img_right_text_content_inner{
+    height: 75%; 
+}
+.text_left_img_right_image{
+    height: 100%; border-radius: 6px; overflow: hidden; 
+}
+.text_left_img_right_textimg{
+  position: absolute; max-height: max(5vw, 7vh); right: 15px; bottom: 10;
+}
+.text_image_container{
+    display: flex; justify-content: end; height: 25%;
+}
+.text_bubbles{
+    position: absolute; right: 10; bottom: 0; height: 20%;
+}
+
+
+/*************************** txt img float****************************/
+
+
+.txt_img_float_main{
+    min-height: 40vh; border: 1px solid rgba(0, 0, 0, 0); 
+    background-color: rgba(245, 236, 223, 0);
+    
+}
+.txt_img_float{
+    max-height: 30vh; width: max(30%, 50vh); max-width: 50%; border: 2px solid black;
+    margin-bottom: 1vh; margin-top: 1.1vh;
+}
+
+/**************************** TABBED BANNER *****************************/
+
+
+.dropdown_text_img_main{
+    background-color: antiquewhite; 
+}
+.dropdown_text_img_image{
+     background-color: antiquewhite; 
+    
+}
+.dropdown_text_img_text{
+    background-color: antiquewhite;
+}
+
+.dropdown_text_img_option{
+ border: 2px solid black; height: 6vh; border-radius: 6px; display: flex;
+ justify-content: center; align-items: center; cursor: pointer;
+ width: 50%; max-width: 13em;
+}
+.dropdown_text_img_option:hover{
+ background-color: rgba(132, 102, 62, 0.269);
+}
+
+@media(max-width:992px){
+    .dropdown_text_img_image{
+       
+    }
+}
