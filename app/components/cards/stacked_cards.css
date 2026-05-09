@@ -2,8 +2,8 @@
    height: 70vh; position: relative; max-width: 75vw !important; 
 }
 .card_top{
-    border: 1px solid black; height: 100%; border-radius: 7%; width: 90%;
-    background-color: rgb(255, 255, 255); position: absolute; left: 50%; top: 50%;
+   height: 100%; border-radius: 7%; width: 90%;
+     position: absolute; left: 50%; top: 50%;
     transform: translate(-50%,-50%); z-index: 1000; 
 
     opacity: 1;
@@ -11,14 +11,14 @@
 }
 
 .card_middle{
-     border: 1px solid black; height: 100%; border-radius: 7%; width: 90%;
-    background-color: #f1f9fe; position: absolute;
+     height: 100%; border-radius: 7%; width: 90%;
+     position: absolute;
     left: 50%; top: 50%;transform: translate(-46%,-47%);
     transition: transform 1s ease, color 0.4s ease;
 }
 /*********************** Cards content ************************/
 .title_card{
-  border-bottom: 1px solid black;  height: 15%;
+   height: 15%;
   display: flex; justify-content: center; align-items: center;
 }
 .stacked_cards_main_content{
@@ -39,7 +39,7 @@ height: 100%; position: absolute; right: 15px;
     opacity: 0 !important;
 }
 .flipped_middle{
-    background-color: aliceblue !important;  transform: translate(-50%,-50%) !important;
+      transform: translate(-50%,-50%) !important;
 }
 
 /******************** TEXT *************************/
@@ -54,18 +54,19 @@ height: 100%; position: absolute; right: 15px;
 
 /*********************** Text center stacked ****************************/
 .text_center_stacked_container{
-    min-height: 45vh; display: flex; border: 1px solid rgba(0, 0, 255, 0); position: relative;
+    min-height: 65vh; display: flex; border: 1px solid rgba(0, 0, 255, 0); position: relative;
+   
 }
 .text_center_stacked_card_top{
-     width: 93%; height: 95%; border: 1px solid black; border-radius: 5px;
-    padding: 9%; background-color: aliceblue; z-index: 1000;
+     width: 93%; height: 95%;  border-radius: 5px;
+    padding: 9%; z-index: 1000;
     opacity: 100; transition: opacity ease 0.7s; padding-top: 5.5vh;
     display: flex; flex-direction: column; gap: 2vh;
 
 }
 .text_center_stacked_card_bot{
-     width: 89%; height: 95%; border: 1px solid black; border-radius: 5px;
-    padding: 9%; position: absolute; bottom: 0; right: 0; background-color: grey;
+     width: 89%; height: 95%;  border-radius: 5px;
+    padding: 9%; position: absolute; bottom: 0; right: 0; 
 }
 .text_center_stacked_arrows{
     height: min(12%, 12vw); aspect-ratio: 1/1;
@@ -85,7 +86,7 @@ height: 100%; position: absolute; right: 15px;
 
 }
 .text_tabs_main{
-  min-height: 45vh; display: flex; border: 1px solid rgba(0, 0, 255, 0); position: relative;
+  min-height: 60vh; display: flex; border: 1px solid rgba(0, 0, 255, 0); position: relative;
   border: 1px solid rgba(255, 0, 0, 0); justify-content: flex-end;
   width: 100%;
 
@@ -94,22 +95,25 @@ height: 100%; position: absolute; right: 15px;
      width: 90%; background-color: aliceblue;  z-index: 1000; height: 97%;
     margin-right: 9%;
    display: flex; flex-direction: column; gap: 2vh;
-    border: 1px solid black; border-radius: 5px; padding: 9%;  padding-top: 5.5vh;
+     border-radius: 5px; padding: 9%;  padding-top: 5.5vh;
 }
 .text_tabs_card_bot{
     position: absolute; right: 0; bottom:0; background-color: grey; height: 90%; width: 100%;
     display: flex; flex-direction: column; align-items: end; 
-     border: 1px solid black; border-radius: 5px; padding-top: 2vh;
+      border-radius: 5px; padding-top: 2vh;
     
 }
 .text_tabs_tabs{
     height: 5vh; width: 11%; border-radius: 6px; transition: height 1s ease;
     display: flex; justify-content: center; align-items: center;
-    border: 1px solid black;
+    border: 1px solid rgb(90, 90, 90); margin-top: -5px;border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
 }
 .text_tabs_big_tab{
     height: 8vh; width: 11%; border-radius: 6px;transition: height 1s ease;
       display: flex; justify-content: center; align-items: center; border: 1px solid black;
+      margin-top: -5px; border-top: 1.5px solid black; 
+      border-bottom: 1.5px solid black; margin-bottom: 1px;
 }
 
 @media(min-width:1500px){

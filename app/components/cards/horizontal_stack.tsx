@@ -1,11 +1,12 @@
 import {useState} from "react"
 
-import type { Cards } from "../0_required_base/types"
+
+type HorizontalStack = {
+  cards: {title:string, content:string}[], bgColor?:string, bgColor2?:string, color?:string 
+}
 
 
-
-
-export default function Text_center_stacked({cards}:Cards){
+export default function Text_center_stacked({cards, bgColor, bgColor2, color}:HorizontalStack){
     const [current_idx, setCurrentIdx] = useState(0)
     const [animationTriggered, setAnimationTriggered] = useState(false)
 
@@ -29,16 +30,24 @@ export default function Text_center_stacked({cards}:Cards){
         <div className="row d-flex justify-content-center text_center_stacked_row">
              
               <div className="col-11 col-lg-6 text_center_stacked_container">
+
                    <div className={!animationTriggered ? "text_center_stacked_card_top"
-                                                       : "text_center_stacked_card_top invisible_card"
-                   }>
+                                                       : "text_center_stacked_card_top invisible_card"}
+                        style={{backgroundColor: bgColor? bgColor : 'aliceblue' ,
+                                border: color? `1px solid ${color}` : '1px solid black',
+                                color: color? color : 'black'
+                        }}
+                   >
                     <h1 className="txt_xl">{cards[current_idx].title && cards[current_idx].title}</h1>
                     <div className="txt_sm">
  {cards[current_idx].content}
                     </div>
                    
                    </div>
-                    <div className="text_center_stacked_card_bot">
+                    <div className="text_center_stacked_card_bot" 
+                         style={{backgroundColor: bgColor2? bgColor2: 'grey',
+                                 border: color? `1px solid ${color}` : '1px solid black',
+                          }}>
                     
                    </div>
 

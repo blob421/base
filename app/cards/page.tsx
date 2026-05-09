@@ -1,15 +1,16 @@
 
 "use client"
 
-import Stacked_cards from "../components/cards/stacked_cards"
+import Stacked_cards from "../components/cards/vertical_stack"
 import Text1 from "../components/text/rounded_edges"
-import Text2 from "../components/cards/text_center_stacked"
-
+import Text2 from "../components/cards/horizontal_stack"
+import Text_tabs from "../components/cards/tabbed_cards"
 
 const slides = [
 
         {title: "This is the first slide" , content: "First slide content"},
         {title: "This is the second slide" , content: "Second slide content"},
+        {title: "This is the 3 slide" , content: "3 slide content"},
 
      ]
 
@@ -32,11 +33,19 @@ export default function Cards(){
     return (
     <>
         <div className="row d-flex justify-content-center mt-4">
-            <Stacked_cards cards={slides}/>
+            <Stacked_cards cards={slides} color="white" bgColor="grey" bgColor2="black"/>
             <Text1 text={text}/>
         </div>
 
-        <Text2 cards={slides}/>
+        <Text2 cards={slides} bgColor='rgb(0,0,0)' color="white" bgColor2='lightgrey'/>
+        <div style={{height:'5vh'}}></div>
+        <Text_tabs cards={slides} bgColor="rgb(255, 255, 255)" 
+                                  bgColor2="rgb(199, 199, 199)"
+                                  color="rgb(55, 50, 44)"
+                                  tabs={[{text: '1', color: 'white'}, 
+                                    {text: '2', color: 'rgb(144, 144, 144)'}, 
+                                    {text: '3', color: 'lightgrey'}]}
+                                  />
       </> 
     )
 }

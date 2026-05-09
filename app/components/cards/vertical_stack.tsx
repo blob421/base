@@ -1,9 +1,11 @@
 import {useState, useEffect} from "react"
 import type { Cards } from "../0_required_base/types"
 
+type VerticalStack = {
+  cards: {title:string, content:string}[], bgColor?:string, bgColor2?:string, color?:string 
+}
 
-
-export default function Stacked_cards({cards}:Cards){
+export default function Stacked_cards({cards, bgColor, bgColor2, color}:VerticalStack){
     
     const [currentSlide, setCurrentSlide] = useState(0)
     const [slideChanged, toggleSlideChanged] = useState(false)
@@ -41,15 +43,23 @@ useEffect(() => {
       <>
         <div className="col-lg-4 col-xxl-5 stacked_cards_main mb-4">
 
-           <div className={slideChanged ? "card_top fadout_card ": "card_top"}>
+           <div className={slideChanged ? "card_top fadout_card ": "card_top"}
+                style={{backgroundColor: bgColor? bgColor: 'white',
+                          color: color? color: 'black',
+                          border: color? `1px solid ${color}` : '1px solid black'
+                  }}
+           >
 
-                <div className="title_card txt_lg">
+                <div className="title_card txt_lg"
+                style={{borderBottom: color? `1px solid ${color}`: '1px solid black'}}>
                     {!slideChanged && cards[currentSlide].title}
                 </div>
-                <div className="stacked_cards_main_content txt_md">
+                <div className="stacked_cards_main_content txt_md"
+               >
                     {!slideChanged && cards[currentSlide].content}
                 </div>
-                <div className="arrows_stacked_cards">
+                <div className="arrows_stacked_cards"
+                 style={{borderTop: color? `1px solid ${color}`: '1px solid black'}}>
 
                      <img src={"/left_arrow.png"} className="arrow_left_cards" 
                      onClick={() => arrowHandler('left')}/>
@@ -59,14 +69,20 @@ useEffect(() => {
 
            </div>
 
-           <div className={slideChanged ? "card_middle flipped_middle": "card_middle"}>
-                    <div className="title_card txt_lg">
+           <div className={slideChanged ? "card_middle flipped_middle": "card_middle"}
+            style={{backgroundColor: bgColor2? bgColor2: '#f1f9fe',
+                    color: color? color: 'black',
+                    border: color? `1px solid ${color}` : '1px solid black'
+            }}>
+                    <div className="title_card txt_lg"
+                     style={{borderBottom: color? `1px solid ${color}`: '1px solid black'}}>
                            {slideChanged && cards[currentSlide].title}
                     </div>
                       <div className="stacked_cards_main_content txt_md">
                     {slideChanged && cards[currentSlide].content}
                 </div>
-                <div className="arrows_stacked_cards">
+                <div className="arrows_stacked_cards"
+                style={{borderTop: color? `1px solid ${color}`: '1px solid black'}}>
 
                   
                 </div>
