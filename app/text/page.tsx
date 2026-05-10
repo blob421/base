@@ -22,8 +22,8 @@ export default function Text(){
       <Dropdown_text_img options={[{img: '/img0.png', txt: text_sample, name: 'test'}]}/>
 
         <div style={{backgroundColor: 'black', height: '18vh'}}></div>
-         <SlideInText text="Woow I am sliding ...." color="white"/>
-        <TextImageBanner text={text_sample} image="/img0.png" imgPosition="left"/>
+         <SlideInText text="Woow I am sliding at the top of this div...." color="white"/>
+        <TextImageBanner text={text_sample} image="/img0.png" imgPosition="left" imgMargin={false}/>
        
         <div style={{height: '90vh'}}></div>
       
