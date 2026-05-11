@@ -5,7 +5,8 @@ import Text_left_img_right from "../components/text_and_image/separated"
 import TextImageBanner from "../components/text_and_image/banner"
 import { sample } from "lodash"
 import Text_centered from "../components/text/text_block_center"
-
+import Star from "../components/shapes/svg/star"
+import Stardiv from "../components/shapes/divs/star"
 import Spacer from "../components/spacer"
 
 const text_sample = `"Lorem ipsum" is the standard dummy text used in printing and design to fill spaces 
@@ -34,7 +35,8 @@ export default function Text(){
           <Spacer h={4}/>
         <Text_centered text={text_sample + text_sample} bgColor="antiquewhite"/>
             <Spacer h={4}/>
-
+           <Star/>
+           <Stardiv/>
         </>
     )
 }

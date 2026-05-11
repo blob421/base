@@ -11,7 +11,8 @@ import "./components/cards/stacked_cards.css"
 import "./components/0_required_base/base.css"
 import "./components/banners/banners.css"
 import "bootstrap/dist/css/bootstrap.min.css"
-
+import "./components/shapes/divs/shaped_divs.css"
+import "./components/images/images.css"
 
 import BootstrapClient from "./components/0_required_base/bootstrap_js";
 import Navbar_Left from "./components/navbar/navbar_content_left";
