@@ -1,8 +1,11 @@
 
-
+.round_img_container_big{
+height: 90% !important;
+ transform: translateY(calc(8vh * var(--mosaic-scroll-factor))) !important;
+}
 .round_img_container_med{
-height: 40% !important;
- transform: translateY(calc(13vh * var(--mosaic-scroll-factor))) !important;
+height: 40% !important; 
+ transform: translateY(calc(2vh * var(--mosaic-scroll-factor))) !important;
 }
 
 
@@ -12,7 +15,7 @@ height: 50% !important;  transform: translateY(calc(-9vh * var(--mosaic-scroll-f
 
 
 .round_img_container{
- border: 4px solid black; border-radius: 50%; aspect-ratio: 1/1;
+ border: 3px solid black;  aspect-ratio: 1/1;
  overflow: hidden; display: flex; justify-content: center; align-items: center; transition: transform 2s ;
  height: 70%; position: relative; transform: translateY(calc(3vh * var(--mosaic-scroll-factor)))
 
@@ -29,8 +32,8 @@ height: 50% !important;  transform: translateY(calc(-9vh * var(--mosaic-scroll-f
 .img_mosaic_row {
   
   display: flex; justify-content: center; align-items: center;
-  gap: 1%;
+  gap: 1%; transform: calc(var(--mosaic-scroll-factor) * 1.5% ); transition: gap 2s ease;
  
-  height: 25vh;
+  height: 35vh; 
 
 }

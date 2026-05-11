@@ -10,7 +10,7 @@ const mosaic_images = ['avatar.png',
        
            <Big_image image="/img0.png"/>
            <Spacer h={13}/>
-           <ImageMosaic images={mosaic_images}/>
+           <ImageMosaic images={mosaic_images} size="big" style="square"/>
            <Spacer h={53}/>
         </>
     )

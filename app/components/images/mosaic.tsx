@@ -3,10 +3,10 @@
 
 import { useEffect, useState, useRef } from "react"
 type ImageMosaic = {
-    images: string[]
+    images: string[], style?: 'round' | 'square', size?: 'big' | 'small'
 }
 
-export default function ImageMosaic({images}:ImageMosaic){
+export default function ImageMosaic({images, style, size}:ImageMosaic){
 
     const scroll_factor = useRef(0.0)
     const mosaic_row = useRef<HTMLElement | null>(null)
@@ -59,16 +59,17 @@ export default function ImageMosaic({images}:ImageMosaic){
 
     return(
         <>
-        <div className="img_mosaic_row">
+        <div className="img_mosaic_row" style={{height: size == 'big'? '35vh' : '25vh'}}>
              {images && images.map((i, idx) => {
                 return (
                      
                     <div key={idx} className={   idx == 0 ? 'round_img_container_smaller round_img_container':
+                                                 idx == 1 ? 'round_img_container_big round_img_container':
                                                 (idx + 1 ) % 3 == 0 ? 'round_img_container_med round_img_container':
                                                 (idx + 1 ) % 4 == 0? 'round_img_container_smaller round_img_container':
                                                 'round_img_container'}
 
-                                               >
+                                   style={{borderRadius: style == 'round'? '50%' : '1%'}}>
                        
                         <img src={i} className={ idx == 0 ? 'slightly_displaced':
                                                 (idx + 1 ) % 3 == 0? 'even_more_displaced':
