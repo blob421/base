@@ -5,7 +5,8 @@ import Text_left_img_right from "../components/text_and_image/separated"
 import TextImageBanner from "../components/text_and_image/banner"
 import { sample } from "lodash"
 import Text_centered from "../components/text/text_block_center"
-import TextBlocks from "../components/cards/option_blocks"
+import Star from "../components/shapes/svg/star"
+import Stardiv from "../components/shapes/divs/star"
 import Spacer from "../components/spacer"
 
 const text_sample = `"Lorem ipsum" is the standard dummy text used in printing and design to fill spaces 
@@ -33,19 +34,9 @@ export default function Text(){
 
           <Spacer h={4}/>
         <Text_centered text={text_sample + text_sample} bgColor="antiquewhite"/>
-            <Spacer h={7}/>
-
-            <TextBlocks color="black" blocks={[{title: 'Option A', 
-            content: text_sample},
-                {title: 'This is a test', content: text_sample}, 
-                {title: 'This is a test', content: 'again'},
-                {title: 'This is a test', content: 'again'}]} bgColor="antiquewhite"
-                footers={[{button:false, text: '* This is the best option in this case'}, 
-                           {button:true, text: 'explore'}
-                          ,{button:true, text: 'explore'},{button:true, text: 'explore'}
-                ]}
-                selectionColor="rgba(35, 96, 158, 0.72)"/>
-
+            <Spacer h={4}/>
+           <Star/>
+           <Stardiv/>
         </>
     )
 }

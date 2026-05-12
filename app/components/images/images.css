@@ -1,0 +1,39 @@
+
+.round_img_container_big{
+height: 90% !important;
+ transform: translateY(calc(8vh * var(--mosaic-scroll-factor))) !important;
+}
+.round_img_container_med{
+height: 40% !important; 
+ transform: translateY(calc(2vh * var(--mosaic-scroll-factor))) !important;
+}
+
+
+.round_img_container_smaller{
+height: 50% !important;  transform: translateY(calc(-9vh * var(--mosaic-scroll-factor))) !important;
+}
+
+
+.round_img_container{
+ border: 3px solid black;  aspect-ratio: 1/1;
+ overflow: hidden; display: flex; justify-content: center; align-items: center; transition: transform 2s ;
+ height: 70%; position: relative; transform: translateY(calc(3vh * var(--mosaic-scroll-factor)))
+
+}
+.even_more_displaced{
+ height: 100%; width: 100%; aspect-ratio: 1/1;
+}
+.more_displaced{
+ height: 100%; width: 100%; aspect-ratio: 1/1;
+}
+.slightly_displaced{
+ height: 100%; width: 100%; aspect-ratio: 1/1;
+}
+.img_mosaic_row {
+  
+  display: flex; justify-content: center; align-items: center;
+  gap: 1%; transform: calc(var(--mosaic-scroll-factor) * 1.5% ); transition: gap 2s ease;
+ 
+  height: 35vh; 
+
+}
