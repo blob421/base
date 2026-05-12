@@ -5,7 +5,7 @@ import Stacked_cards from "../components/cards/vertical_stack"
 import Text1 from "../components/text/rounded_edges"
 import Text2 from "../components/cards/horizontal_stack"
 import Text_tabs from "../components/cards/tabbed_cards"
-
+import TextBlocks from "../components/cards/option_blocks"
 const slides = [
 
         {title: "This is the first slide" , content: "First slide content"},
@@ -13,6 +13,10 @@ const slides = [
         {title: "This is the 3 slide" , content: "3 slide content"},
 
      ]
+const text_sample = `"Lorem ipsum" is the standard dummy text used in printing and design to fill spaces 
+in layouts to focus on visual design rather than content. It is a scrambled version of Latin from 
+Cicero, used since the 14th century, or can be generated in tools like Word using =rand().`
+
 
 const text = `Weather river cloud animal star? Window plate phone, apple fruit spoon watch 
 heavy dream understand. Phone sun star watch field. Small water sand love notebook? Animal old 
@@ -46,6 +50,18 @@ export default function Cards(){
                                     {text: '2', color: 'rgb(144, 144, 144)'}, 
                                     {text: '3', color: 'lightgrey'}]}
                                   />
+
+
+          <TextBlocks color="black" blocks={[{title: 'Option A', 
+            content: text_sample},
+                {title: 'This is a test', content: text_sample}, 
+                {title: 'This is a test', content: 'again'},
+                {title: 'This is a test', content: 'again'}]} bgColor="antiquewhite"
+                footers={[{button:false, text: '* This is the best option in this case'}, 
+                           {button:true, text: 'explore'}
+                          ,{button:true, text: 'explore'},{button:true, text: 'explore'}
+                ]}
+                selectionColor="rgba(35, 96, 158, 0.72)"/>
       </> 
     )
 }
