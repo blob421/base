@@ -136,3 +136,29 @@ height: 100%; position: absolute; right: 15px;
     border-radius: 19px;
 }
 }
+
+/************************** Option BLOCKS **********************************/
+
+.text_blocks{
+    border-radius: 16px; overflow: hidden; min-height: 55vh; display: flex; flex-direction: column;
+}
+
+.blocks_title{
+  display: flex; justify-content: start; align-items: center;
+
+   width: 100%;  height: 22%; 
+}
+.blocks_content{
+ height: 60%; line-height: 1.7; display: flex; align-items: top;
+}
+.blocks_footer {
+    padding-top: 3vh; padding-bottom: 3vh; height: 20%; justify-content: end;
+    display: flex; justify-content: end;  width: 100%; align-items: center;
+
+}
+.blocks_footer_btn {
+    border-radius: 5px; padding: 1%; display: flex; align-items: center; margin-right: max(1.5vw, 3vh);
+}
+.blocks_footer_text_only{
+   margin-right: max(3.5vw, 5vh);
+}
