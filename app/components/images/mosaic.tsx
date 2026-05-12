@@ -4,9 +4,10 @@
 import { useEffect, useState, useRef } from "react"
 type ImageMosaic = {
     images: string[], style?: 'round' | 'square', size?: 'big' | 'small'
+    imageRatio?: '1/1' | '16/9'
 }
 
-export default function ImageMosaic({images, style, size}:ImageMosaic){
+export default function ImageMosaic({images, style, size, imageRatio}:ImageMosaic){
 
     const scroll_factor = useRef(0.0)
     const mosaic_row = useRef<HTMLElement | null>(null)
@@ -59,17 +60,30 @@ export default function ImageMosaic({images, style, size}:ImageMosaic){
 
     return(
         <>
-        <div className="img_mosaic_row" style={{height: size == 'big'? '35vh' : '25vh'}}>
+        <div className="img_mosaic_row ms-3 me-3" 
+                        >
              {images && images.map((i, idx) => {
                 return (
                      
-                    <div key={idx} className={   idx == 0 ? 'round_img_container_smaller round_img_container':
-                                                 idx == 1 ? 'round_img_container_big round_img_container':
-                                                (idx + 1 ) % 3 == 0 ? 'round_img_container_med round_img_container':
-                                                (idx + 1 ) % 4 == 0? 'round_img_container_smaller round_img_container':
-                                                'round_img_container'}
+                    <div key={idx} className={   idx == 0 ? `
+                                                            round_img_container_smaller`:
+                                                 idx == 1 ? `
+                                                             round_img_container_big`:
+                                                 idx == 2 ? 
+                                                            `
+                                                            round_img_container_med`:
+                                                 
+                                                           
+                                               
+                                                'col-lg-2 col-6 p-0 round_img_container'}
 
-                                   style={{borderRadius: style == 'round'? '50%' : '1%'}}>
+                                   style={{borderRadius: style == 'round'? '50%' : '1%',
+                                           aspectRatio: imageRatio? imageRatio : '1/1',
+                                           border:  '2px solid black',
+                                           position: "absolute",
+                                           transition: 'transform 2s',
+                                           overflow: 'hidden'
+                                   }}>
                        
                         <img src={i} className={ idx == 0 ? 'slightly_displaced':
                                                 (idx + 1 ) % 3 == 0? 'even_more_displaced':

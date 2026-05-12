@@ -1,39 +1,47 @@
 
 .round_img_container_big{
-height: 90% !important;
- transform: translateY(calc(8vh * var(--mosaic-scroll-factor))) !important;
+max-width: max(40vw, 30vh); left: 0; top: 0;
+ border: 3px solid black;  
+ transform: translateY(calc(min(-3vh, -3vw) * var(--mosaic-scroll-factor)));
 }
 .round_img_container_med{
-height: 40% !important; 
- transform: translateY(calc(2vh * var(--mosaic-scroll-factor))) !important;
+max-width: max(30vw, 20vh) ;
+border: 3px solid black; 
+ transform: translateY(calc(min(5vh, 5vw) * var(--mosaic-scroll-factor))); bottom: 30%;
+ margin-left: max(30vw, 25vh); z-index: 1000;
 }
 
 
 .round_img_container_smaller{
-height: 50% !important;  transform: translateY(calc(-9vh * var(--mosaic-scroll-factor))) !important;
+max-width: max(20vw, 10vh); 
+transform: translateY(calc(min(-13vh, -13vw) * var(--mosaic-scroll-factor))) ;
+ top: 40%; right: 0; z-index: 1000;
 }
 
 
 .round_img_container{
- border: 3px solid black;  aspect-ratio: 1/1;
- overflow: hidden; display: flex; justify-content: center; align-items: center; transition: transform 2s ;
- height: 70%; position: relative; transform: translateY(calc(3vh * var(--mosaic-scroll-factor)))
+ border: 3px solid black; 
+ overflow: hidden; max-width: max(25vw, 15vh);right: 0; margin-right: max(18vh, 18vw);
+
+
+ transform: translateY(calc(min(2vh, 2vw) * var(--mosaic-scroll-factor)))
 
 }
 .even_more_displaced{
- height: 100%; width: 100%; aspect-ratio: 1/1;
+ height: 100%; width: 100%;
 }
 .more_displaced{
- height: 100%; width: 100%; aspect-ratio: 1/1;
+ height: 100%; width: 100%; 
 }
 .slightly_displaced{
- height: 100%; width: 100%; aspect-ratio: 1/1;
+ height: 100%; width: 100%;
 }
 .img_mosaic_row {
   
-  display: flex; justify-content: center; align-items: center;
-  gap: 1%; transform: calc(var(--mosaic-scroll-factor) * 1.5% ); transition: gap 2s ease;
  
-  height: 35vh; 
+
+   position: relative; 
+  height: max(60vh, 60vw)  
 
 }
+
