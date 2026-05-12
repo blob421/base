@@ -2,15 +2,15 @@
 
 type NavbarProps = {
     nav_sections: string[] | '/image.png'[] | 'image must be in the middle of floor(len/2)'[], 
-    bgColor?:string, color?: string , 
+    bgColor?:string, color?: string , hamStyle?: 'side' | 'drop',
     style?: "classic" | "modern",
     hamBgColor?:string, hamColor?: string
 
 }
-
+import SideHamMenu from "./menus/side_ham_menu"
 import {useState, useEffect} from "react"
 
-export default function NavbarCentered({nav_sections, bgColor, color, style, 
+export default function NavbarCentered({nav_sections, bgColor, color, style, hamStyle,
     hamBgColor, hamColor}:NavbarProps){
 
    const [hamTriggered, setHamTriggered] = useState(false)
@@ -67,8 +67,9 @@ export default function NavbarCentered({nav_sections, bgColor, color, style,
                 </div>
 
         </div>
+                  
+        {hamTriggered && hamStyle == 'drop' ? 
 
-                {hamTriggered && 
          <div className={hamEnlarging && style == 'modern' ? 
          "hamburger_menu_expanded_modern hamburger_menu_initial txt_md": 
          style == 'classic' && hamEnlarging ? 
@@ -95,7 +96,17 @@ export default function NavbarCentered({nav_sections, bgColor, color, style,
                })}
              
           </div>
+
+       
+          : ""
+
            }
+            {hamStyle == 'side' && 
+
+                 <SideHamMenu categories={nav_sections.filter(n => !n.includes('.png'))} 
+                                setTriggered={(bool) => setHamTriggered(bool)}
+                                triggered={hamTriggered}/>
+                       }
   </>
     )
 }

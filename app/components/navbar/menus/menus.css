@@ -1,0 +1,25 @@
+.side_ham_menu_main{
+    position: fixed; height: 100vh; width: 60vw; background-color: rgba(17, 17, 17, 0.97);
+    right: -100vw; transition: right 2s ease; top: 0; z-index: 10000000; color: white;
+    border: 2px solid rgb(84, 84, 84);
+    display: flex; flex-direction: column; align-items: center;
+}
+
+.side_ham_menu_show {
+    right: 0 !important;
+}
+.title_div_side_ham{
+    display: flex; justify-content: center; height: 14vh; align-items: center;
+    width: 100%; margin-bottom: 4vh; width: 90%; border-bottom: 1px solid grey;
+}
+.logo_cont_side_ham{
+    margin-bottom: 2vh; display: flex; justify-content: end; margin-right: 2vw; margin-top: 1vh;
+    position: absolute; bottom: 0; right: 0;
+}
+.logo_side_ham{
+    width: 30%; aspect-ratio: 1/1;
+}
+.cat_side_ham{
+   display: flex; justify-content: center;
+    padding-bottom: 2vh; padding-top: 2vh; margin-bottom: 1vh; width: 75%;
+}

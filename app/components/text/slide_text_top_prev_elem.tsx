@@ -17,7 +17,8 @@ export default function SlideInText({text, fontSize, style, color}:SlideInText){
     useEffect(()=>{
 
         
-        const this_element = document.getElementById('slide_in_text') as HTMLElement
+        const this_element = document.getElementById('slide_in_wrapper') as HTMLElement
+      
         if (this_element){
             const sibling = this_element.previousElementSibling as HTMLElement
 
@@ -59,9 +60,9 @@ export default function SlideInText({text, fontSize, style, color}:SlideInText){
 
 
         }
-        document.addEventListener('scroll', handleScroll)
-
-        return () => {document.removeEventListener('scroll', handleScroll) ;
+        window.addEventListener('scroll', handleScroll)
+       
+        return () => {window.removeEventListener('scroll', handleScroll) ;
                        if (timeout_ref.current)
             
                          window.clearTimeout(timeout_ref.current)}
@@ -71,7 +72,8 @@ export default function SlideInText({text, fontSize, style, color}:SlideInText){
 
 
     return (
-        <div id='slide_in_text' className={slide ? ` position-absolute hidden_slide_in slide_in_text 
+       <div id="slide_in_wrapper">
+        <div id='slide_in_text' className={slide ? ` p-4 position-absolute hidden_slide_in slide_in_text 
                                                     ${fontSize? fontSize : 'txt_lg'}` 
                                                     
                                                  : `position-absolute hidden_slide_in 
@@ -85,5 +87,7 @@ export default function SlideInText({text, fontSize, style, color}:SlideInText){
             
             {text}
         </div>
+        </div>
+    
     )
 }

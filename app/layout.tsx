@@ -13,6 +13,7 @@ import "./components/banners/banners.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./components/shapes/divs/shaped_divs.css"
 import "./components/images/images.css"
+import './components/navbar/menus/menus.css'
 
 import BootstrapClient from "./components/0_required_base/bootstrap_js";
 import Navbar_Left from "./components/navbar/navbar_content_left";
@@ -49,7 +50,7 @@ export default function RootLayout({
        <BootstrapClient/>
         <div className="container-fluid p-0">
           
-            <NavbarCentered nav_sections={navCentered} 
+            <NavbarCentered nav_sections={navCentered} hamStyle="side"
      
              style="modern"/>
      
