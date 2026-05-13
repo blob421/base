@@ -17,35 +17,35 @@
 /***************************** ARC **************************/
 
 .car_arc_row{
-    display: flex; max-height: 60vh; 
-    width: 100vw; justify-content: center;
+    min-height: 69vh;
+   
 }
 .car_arc_cont_0{
-  width: 16vw; z-index: 1000;left: 25vw;
-    border: 1px solid green; max-height: 100%; 
-    transition: left 2s ease, width 2s ease;
+  width: 25%; z-index: 1000;left: 3%;margin-top: 5% ;
+    max-height: 100%; 
+    transition: left 2s ease, width 2s ease, margin-top 2s ease;
 }
 .car_arc_cont_1{
- width: 18vw; left: 33vw; z-index: 2000;
+ width: 34%; left: 12%; z-index: 2000; margin-top: 3%;
  
   
-  transition: left 2s ease, width 2s ease;
+  transition: left 2s ease, width 2s ease,  margin-top 2s ease;
 }
 .car_arc_cont_2{
-  width: 20vw; border: 2px solid black;   left: 40vw; position: absolute;
- border: 1px solid red; max-height: 100%; z-index: 3000;
-  transition: left 2s ease, width 2s ease;
+  width: 40%; left: 30%; position: absolute;
+  max-height: 100%; z-index: 3000; margin-top: 0%;
+  transition: left 2s ease, width 2s ease, margin-top 2s ease;
 }
 .car_arc_cont_3{
- width: 18vw;
-   z-index: 2000; left: 55vw;
+ width: 34%;
+   z-index: 2000; left: 55%;margin-top: 3%;
   
-  transition: left 2s ease, width 2s ease;
+  transition: left 2s ease, width 2s ease, margin-top 2s ease;
 }
 .car_arc_cont_4{
-  width: 16vw; z-index: 1000; 
-    border: 1px solid green; max-height: 100%; left: 60vw;
-    transition: left 2s ease, width 2s ease;
+  width: 25%; z-index: 1000; margin-top: 5% ;
+  max-height: 100%; left: 72%;
+    transition: left 2s ease, width 2s ease, margin-top 2s ease;
 }
 
 
@@ -53,42 +53,44 @@
 
 
 .arc_img{
-    width: 100%;  max-height: 100%;
+    width: 100%;  max-height: 100%; border: 3px solid black;
 }
 
 /******* transitions *************/
 
 .left_to_right_t{
-  left: 60vw !important; z-index: 1000 !important; width: 16vw !important;
+  left: 72% !important; width: 25% !important; z-index: 999 !important; margin-top: 5% !important;
 }
 .t_0_1{
-   z-index: 2000 !important; left: 33vw !important; width: 18vw !important;
-}
 
+  left: 12% !important; width: 34% !important; z-index: 2000 !important; margin-top: 3% !important;
+}
 .t_1_0{
- left: 25vw !important; z-index: 1000 !important; width: 16vw !important;
+    
+  left: 3%!important;   width: 25% !important; z-index: 1000 !important; margin-top: 5% !important;
 } 
 .t_1_2{
-  z-index: 3000 !important; left: 40vw !important; width: 20vw !important;
+  left: 30% !important; width: 40% !important; z-index: 3000 !important; margin-top: 0% !important;
 }
 
 .t_2_1{
- left: 33vw !important; width: 18vw !important; z-index: 2000 !important;
+
+  left: 12% !important; width: 34% !important; z-index: 2000 !important; margin-top: 3% !important;
 }
 .t_2_3 {
- left: 55vw !important; z-index: 2000 !important; width: 18vw !important;
+  left: 55% !important; width: 34% !important; z-index: 2000 !important; margin-top: 3% !important; 
 }
 
 .t_3_2{
- left: 40vw !important; width: 20vw !important; z-index: 3000 !important;
+  left: 30% !important; width: 40% !important; z-index: 3000 !important; margin-top: 0% !important;
 }
 .t_3_4{
- z-index: 1000 !important; width: 16vw; left: 60vw !important;
+  left: 72% !important; width: 25% !important;  z-index: 1000 !important; margin-top: 5% !important;
 }
 .t_4_3{
-  left: 55vw !important; width: 18vw !important; z-index: 2000 !important;
+  left: 55% !important; width: 34% !important; z-index: 2000 !important; margin-top: 3% !important;
 }
 
 .right_to_left_t{
-  left: 25vw !important; z-index: 1000 !important; width: 16vw !important;
+  left: 3% !important; width: 25% !important; z-index: 999 !important; margin-top: 5% !important;
 }

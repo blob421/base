@@ -15,8 +15,8 @@ export default function CarouselArc({images}:CarArc){
 
     const current_idx = useRef(2)
     const transition_list = useRef<{left:string, right:string}[]>([])
-    const [reload, setReload] = useState(false)
-    const [direction, setDirection] = useState<'right' | 'left'>('left')
+  
+    const [direction, setDirection] = useState<null | 'left' | 'right'>(null)
 
     const timeoutRef = useRef<number | null>(0)
     const [init, setInit] = useState(false)
@@ -30,7 +30,12 @@ export default function CarouselArc({images}:CarArc){
                                        {left: 't_2_1', right: 't_1_2'},
                                        {left: 't_3_2', right: 't_2_3'},
                                        {left: 't_4_3', right: 't_3_4'}]
+                                       
+    const temp:Record<number, mappingObject> = {}     
 
+      transition_list.current.map((t, idx) => {
+                        temp[idx] = t})
+    setTransi(temp)
      return () => {
         if (timeoutRef.current){
            
@@ -40,15 +45,7 @@ export default function CarouselArc({images}:CarArc){
      }
     }, [])
 
-    useEffect(()=> {
-        if (!reload) return;
-       
-       
-        setReload(false)
-
-
-
-    }, [reload])
+ 
     function switchIdx(direction:string){
         
         if (current_idx.current == images.length && direction == 'left'){
@@ -70,22 +67,23 @@ export default function CarouselArc({images}:CarArc){
 
     }
 
-    function setFutureTransitions(position:string | null) {
+    function setFutureTransitions(position:'right' | 'left') {
                 const temp:Record<number, mappingObject> = {}
                 let new_arr
 
-                if (!init) {
+                if (!init && position !== 'right') {
+                  
                     setInit(true)
-                    transition_list.current.map((t, idx) => {
-                        temp[idx] = t
-                        
-                    })
-                    setTransi(temp)
                     return
-
+              
+                    }
+                else {
+                    setInit(true)
                 }
+                   
+ 
               if (position == 'right'){
-
+                         
                         new_arr = [...transition_list.current.slice(1), ...transition_list.current.slice(0,1)]
                     }
 
@@ -106,15 +104,22 @@ export default function CarouselArc({images}:CarArc){
     }
 
     const ReorderImages = (e:MouseEvent) => {
-            
-             const position = e.clientX
+             let direction_changed
 
+             const position = e.clientX
+          
              if (position < window.innerWidth / 2){
             
                switchIdx('left')
 
-               const direction_changed = direction != 'left'
-               setDirection('left')
+               if (direction){
+                    direction_changed = direction != 'left'
+               }
+               else {
+                     direction_changed = false
+               }
+              
+                setDirection('left')
 
                 if (!direction_changed){
                        setFutureTransitions('left')
@@ -124,37 +129,42 @@ export default function CarouselArc({images}:CarArc){
              }
 
              else{
-                const direction_changed = direction != 'right'
-                switchIdx('right')
+                 switchIdx('right')
+                if (direction){
+                   direction_changed = direction != 'right'
+                }
+
+                else {
+                    direction_changed = false
+                }
+                
                 setDirection('right')
 
                  if (!direction_changed){
+                   
                       setFutureTransitions('right')
                  }
                      
-            
-               
-              
-                
-              
-
              }
             
          }
 
     return (
-        <div className="car_arc_row">
+        <div className="row d-flex justify-content-center">
+      
+            <div className="col-md-6 col-11 car_arc_row position-relative">
               {images.map((i, idx)=>{
 
                 return (
-                    <div key={idx} className={`${init? transition_mappings[idx][direction]: ''} 
+                    <div key={idx} className={`${init && direction ? transition_mappings[idx][direction]: ''} 
                                                ${`car_arc_cont_${idx}`}`}
                  
                      onMouseUp={(e)=> ReorderImages(e)}
                
-                      style={{pointerEvents: current_idx.current == idx? 'none' : 'unset',
-                              zIndex: current_idx.current == idx? 3000 : '',
-                              position: 'absolute'
+                      style={{pointerEvents: current_idx.current == idx? 'none' : 'all',
+                            
+                              position: 'absolute',
+                              boxShadow: '6px 3px 20px black'
                       }}>
 
                           <img src={i} className={'arc_img'}/>
@@ -163,6 +173,9 @@ export default function CarouselArc({images}:CarArc){
               })
 
               }
+              
+              </div>
+             
         </div>
     )
 }
