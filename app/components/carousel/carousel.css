@@ -12,3 +12,83 @@
 .big_carousel_main{
  
 }
+
+
+/***************************** ARC **************************/
+
+.car_arc_row{
+    display: flex; max-height: 60vh; 
+    width: 100vw; justify-content: center;
+}
+.car_arc_cont_0{
+  width: 16vw; z-index: 1000;left: 25vw;
+    border: 1px solid green; max-height: 100%; 
+    transition: left 2s ease, width 2s ease;
+}
+.car_arc_cont_1{
+ width: 18vw; left: 33vw; z-index: 2000;
+ 
+  
+  transition: left 2s ease, width 2s ease;
+}
+.car_arc_cont_2{
+  width: 20vw; border: 2px solid black;   left: 40vw; position: absolute;
+ border: 1px solid red; max-height: 100%; z-index: 3000;
+  transition: left 2s ease, width 2s ease;
+}
+.car_arc_cont_3{
+ width: 18vw;
+   z-index: 2000; left: 55vw;
+  
+  transition: left 2s ease, width 2s ease;
+}
+.car_arc_cont_4{
+  width: 16vw; z-index: 1000; 
+    border: 1px solid green; max-height: 100%; left: 60vw;
+    transition: left 2s ease, width 2s ease;
+}
+
+
+/********* Reminder 8 vw *****************/
+
+
+.arc_img{
+    width: 100%;  max-height: 100%;
+}
+
+/******* transitions *************/
+
+.left_to_right_t{
+  left: 60vw !important; z-index: 1000 !important; width: 16vw !important;
+}
+.t_0_1{
+   z-index: 2000 !important; left: 33vw !important; width: 18vw !important;
+}
+
+.t_1_0{
+ left: 25vw !important; z-index: 1000 !important; width: 16vw !important;
+} 
+.t_1_2{
+  z-index: 3000 !important; left: 40vw !important; width: 20vw !important;
+}
+
+.t_2_1{
+ left: 33vw !important; width: 18vw !important; z-index: 2000 !important;
+}
+.t_2_3 {
+ left: 55vw !important; z-index: 2000 !important; width: 18vw !important;
+}
+
+.t_3_2{
+ left: 40vw !important; width: 20vw !important; z-index: 3000 !important;
+}
+.t_3_4{
+ z-index: 1000 !important; width: 16vw; left: 60vw !important;
+}
+.t_4_3{
+  left: 55vw !important; width: 18vw !important; z-index: 2000 !important;
+}
+
+.right_to_left_t{
+  left: 25vw !important; z-index: 1000 !important; width: 16vw !important;
+}

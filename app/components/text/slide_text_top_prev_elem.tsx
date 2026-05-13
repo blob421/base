@@ -73,7 +73,7 @@ export default function SlideInText({text, fontSize, style, color}:SlideInText){
 
     return (
        <div id="slide_in_wrapper">
-        <div id='slide_in_text' className={slide ? ` p-4 position-absolute hidden_slide_in slide_in_text 
+        <div id='slide_in_text' className={slide ? ` position-absolute hidden_slide_in slide_in_text 
                                                     ${fontSize? fontSize : 'txt_lg'}` 
                                                     
                                                  : `position-absolute hidden_slide_in 
