@@ -18,32 +18,32 @@
 
 .car_arc_row{
     min-height: 69vh;
-   
+  
 }
 .car_arc_cont_0{
-  width: 25%; z-index: 1000;left: 3%;margin-top: 5% ;
+  width: 25%; z-index: 1000;left: 3%;margin-top: 10% ; will-change: transform;
     max-height: 100%; 
     transition: left 2s ease, width 2s ease, margin-top 2s ease;
 }
 .car_arc_cont_1{
- width: 34%; left: 12%; z-index: 2000; margin-top: 3%;
+ width: 34%; left: 12%; z-index: 2000; margin-top: 3%;will-change: transform;
  
   
   transition: left 2s ease, width 2s ease,  margin-top 2s ease;
 }
 .car_arc_cont_2{
-  width: 40%; left: 30%; position: absolute;
+  width: 40%; left: 30%; position: absolute; will-change: transform;
   max-height: 100%; z-index: 3000; margin-top: 0%;
   transition: left 2s ease, width 2s ease, margin-top 2s ease;
 }
 .car_arc_cont_3{
  width: 34%;
-   z-index: 2000; left: 55%;margin-top: 3%;
+   z-index: 2000; left: 55%;margin-top: 3%; will-change: transform;
   
   transition: left 2s ease, width 2s ease, margin-top 2s ease;
 }
 .car_arc_cont_4{
-  width: 25%; z-index: 1000; margin-top: 5% ;
+  width: 25%; z-index: 1000; margin-top: 10% ; will-change: transform;
   max-height: 100%; left: 72%;
     transition: left 2s ease, width 2s ease, margin-top 2s ease;
 }
@@ -53,21 +53,24 @@
 
 
 .arc_img{
-    width: 100%;  max-height: 100%; border: 3px solid black;
+    width: 100%;  max-height: 100%; border: 3px solid black; border-radius: 5px; 
 }
+
 
 /******* transitions *************/
 
 .left_to_right_t{
-  left: 72% !important; width: 25% !important; z-index: 999 !important; margin-top: 5% !important;
+  left: 72% !important; width: 25% !important; z-index: 999 !important; margin-top: 10% !important;
 }
 .t_0_1{
 
   left: 12% !important; width: 34% !important; z-index: 2000 !important; margin-top: 3% !important;
+  
 }
+
 .t_1_0{
     
-  left: 3%!important;   width: 25% !important; z-index: 1000 !important; margin-top: 5% !important;
+  left: 3%!important;   width: 25% !important; z-index: 1000 !important; margin-top: 10% !important;
 } 
 .t_1_2{
   left: 30% !important; width: 40% !important; z-index: 3000 !important; margin-top: 0% !important;
@@ -85,12 +88,96 @@
   left: 30% !important; width: 40% !important; z-index: 3000 !important; margin-top: 0% !important;
 }
 .t_3_4{
-  left: 72% !important; width: 25% !important;  z-index: 1000 !important; margin-top: 5% !important;
+  left: 72% !important; width: 25% !important;  z-index: 1000 !important; margin-top: 10% !important;
 }
 .t_4_3{
   left: 55% !important; width: 34% !important; z-index: 2000 !important; margin-top: 3% !important;
 }
 
 .right_to_left_t{
-  left: 3% !important; width: 25% !important; z-index: 999 !important; margin-top: 5% !important;
+  left: 3% !important; width: 25% !important; z-index: 999 !important; margin-top: 10% !important;
+}
+
+
+/************************************* CIRCLE *****************************************/
+
+.car_circle_row{
+    min-height: max(25vh, 39vw); position: absolute; aspect-ratio: 10/6;
+   
+  
+}
+
+.car_circle_cont_0{
+  width: 25%; z-index: 1000;left: -18%; will-change: transform;
+    max-height: 100%; transform: rotate(-90deg); top: 93%;
+   transition: left 1s , width 1s ease, transform 1s , top 1s ease
+}
+.car_circle_cont_1{
+  width: 25%; left: 0%; z-index: 2000; will-change: transform;
+ transform: rotate(-40deg); top: 29%;
+  
+ transition: left 1s, width 1s ease, transform 1s , top 1s ease
+}
+.car_circle_cont_2{
+  width: 27%; left: 36%; position: absolute; will-change: transform;
+  max-height: 100%; z-index: 3000; top: 1%;
+ transition: left 1s, width 1s ease, transform 1s , top 1s ease}
+.car_circle_cont_3{
+  width: 25%; 
+   z-index: 2000; left: 74%; will-change: transform; top: 29%;
+   transform: rotate(40deg);
+  
+ transition: left 1s, width 1s ease, transform 1s , top 1s ease}
+.car_circle_cont_4{
+  width: 25%; z-index: 1000;  ; will-change: transform;
+  transform: rotate(90deg); top: 93%;
+  max-height: 100%; left: 91%;
+ transition: left 1s, width 1s ease, transform 1s , top 1s ease}
+
+.circle_img{
+    width: 100%;  max-height: 100%; border: 3px solid black; border-radius: 5px; 
+}
+.halt_rotation{
+    transition: left 1s, width 1s ease, top 1s ease !important;
+}
+
+/******* transitions *************/
+
+.left_to_right_c{
+ width: 25% !important; top: 93% !important; left: 91%!important; transform: rotate(90deg) !important; 
+}
+.c_0_1{
+
+ width: 25% !important; top: 29% !important; left: 0% !important; transform: rotate(-40deg) !important;
+  
+}
+
+.c_1_0{
+ width: 25% !important; top: 93% !important; left: -18% !important; transform: rotate(-90deg) !important;
+
+} 
+.c_1_2{
+width: 27% !important; top: 1% !important; left: 36%!important; transform: rotate(0deg) !important; 
+}
+
+.c_2_1{
+  width: 25% !important; top: 29% !important; left: 0% !important; transform: rotate(-40deg) !important;
+
+}
+.c_2_3 {
+ width: 25% !important; top: 29% !important; left: 74%; transform: rotate(40deg) !important; 
+}
+
+.c_3_2{
+width: 27% !important; top: 1% !important; left: 36%!important; transform: rotate(0deg) !important; 
+}
+.c_3_4{
+    width: 25% !important; top: 93% !important; left: 91%!important; transform: rotate(90deg) !important; 
+}
+.c_4_3{
+width: 25% !important; top: 29% !important; left: 74%; transform: rotate(40deg) !important; 
+}
+
+.right_to_left_c{
+ width: 25% !important; top: 93% !important; left: -18% !important; transform: rotate(-90deg) !important;
 }
