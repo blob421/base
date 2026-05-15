@@ -162,3 +162,36 @@ height: 100%; position: absolute; right: 15px;
 .blocks_footer_text_only{
    margin-right: max(3.5vw, 5vh);
 }
+
+
+/*********************************** Accordion ***************************************/
+
+.acc_col {
+    border: 2px solid black; border-radius: 4px; overflow: hidden;
+}
+.acc_unit_head {
+    width: max(4vw, 6vh); background-color: grey; writing-mode: vertical-rl;
+    display: flex; align-items: center;
+     padding-top: 3vh; border: 1.5px solid black;  cursor: pointer; border-right: 2px solid black;
+}
+
+.acc_unit{
+  overflow: hidden; display: flex; 
+  border: 2px solid black; width: fit-content;
+}
+
+.collapsed_acc_text {
+    width: 0% !important; min-width: 0; 
+}
+.slid_out_text {
+    transform: translateX(-100%)
+}
+.text_acc {
+    transition: width 2s ease; width: 100%;overflow: hidden; position: relative;
+    display: flex; justify-content: center; align-items: top;
+}
+.text_acc_inner{
+    padding: 3vh; position: absolute; width: 100%; overflow: hidden; 
+    transition: transform 1.6s ease; 
+   
+}
