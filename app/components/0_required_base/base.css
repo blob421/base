@@ -2,10 +2,10 @@ html, body {
     user-select: none;
 }
 .txt_lg{
-    font-size: max(1.5vw, 2.5vh) !important; 
+    font-size: max(1.5vw, 2.7vh) !important; 
 }
 .txt_md{
-font-size: max(1.3vw, 2.3vh) !important;
+font-size: max(1.3vw, 2.5vh) !important;
 }
 .txt_sm{
 font-size: max(1.3vw, 2vh) !important;
@@ -23,13 +23,7 @@ font-size: max(1.3vw, 2vh) !important;
     { 
         flex: 0 0 100%; max-width: 100%;   padding: 4% !important;
     } 
-    .stacked_cards_row > [class*="col-lg"] 
-    { 
-        flex: 0 0 100%; max-width: 100%; margin: 3vh; padding: 7% !important; 
-    } 
-    .stacked_cards_main {
-        max-height: 50vh; max-width: 70vw !important; 
-    }
+
     .contact_form_row > [class*="col-lg"] {
          flex: 0 0 93%; max-width: 93%;  
     }

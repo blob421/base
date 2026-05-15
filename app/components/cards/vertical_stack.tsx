@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react"
-import type { Cards } from "../0_required_base/types"
+
 
 type VerticalStack = {
   cards: {title:string, content:string}[], bgColor?:string, bgColor2?:string, color?:string 
@@ -41,7 +41,7 @@ useEffect(() => {
 
     return (
       <>
-        <div className="col-lg-4 col-xxl-5 stacked_cards_main mb-4">
+        <div className="col-md-4 col-11 stacked_cards_main mb-4">
 
            <div className={slideChanged ? "card_top fadout_card ": "card_top"}
                 style={{backgroundColor: bgColor? bgColor: 'white',
@@ -54,7 +54,7 @@ useEffect(() => {
                 style={{borderBottom: color? `1px solid ${color}`: '1px solid black'}}>
                     {!slideChanged && cards[currentSlide].title}
                 </div>
-                <div className="stacked_cards_main_content txt_md"
+                <div className="stacked_cards_main_content txt_sm p-4"
                >
                     {!slideChanged && cards[currentSlide].content}
                 </div>
@@ -78,7 +78,7 @@ useEffect(() => {
                      style={{borderBottom: color? `1px solid ${color}`: '1px solid black'}}>
                            {slideChanged && cards[currentSlide].title}
                     </div>
-                      <div className="stacked_cards_main_content txt_md">
+                      <div className="stacked_cards_main_content txt_sm p-4">
                     {slideChanged && cards[currentSlide].content}
                 </div>
                 <div className="arrows_stacked_cards"

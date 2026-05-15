@@ -1,9 +1,10 @@
 .stacked_cards_main{
-   height: 70vh; position: relative; max-width: 75vw !important; 
+   height: 70%; position: relative; aspect-ratio: 16/17;  
 }
+
 .card_top{
-   height: 100%; border-radius: 7%; width: 90%;
-     position: absolute; left: 50%; top: 50%;
+   border-radius: 7%; height: 95%;
+     position: absolute; left: 50%; top: 50%; aspect-ratio: 16/17;
     transform: translate(-50%,-50%); z-index: 1000; 
 
     opacity: 1;
@@ -11,7 +12,7 @@
 }
 
 .card_middle{
-     height: 100%; border-radius: 7%; width: 90%;
+      border-radius: 7%;height: 95%; aspect-ratio: 16/17;
      position: absolute;
     left: 50%; top: 50%;transform: translate(-46%,-47%);
     transition: transform 1s ease, color 0.4s ease;
@@ -59,7 +60,7 @@ height: 100%; position: absolute; right: 15px;
 }
 .text_center_stacked_card_top{
      width: 93%; height: 95%;  border-radius: 5px;
-    padding: 9%; z-index: 1000;
+    padding: 9%; z-index: 1000; margin-right: 7vh;
     opacity: 100; transition: opacity ease 0.7s; padding-top: 5.5vh;
     display: flex; flex-direction: column; gap: 2vh;
 
@@ -69,7 +70,8 @@ height: 100%; position: absolute; right: 15px;
     padding: 9%; position: absolute; bottom: 0; right: 0; 
 }
 .text_center_stacked_arrows{
-    height: min(12%, 12vw); aspect-ratio: 1/1;
+    height: min(12%, 12vw); aspect-ratio: 1/1; 
+    z-index: 10000;
 }
 .arrows_cont_text_center_stacked{
     display: flex; flex-direction: column; height: 100%; position: absolute; right: 3;
@@ -84,6 +86,9 @@ height: 100%; position: absolute; right: 15px;
 /******************** TEXT TABS ****************************/
 .text_tabs_row{
 
+}
+.text_tabs_content{
+    margin-top: 2vh;
 }
 .text_tabs_main{
   min-height: 60vh; display: flex; border: 1px solid rgba(0, 0, 255, 0); position: relative;
@@ -164,20 +169,21 @@ height: 100%; position: absolute; right: 15px;
 }
 
 
-/*********************************** Accordion ***************************************/
+/*********************************** AccordionH ***************************************/
 
 .acc_col {
     border: 2px solid black; border-radius: 4px; overflow: hidden;
 }
 .acc_unit_head {
-    width: max(4vw, 6vh); background-color: grey; writing-mode: vertical-rl;
-    display: flex; align-items: center;
-     padding-top: 3vh; border: 1.5px solid black;  cursor: pointer; border-right: 2px solid black;
+    width: max(4vw, 7vh); background-color: grey; writing-mode: vertical-rl;
+    display: flex; align-items: center; flex: 0 0 auto;
+     padding-top: 5vh; border: 1px solid black;  
+     cursor: pointer; 
 }
 
 .acc_unit{
   overflow: hidden; display: flex; 
-  border: 2px solid black; width: fit-content;
+   width: fit-content;
 }
 
 .collapsed_acc_text {
@@ -191,7 +197,35 @@ height: 100%; position: absolute; right: 15px;
     display: flex; justify-content: center; align-items: top;
 }
 .text_acc_inner{
-    padding: 3vh; position: absolute; width: 100%; overflow: hidden; 
+    padding: 5vh; position: absolute; width: 100%; overflow: hidden; 
     transition: transform 1.6s ease; 
    
+}
+
+/*********************************** AccordionV ***************************************/
+.acc_vert_row{
+    height: 70vh;
+}
+.acc_vert_col{
+    border: 2px solid black; display: flex; flex-direction: column; justify-content: start;
+      overflow: hidden; border-radius: 4px; 
+
+}
+.vert_acc_handle{
+    background-color: grey; color: white; height: max(8.5vh, 4.4vw); flex: 0 0 auto; 
+    display: flex; justify-content: center; 
+    align-items: center; border: 1px solid black;
+}
+.vert_acc_text_cont_collapsed{
+    height: 0% !important; overflow: hidden;
+}
+.vert_acc_text_cont{
+    height: 100%; transition: height 2s ease; overflow: hidden; position: relative;
+}
+.vert_acc_text {
+    padding: 5vh; padding-left: 6vh; padding-right: 6vh; padding-top: 6vh;  
+    transition: transform 1.6s ease; position: absolute;
+}
+.slid_out_vert_acc_text{
+    transform: translateY(-100%)
 }

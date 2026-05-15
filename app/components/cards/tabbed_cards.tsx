@@ -23,7 +23,7 @@ export default function Text_tabs({cards, bgColor, bgColor2, color, color2, tabs
                    }}>
                
                 <h1 className="txt_xl">{cards[tabIndex].title}</h1>
-                <div className="text_tabs_content txt_sm">
+                <div className="text_tabs_content txt_md">
                  {cards[tabIndex].content}
                 </div>
           

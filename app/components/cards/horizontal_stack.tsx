@@ -39,7 +39,7 @@ export default function Text_center_stacked({cards, bgColor, bgColor2, color}:Ho
                         }}
                    >
                     <h1 className="txt_xl">{cards[current_idx].title && cards[current_idx].title}</h1>
-                    <div className="txt_sm">
+                    <div className="txt_md" style={{marginTop: '2vh'}}>
  {cards[current_idx].content}
                     </div>
                    

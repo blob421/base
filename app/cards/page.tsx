@@ -8,7 +8,7 @@ import Text_tabs from "../components/cards/tabbed_cards"
 import TextBlocks from "../components/cards/option_blocks"
 import Accordion from "../components/cards/accordion"
 import Spacer from "../components/spacer"
-
+import AccordionV from "../components/cards/accordion_v"
 
 const text_sample = `"Lorem ipsum" is the standard dummy text used in printing and design to fill spaces 
 in layouts to focus on visual design rather than content. It is a scrambled version of Latin from 
@@ -39,7 +39,7 @@ export default function Cards(){
 
     return (
     <>
-        <div className="row d-flex justify-content-center mt-4">
+        <div className="row d-flex justify-content-center mt-4 stacked_cards_row">
             <Stacked_cards cards={slides} color="white" bgColor="grey" bgColor2="black"/>
             <Text1 text={text}/>
         </div>
@@ -69,6 +69,10 @@ export default function Cards(){
             <Spacer h={15}/>
             <Accordion sections={slides} height={50}/>
              <Spacer h={15}/>
+
+             <AccordionV sections={slides}/>
+              <Spacer h={15}/>
+             
       </> 
     )
 }
