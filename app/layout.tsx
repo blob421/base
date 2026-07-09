@@ -48,10 +48,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
-      <style>
-          @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-      </style>
+
+     
 
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
        <BootstrapClient/>

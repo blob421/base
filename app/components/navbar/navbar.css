@@ -265,7 +265,7 @@ align-self: center; justify-content: center; display: flex; flex-direction: colu
 .section_nav_modern{
      border-radius: 6px; color: white;
      height: 50%; ; 
-     border: 1px solid white;
+     border: 1px solid white;cursor: pointer;
 }
 .logo_nav_modern{
      height: 50%; position: absolute; left: 0;

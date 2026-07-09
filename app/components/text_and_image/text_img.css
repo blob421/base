@@ -106,15 +106,17 @@ border: 2px solid black; width: 85%; position: absolute; top: 0;
   color: white;
 }
 .product_row{
-  
+  min-height: 100vh;
 }
 .product_text{
- background-color: white; height: 35%;
+  height: 55%;
+  background: linear-gradient(180deg, white 44%, rgb(225, 225, 244) 96%, rgb(148, 148, 242));
   color: black; border-radius: 6px; border: 1px solid black;
 }
 .product_text_2{
-  height: 65%;color: black; 
-  border-radius: 6px; border: 1px solid black;background-color: white;
+  height: 45%;color: black; min-height: 35vh;
+  border-radius: 6px; border: 1px solid black;
+   background: linear-gradient(180deg, white 44%, rgb(225, 225, 244) 96%, rgb(148, 148, 242));
 }
 .hero_txt_full{
 
@@ -134,26 +136,33 @@ border: 2px solid black; width: 85%; position: absolute; top: 0;
   position: relative;
 }
 .img_carousel_top{
-  width: 85%; border: 1px solid black;
+  width: 85%; border: 1px solid black; border-radius: 6px; overflow: hidden;
+   
+  
 }
 .img_carousel{
-  border: 1px solid black; overflow: hidden; width: 85%;
+  border: 1px solid black; width: 85%;
+  background-color: black; opacity: 0.7; border-radius: 6px; overflow: hidden;
 }
 
 
 .arrow_div{
-  position: absolute; width: 25%; right: 0; opacity: 0.5;
+  position: absolute; width: 85%; z-index: 10000; right: -22%;
 }
 .arrow_div img{
-  aspect-ratio: 1/1; width: 65%;
+  aspect-ratio: 1/1; width: 15%; opacity: 0.8; transition: transform 1s ease;
+ 
 }
 
+.arrow_div img:hover{
+  opacity: 1 !important; transform: scale(1.1); cursor: pointer;
+}
 .top_img{
   position: absolute; z-index: 100;
-  width: 85%;
+  width: 85%; pointer-events: none; 
 }
 .next_img{
-  position: absolute; z-index: 0;top: 4vh; opacity: 0.6;
+  position: absolute; z-index: 0;top: 4vh; 
 }
 .text_container{
   min-height: 30vh;
