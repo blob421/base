@@ -20,6 +20,7 @@ import Navbar_Left from "./components/navbar/navbar_content_left";
 import Navbar_categories_hover from "./components/navbar/navbar_categories_hover";
 import NavbarCentered from "./components/navbar/navbar_content_centered";
 import NavbarSearch from "./components/navbar/navbar_search";
+import NavModern from "./components/navbar/navbar_modern";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
 
                    
 const navCentered = ['Banners', 'Cards', "Carousel", '/cart.png', 'Text', 'Images', 'Forms']  
+const nav_modern_s = ['Banners', 'Cards', "Carousel", 'Text', 'Images', 'Landing']
 
 export default function RootLayout({
   children,
@@ -46,15 +48,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
+      <style>
+          @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+      </style>
+
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
        <BootstrapClient/>
         <div className="container-fluid p-0">
           
-            <NavbarCentered nav_sections={navCentered} hamStyle="side"
+            <NavModern sections={nav_modern_s} logo="/avatar.png"/>
      
-             style="modern"/>
-     
-            <div style={{height: '1vh'}}></div>
+            <div style={{height: '0.5vh', backgroundColor:'grey'}}></div>
             {children}
         </div>
        

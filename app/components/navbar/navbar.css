@@ -252,3 +252,21 @@ align-self: center; justify-content: center; display: flex; flex-direction: colu
      aspect-ratio: 1; flex: 0 0 auto;
      
 }
+
+/***************** NAV MODERN *******************/
+
+.nav_modern_row{
+      background-color: rgb(58, 41, 116);
+     height: 9vh;
+}
+
+
+
+.section_nav_modern{
+     border-radius: 6px; color: white;
+     height: 50%; ; 
+     border: 1px solid white;
+}
+.logo_nav_modern{
+     height: 50%; position: absolute; left: 0;
+}
