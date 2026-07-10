@@ -22,3 +22,23 @@
     height: 12vh; width: 100%; overflow: hidden; top: 0; position: absolute;
 }
 
+
+
+
+/****************** HERO TEXT *******************/
+
+
+.row_full_size_img_hero_txt{
+  color: white;
+}
+
+.hero_txt_full{
+
+  z-index: 1000;  height: 100%;
+}
+
+
+.text_0 {
+  font-family: "Archivo Black", sans-serif;
+}
+

@@ -1,6 +1,11 @@
 html, body {
     user-select: none;
 }
+
+body {
+  background-color: rgb(240, 240, 226) !important;
+}
+
 .txt_lg{
     font-size: max(1.5vw, 2.7vh) !important; 
 }

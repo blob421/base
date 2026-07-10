@@ -5,6 +5,7 @@ import HeroText from "../components/text/hero_text"
 import BgImage from "../components/images/BgImage"
 import Banner from "../components/banners/banner"
 import StackedCardsCarousel from "../components/carousel/car_stacked_cards"
+import InfoBanner from "../components/banners/info_banner"
 
 export default function Landing(){
     const products = [
@@ -49,6 +50,7 @@ export default function Landing(){
     return (
         <>
          <BgImage img="/july_gen_7_2.png" imgMob="/july_gen_7_mob.png"/>
+      
          <HeroText header={hero_head} subHeaders={hero_subhaders} 
          callToAction={callToAction} colorDelimiters={['make', 'move', "tested", "best"]} 
          delColor="orange"/>
