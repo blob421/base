@@ -93,7 +93,7 @@
      height: 6.5vh; display: none;  position: absolute; right: 2vw; 
   }
   .nav2_ham_icon_image{
-     display: none; 
+     visibility: hidden;  max-height: 6vh;
   }
 @media (max-width:450px){
      .nav2_logo{
@@ -256,8 +256,9 @@ align-self: center; justify-content: center; display: flex; flex-direction: colu
 /***************** NAV MODERN *******************/
 
 .nav_modern_row{
-      background-color: rgb(58, 41, 116);
-     height: 9vh;
+     position: relative;
+     height: 9vh; width: 100vw; z-index: 100000;
+   
 }
 
 

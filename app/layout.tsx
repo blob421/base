@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
                    
 const navCentered = ['Banners', 'Cards', "Carousel", '/cart.png', 'Text', 'Images', 'Forms']  
-const nav_modern_s = ['Banners', 'Cards', "Carousel", 'Text', 'Images', 'Landing']
+const nav_modern_s = ['Banners', 'Cards', "Carousel", 'Text', 'Landing']
 
 export default function RootLayout({
   children,
@@ -55,7 +55,8 @@ export default function RootLayout({
        <BootstrapClient/>
         <div className="container-fluid p-0">
           
-            <NavModern sections={nav_modern_s} logo="/avatar.png"/>
+            <NavModern nav_sections={nav_modern_s} logo="/avatar.png" bgColor="rgb(58, 41, 116)"
+            hamStyle="drop"/>
      
             <div style={{height: '0.5vh', backgroundColor:'grey'}}></div>
             {children}

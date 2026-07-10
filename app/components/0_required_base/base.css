@@ -10,6 +10,7 @@ font-size: max(1.3vw, 2.5vh) !important;
 .txt_sm{
 font-size: max(1.1vw, 2vh) !important;
 }
+
 .txt_xs{
     font-size: max(1vw, 1.5vh) !important;
 }
@@ -84,10 +85,28 @@ font-size: max(1.1vw, 2vh) !important;
 
 }
 @media (orientation: portrait) and (max-width:992px){
+    .section_nav_modern{
+        visibility: hidden !important; display: none;
+    }
+    .nav2_ham_icon_image{
+        visibility: visible;
+    }
+    .product_row > [class*='col-md']{
+        flex: 0 0 90% !important;
+        gap: 3vh !important; 
+    }
+
+    .nav_modern_row > [class*='col-12']{
+      gap: 2.5% !important;
+    }
+    .img_full_hero_txt{
+        height:  100% !important; aspect-ratio: 16/9 !important; width: unset !important;
+    }
     .navbar_main{
        justify-content: end !important; display: flex !important; 
     }
     .navbar_main_modern{
         justify-content: end !important; display: flex !important;
     }
+ 
 }
