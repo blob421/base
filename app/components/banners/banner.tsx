@@ -6,19 +6,19 @@ export default function Banner({text, color, bgColor, height, fontSize}:BannerPr
         <div className={
             height == 'small' ? 
                 `row banner_medium ${fontSize? fontSize: 'txtlg'} 
-                text-center pt-3 pb-4 mb-3 mt-3 pb-xxl-5`
+                text-center pt-3 pb-4 mb-3 mt-3 pb-xxl-5 pt-xxl-5 mb-xl-5 mt-xxl-5`
 
           : height == 'medium' ? 
                 `row banner_medium ${fontSize? fontSize: 'txtlg'} 
-                text-center pt-4 pb-4 mb-3 mt-3 pb-xxl-5`
+                text-center pt-4 pb-4 mb-3 mt-3 pb-xxl-5 pt-xxl-5 mb-xl-5 mt-xxl-5`
 
           : height == 'large' ? 
                 `row banner_medium ${fontSize? fontSize: 'txtlg'} 
-                text-center pt-5 pb-5 mb-3 mt-3 pb-xxl-5` 
+                text-center pt-5 pb-5 mb-3 mt-3 pb-xxl-5 pt-xxl-5 mb-xl-5 mt-xxl-5` 
 
           :
                 `row banner_medium ${fontSize? fontSize: 'txtlg'} 
-                text-center pt-3 pb-3 mb-3 mt-3 pb-xxl-5`}
+                text-center pt-3 pb-3 mb-3 mt-3 pb-xxl-5 pt-xxl-5 mb-xl-5 mt-xxl-5`}
          
           style={{color: color? color: "black", 
                   backgroundColor: bgColor? bgColor: "white",

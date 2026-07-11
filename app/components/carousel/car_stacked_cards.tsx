@@ -23,11 +23,12 @@ export default function StackedCardsCarousel({products}:props){
                 <>
         
         
-                <div className="product_row row p-0 m-0 pt-3 pb-3 pb-sm-5 ps-md-2 justify-content-center">
+                <div className="product_row row p-0 m-0 pt-3 pb-3 pb-sm-5 ps-md-2 
+                justify-content-center pt-xxl-5 mt-xxl-5">
                     
                        
-                        <div className=" g-0 col-11 col-md-6 pt-3 p-md-5 mt-md-3 mt-md-3 pb-4 
-                        pb-sm-5 pb-md-0 
+                        <div className="g-0 col-11 col-md-6 pt-3 p-md-5 mt-md-3 mt-md-3 pb-4 
+                        pb-sm-5 pb-md-2 pt-md-3 pb-md-0 pb-xxl-5 mb-xxl-5
                         d-flex justify-content-center align-content-md-start">
         
         
@@ -55,12 +56,12 @@ export default function StackedCardsCarousel({products}:props){
         
                         <div className="col-md-6 p-0 p-md-5 pt-5 h-100 d-flex mt-md-5
                         align-items-center justify-content-start product_car_cards_col
-                        gap-4 gap-md-2 flex-column">
+                        gap-4 gap-md-2 flex-column gap-xxl-5">
         
         
                            
         
-                            <div className="product_text p-4 pb-5 pb-md-4 mb-1 mb-sm-4 mb-md-2">
+                            <div className="product_text p-4 pb-5 pb-md-4 mb-1 mb-sm-4 mb-md-2 p-xxl-5">
                                 
                                 <h1 className="txt_lg product_title pb-3 pb-md-0">
                                     {products.at(cP)?.name}
@@ -71,7 +72,7 @@ export default function StackedCardsCarousel({products}:props){
         
                                
                             </div>
-                            <div className="product_text_2 p-4 txt_xl">
+                            <div className="product_text_2 p-4 p-xxl-5 txt_xl">
                                 
                                 <h1 className="txt_lg product_title pb-3 pb-md-0">
                                     Features

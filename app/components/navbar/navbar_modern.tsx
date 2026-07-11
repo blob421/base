@@ -47,7 +47,7 @@ export default function NavModern({nav_sections, logo, bgColor}:nav){
         <>
         <div className="row nav_modern_row m-0 p-0" style={{backgroundColor: bgColor}}>
             <div className="col-12 d-flex gap-1 gap-md-5 align-items-center 
-            justify-content-end pe-4 position-relative">
+            justify-content-end pe-2 pe-sm-3 pe-md-5 position-relative">
            
 
                 <img className="logo_nav_modern ms-3" src={logo}></img>

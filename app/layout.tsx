@@ -39,8 +39,10 @@ export const metadata: Metadata = {
 
                    
 const navCentered = ['Banners', 'Cards', "Carousel", '/cart.png', 'Text', 'Images', 'Forms']  
-const nav_modern_s = ['Banners', 'Cards', "Carousel", 'Images', 'Landing']
+const nav_modern_s = ['Banners', 'Cards', "Landing2", 'Images', 'Landing']
 
+/// Landing 1 :  <NavModern nav_sections={nav_modern_s} logo="/avatar.png" bgColor="rgb(58, 41, 116)"
+///               hamStyle="drop"/>
 export default function RootLayout({
   children,
 }: Readonly<{

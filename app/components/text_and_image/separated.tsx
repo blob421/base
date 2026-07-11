@@ -23,11 +23,11 @@ export default function Text_left_img_right({image, text, BgColor, color,
 
     {(imagePosition == "right-top" || imagePosition == "left-top" || !imagePosition)  &&   
 
-    <div className={`col-lg-6 col-11 text_left_img_right_image`}>
-                  <img src={image} className={`img-fluid ${displaced? 'mb-3 m-lg-3' : ""} h-100`}></img>
+    <div className={`col-lg-6 col-11 text_left_img_right_image g-0`}>
+                  <img src={image} className={`img-fluid w-100 ${displaced? 'mb-3 m-lg-3' : ""} h-100`}></img>
             </div>
 }  
-            <div className="col-lg-5 col-11 text_left_img_right_text">
+            <div className="col-lg-5 col-11 mt-2 mt-md-0 text_left_img_right_text g-0 m-md-3 mt-md-0">
 
               <div className="text_left_img_right_text_content txt_md
                 mb-lg-2 mb-3"

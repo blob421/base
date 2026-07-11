@@ -59,7 +59,8 @@ export default function HeroText({callToAction, subHeaders, header, colorDelimit
           @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
          </style>
 
-        <div className="row p-0 m-0 row_full_size_img_hero_txt h-100 w-100 mb-5 pt-3 pt-sm-4">
+        <div className="row p-0 m-0 row_full_size_img_hero_txt h-100 w-100 mb-5 pt-3 pt-sm-4
+        pt-xxl-5 pb-xxl-5 ps-xxl-5 mt-xxl-5">
 
             <div className="col-12 col-md-6 hero_txt_full h-100 g-0">
 
@@ -72,7 +73,7 @@ export default function HeroText({callToAction, subHeaders, header, colorDelimit
 
                         {subHeaders.map((h, idx)=> {
                             return(
-                                <div key={idx} className="txt_sm">
+                                <div key={idx} className="txt_sm_wide">
                                     {h}
                                 </div>
                             )
@@ -84,7 +85,7 @@ export default function HeroText({callToAction, subHeaders, header, colorDelimit
             </div>
 
             < div className="col-12 col-md-6 p-4 pb-2 pb-md-5 p-md-5 pt-0 pt-md-5">
-                 <div className="text_right txt_sm">
+                 <div className="text_right txt_sm_wide ps-md-3">
                   
                  </div>
             </div>

@@ -41,4 +41,10 @@
 .text_0 {
   font-family: "Archivo Black", sans-serif;
 }
+.header_hero_alt{
+  font-family: "Montenegrin Gothic One", serif;
+}
 
+.hero_alt_text_container{
+  display: flex; flex-direction: column;
+}

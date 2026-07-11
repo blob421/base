@@ -36,13 +36,13 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
 /************************** SCALED ********************************/
 
 .growing_text_content{
-    transition: transform 0.65s ease; 
+    transition: transform 0.75s ease; 
     text-align: center; display: flex;justify-content: center; align-items: center;
    
 
 }
 .scaled_banner{
-   justify-self: center; 
+   justify-self: center;
 }
 
 

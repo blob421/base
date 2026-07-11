@@ -31,11 +31,9 @@ export default function GrowingBanner({text, height, bgColor, color, fontSize, s
              setTextScale(1.0)
             }
             else if (distance_percent >= 15){
-                setTextScale(1.2)
+                setTextScale(1.25)
             }
-            else {
-             setTextScale(1.3)
-            }
+      
        }
        }
        window.addEventListener("scroll", handleScroll) 
@@ -48,15 +46,15 @@ export default function GrowingBanner({text, height, bgColor, color, fontSize, s
         <div id="growing_banner" className={
             
               height == 'small' ? 
-                "row d-flex justify-content-center  pb-3 pt-3 scaled_banner w-100 m-0 mb-5 mt-5" 
+                "row d-flex justify-content-center  pb-3 pt-3 scaled_banner w-100 m-0 mt-5" 
 
             : height == 'medium' ? 
-                "row d-flex  justify-content-center pb-4 pt-4 scaled_banner w-100 m-0 mb-5 mt-5"
+                "row d-flex  justify-content-center pb-4 pt-4 scaled_banner w-100 m-0 mt-5"
 
             : height == 'large' ? 
-                "row d-flex justify-content-center pb-5 pt-5 scaled_banner w-100 m-0 mb-5 mt-5"
+                "row d-flex justify-content-center p-5 pb-5 pt-5 scaled_banner w-100 m-0 mt-5"
             :
-                "row d-flex justify-content-center pb-4 pt-4 scaled_banner w-100 m-0 mb-5 mt-5"} 
+                "row d-flex justify-content-center pb-4 pt-4 scaled_banner w-100 m-0 mt-5"} 
 
            
                 style={{ backgroundColor: bgColor ? bgColor: 'white', 
@@ -70,6 +68,7 @@ export default function GrowingBanner({text, height, bgColor, color, fontSize, s
                               fontSize == 'txt_xl' ? "growing_text_content txt_xl":
                               fontSize == 'txt_sm' ? "growing_text_content txt_sm":
                               fontSize == 'txt_md' ? "growing_text_content txt_md":
+                              fontSize == 'txt_md_wide' ? 'growing_text_content txt_md_wide':
                                                       "growing_text_content txt_lg"} 
                    style={{transform: `scale(${textScale})`,
                            maxWidth: textScale == 1.2 ? '70%': '90%'}}>

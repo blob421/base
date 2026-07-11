@@ -20,6 +20,7 @@
 }
 .text_left_img_right_image{
     height: 100%; border-radius: 6px; overflow: hidden; 
+    border: 2px solid black;
 }
 .text_left_img_right_textimg{
   position: absolute; max-height: max(5vw, 7vh); right: 15px; bottom: 10;
@@ -96,4 +97,48 @@ border: 2px solid black; width: 85%; position: absolute; top: 0;
     transform: translate(7px, 7px);
   }
 }
+
+
+
+/******************** Reviews component **********************/
+.reviews_container{
+  border: 2px solid black; background-color: rgba(255, 255, 255, 0.671);
+  width: 100%; display: flex; flex-direction: column; height: 50vh;
+  border-radius: 8px; aspect-ratio: 16/9 !important;
+}
+.reviews_head{
+  height: 30%; width: 100%; background-color: rgba(0, 60, 255, 0.443);
+  display: flex;
+}
+.reviewer_pic{
+  height: 100%;
+}
+.reviewer_body{
+  height: 70%; width: 100%;
+}
+.reviewer_text{
+  height: 75%; width: 100%;
+}
+.review_title{
+ height: 25%; 
+}
+.review_content{
+  height: 50%; 
+}
+.review_rating{
+   height: 25%;width: 100%;
+  display: flex; justify-content: end; align-items: center;
+}
+.text_container_reviews{
+  width: 100%; color: rgb(18, 18, 18);
+}
+.star_img_review{
+  width: 14%; aspect-ratio: 1/1;
+}
+.row_review_cards{
+  background-color: rgba(255, 255, 255, 0.821);
+  padding-top: max(11vh, 6vw); padding-bottom: max(11vh, 6vw);
+  border: 1px solid black
+}
+
 
