@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
                    
 const navCentered = ['Banners', 'Cards', "Carousel", '/cart.png', 'Text', 'Images', 'Forms']  
-const nav_modern_s = ['Banners', 'Cards', "Carousel", 'Text', 'Landing']
+const nav_modern_s = ['Banners', 'Cards', "Carousel", 'Images', 'Landing']
 
 export default function RootLayout({
   children,

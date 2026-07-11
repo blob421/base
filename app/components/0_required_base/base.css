@@ -113,5 +113,15 @@ font-size: max(1.1vw, 2vh) !important;
     .navbar_main_modern{
         justify-content: end !important; display: flex !important;
     }
+
+    .tabbed_img_row > [class*='col-md']{
+        flex: 0 0 98%;
+    }
+    .img_tabbed_tabs_cont{
+        visibility: hidden !important;
+    }
+    .image_cont_tabbed_img > [class*='col-md']{
+        flex: 0 0 50% !important;
+    }
  
 }

@@ -3,6 +3,9 @@ import Text_Round from "../components/text/rounded_edges"
 import ImageMosaic from "../components/images/mosaic"
 import Spacer from "../components/spacer"
 import DualImage from "../components/text_and_image/dual_img_text"
+import TabbedImages from "../components/images/tabbed_images"
+
+
 const text_sample = `"Lorem ipsum" is the standard dummy text used in printing and design to fill spaces 
 in layouts to focus on visual design rather than content. It is a scrambled version of Latin from 
 Cicero, used since the 14th century, or can be generated in tools like Word using =rand().`
@@ -12,10 +15,13 @@ const mosaic_images = ['avatar.png',
     'avatar.png','avatar.png','avatar.png']
 
 const dual_img_img = ['avatar.png', 'avatar.png']
-
+const tabbed = [
+    {url: '/img0.png', name:'mountains', title:'Beautiful mountains', text:text_sample, 
+        txtColor:'rgb(255, 255, 255)'}, 
+    {url: '/img1.png', name: 'sunny mountains', title: 'Sunny mountains', text: text_sample}]
     return (
         <>
-       
+           <TabbedImages images={tabbed}/>
            <Big_image image="/img0.png"/>
            <Spacer h={13}/>
            <ImageMosaic images={mosaic_images} size="big" style="round"/>

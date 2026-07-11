@@ -50,3 +50,56 @@ transform: translateY(calc(min(-13vh, -13vw) * var(--mosaic-scroll-factor))) ;
 .img_full_hero_txt{
   opacity: 0.8;position: absolute; z-index: -10;
 }
+
+/*************** Tabbed images comp ***************/
+
+.tabbed_img_row{
+ display: flex; justify-content: center; min-height: 30vh;
+}
+.col_img_cont_tabbed_img{
+  border-radius: 25px; overflow: hidden; position: relative; border: 2px solid black;
+  width: 100%; height: 100%;
+}
+.img_tabbed_tabs_cont{
+ position: absolute; top: 0; left: 0; display: flex; gap: 2%; width: 100%; z-index: 1000;
+  height: 10%; background-color: rgba(240, 248, 255, 0.384);
+  align-items: center; min-height: 60px; 
+}
+.img_tabbed_img{
+ width: 100%; z-index: 10; height: 100%;
+}
+.image_cont_tabbed_img{
+  width: 100%; height: 100%; justify-content: end; position: relative; display: flex;
+
+}
+.text_img_tab_container{
+  position: absolute;z-index: 100; 
+  display: flex; flex-direction: column; gap: min(2vh, 2vw); 
+  background-color: rgba(0, 0, 0, 0.381); border-radius: 10px;
+  padding: 3%; margin-top: 10%; margin-right: 3%;
+  
+}
+
+.img_text_tab{
+ width: 100%; font-size: max(1.4vh, 1.2vw) !important;
+}
+.img_title_tab{
+  font-size: max(2.2vh, 1.9vw) !important;
+}
+.img_tab_btn{
+  border: 1px solid rgb(0, 0, 0); cursor: pointer; z-index: 1000000;
+  display: flex; align-items: center; justify-content: center;
+  background-color: aliceblue; border-radius: 10px;
+   height: 80%; padding-left: 2%; padding-right: 2%;
+}
+.tab_img_selected{
+  background-color: rgba(0, 0, 0, 0.132);
+}
+
+@media (max-width: 992px){
+  .text_img_tab_container{
+    margin-top: 0% !important; height: 100% !important;
+    margin-right: 0% !important;   background-color: rgba(0, 0, 0, 0.481) !important;
+    padding: 4% !important; padding-left: 6% !important;
+  }
+}
