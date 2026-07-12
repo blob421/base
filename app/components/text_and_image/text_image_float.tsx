@@ -1,5 +1,5 @@
 type Text_image_float_props = {
-    text: string , position: string, image: string
+    text: string , position: 'left' | 'right', image: string
 }
 export default function Text_image_float({text, position, image}: Text_image_float_props){
     return (

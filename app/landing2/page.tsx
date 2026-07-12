@@ -1,11 +1,12 @@
 import BgImage from "../components/images/BgImage"
-import { HeroTextVar } from "../components/text/hero_text_variant"
+import { HeroTextCenter } from "../components/text/hero_text_center"
 import Reviews from "../components/text_and_image/reviews_component"
 import Text_left_img_right from "../components/text_and_image/separated"
 import Spacer from "../components/spacer"
 import Banner from "../components/banners/banner"
-import Tail_banner_image from "../components/banners/banner_image"
+import Tail_banner_image from "../components/banners/tail_banner"
 import GrowingBanner from "../components/banners/growing_banner"
+
 
 const subHeaders = ['Lightning fast deliveries', 'Support available at any time']
 const rev = [{name: 'blob', picture: '/avatar.png', title: 'Nice review', 
@@ -31,7 +32,8 @@ export default function Landing2(){
 
        
         <BgImage img="/july_gen_39.png" imgMob="/july_gen_39_mob.png"/>
-        <HeroTextVar header="City network , logistics agency" subHeaders={subHeaders}/>
+        <HeroTextCenter header="City network , logistics agency" subHeaders={subHeaders} 
+        alignment="left"/>
         <Spacer h={30}></Spacer>
         <Banner text="Our mission" bgColor="none" color="white" fontSize="txt_xl" 
         height="large" />
@@ -44,8 +46,10 @@ export default function Landing2(){
     
         <Reviews reviews={rev} bgColor="rgba(0, 60, 255, 0.443);"/>
         <Spacer h={11}/>
+
+     
         <Tail_banner_image text="What are you waiting for ? Subscribe to get the best delivery services available"
-        fontSize="txt_sm" height="large"/>
+        fontSize="txt_sm" height="large" link={{'href': '/home', 'word': 'Subscribe'}}/>
         </>
     )
 } 

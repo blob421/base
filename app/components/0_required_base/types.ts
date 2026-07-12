@@ -8,11 +8,16 @@ export type CarouselProps = {
  images : Image[], textLeft?: string, textRight?:string
 }
 
+export type LinkProps = {
+    href:string ,word:string, text:string
+}
+
 export type BannerProps = {
     text: string, img?: string , bgColor?:string , color?:string,  
     shape?: "square" | "round"
     height?: "small" | "medium" | "large",
     fontSize?: "txt_xl" | "txt_lg" | "txt_md" | "txt_sm" | string
+    link?: { href: string , word:string}
 }
 export type VertSlideBanner = {
     text:string, image?: string, bgColor?:string, color?:string, persistence?: "long" | "short",

@@ -150,5 +150,19 @@ font-size: max(1.1vw, 2vh) !important;
     .row_review_cards{
         margin-top: 0 !important;
     }
+    .row_bottom_hero_img_stacked > [class*='col-md']{
+        flex: 0 0 100% !important; margin-top: 1vh !important;
+    }
  
+}
+
+@media (min-width: 800px) and (orientation: portrait){
+
+    .row_bottom_hero_img_stacked > [class*='col-md']{
+        flex: 0 0 90% !important; margin-top: 4vh !important;
+    }
+    .text_img_tab_container{
+        width: 50% !important; 
+    }
+   
 }

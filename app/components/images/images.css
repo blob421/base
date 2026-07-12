@@ -55,6 +55,7 @@ transform: translateY(calc(min(-13vh, -13vw) * var(--mosaic-scroll-factor))) ;
 
 .tabbed_img_row{
  display: flex; justify-content: center; min-height: 30vh;
+ border-top: 1px solid black;
 }
 .col_img_cont_tabbed_img{
   border-radius: 25px; overflow: hidden; position: relative; border: 2px solid black;
@@ -81,7 +82,7 @@ transform: translateY(calc(min(-13vh, -13vw) * var(--mosaic-scroll-factor))) ;
 }
 
 .img_text_tab{
- width: 100%; font-size: max(1.4vh, 1.2vw) !important;
+ width: 100%; font-size: max(1.7vh, 1.2vw) !important;
 }
 .img_title_tab{
   font-size: max(2.2vh, 1.9vw) !important;

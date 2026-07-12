@@ -3,13 +3,15 @@
 import { useState, useEffect, useRef } from "react"
 
 type img = {
-    images: {url:string, name:string, title?:string , text?:string, txtColor?:string}[]
+    images: {url:string, name:string, title?:string , text?:string, txtColor?:string}[],
+    rowColor?: string
 }
 
-export default function TabbedImages({images}:img){
+export default function TabbedImages({images, rowColor}:img){
     const [cI, setCi] = useState(0)
     const [useClickedTab , setTabClicked] = useState(false)
     const iRef = useRef(0)
+
 
     const setInterval = () => {
 
@@ -50,7 +52,9 @@ export default function TabbedImages({images}:img){
 
     
     return (
-        <div className="row tabbed_img_row m-0 p-0 mt-4">
+        <div className="row tabbed_img_row m-0 p-0 pt-3 pb-2" 
+             style={{backgroundColor: rowColor? rowColor: 'none'}}>
+                
             <div className="col-12 col-md-10 g-0">
                <div className="col_img_cont_tabbed_img">
             
@@ -78,15 +82,14 @@ export default function TabbedImages({images}:img){
                                 </div>
                        
 
-                                <div className="col-5 col-md-4 g-0 text_img_tab_container 
-                                " 
+                                <div className="col-9 col-md-4 g-0 text_img_tab_container" 
                                 hidden={(!i.title) || (!i.title && !i.text)}
                                 style={{color: i.txtColor? i.txtColor : 'white'}}>
 
                                         <div className="img_title_tab txt_xl">
                                             {i.title && i.title}
                                         </div>
-                                        <div className="img_text_tab">
+                                        <div className="img_text_tab txt_md">
                                             {i.text && i.text}
                                         </div>
                                   </div>

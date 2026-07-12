@@ -3,12 +3,14 @@ import Banner1 from '../components/banners/banner'
 import Banner2 from '../components/banners/growing_banner'
 import Banner3 from '../components/banners/slide-in-horizontal'
 import Banner4 from '../components/banners/slide-in-vertical'
-import Banner5 from '../components/banners/banner_image'
+import Banner5 from '../components/banners/tail_banner'
+import InfoBanner from '../components/banners/info_banner'
 
 export default function LandingPage(){
 
     return (      
       <>
+       <InfoBanner slides={['HI', 'slide 2']}/>
        <Banner1 text='Welcome to this cool app' bgColor='grey' color='white' height='large' 
        fontSize='txt_xl'/>
 

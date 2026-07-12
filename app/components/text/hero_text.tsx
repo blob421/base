@@ -4,50 +4,22 @@ type herotxtprops = {
     callToAction: string, subHeaders: string[] , header: string, colorDelimiters: string[],
     delColor: string
 }
+import addColor from "../1_utilities/addColor"
 import { useLayoutEffect, useState } from "react"
 export default function HeroText({callToAction, subHeaders, header, colorDelimiters, delColor}:herotxtprops)
- 
+
 { 
 
-    useLayoutEffect(()=>{
+useLayoutEffect(()=>{
 
-    let  deletemited_text = callToAction.split(' ')
-    deletemited_text = deletemited_text.filter(c => c !== '' && !c.includes('\n') )
-    
-    const idx:number[] = []
     const ctaDiv = document.querySelector('.text_right')
-
-
-    colorDelimiters.forEach(d=> {
-        idx.push(deletemited_text.indexOf(d))
-    })
-
-  
-
-    let finalStr = ''
-
-    if (idx.length > 0 && ctaDiv){
-
-        deletemited_text.forEach((w, i)=> {
-
-            if (idx.includes(i) && (idx.indexOf(i)) % 2 == 0){
-               finalStr += `<span style='color: ${delColor}'> ` +  w + " "
-            }
-            else if ((idx.includes(i) && (idx.indexOf(i)) % 2 == 1)){
-               finalStr += w + ' </span>'
-            }
-            else {
-                finalStr += w + ' '
-            }
-        })
-
-            console.log(finalStr)
-            ctaDiv.innerHTML = finalStr
-
+    if (colorDelimiters && ctaDiv){
+        const new_txt = addColor(callToAction, colorDelimiters, delColor)
+        if (new_txt)
+             ctaDiv.innerHTML = new_txt
     }
-    else {
-        if (ctaDiv)
-            ctaDiv.innerHTML = callToAction
+    else if (ctaDiv){
+         ctaDiv.innerHTML = callToAction
     }
 
     },[])

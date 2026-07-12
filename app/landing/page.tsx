@@ -1,6 +1,6 @@
 
 
-import Tail_banner_image from "../components/banners/banner_image"
+import Tail_banner_image from "../components/banners/tail_banner"
 import HeroText from "../components/text/hero_text"
 import BgImage from "../components/images/BgImage"
 import Banner from "../components/banners/banner"

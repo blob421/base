@@ -141,4 +141,26 @@ border: 2px solid black; width: 85%; position: absolute; top: 0;
   border: 1px solid black
 }
 
+/******************** HEro img stackes *********************/
+
+.hero_img_stacked_imgs_cont{
+
+}
+.hero_img_stacked_imgs_cont img{
+  aspect-ratio: 16/9 !important; border: 2px solid rgb(255, 255, 255);
+  border-radius: 15px; width: 100%;
+}
+.hero_img_stacked_img_bottom{
+  position: absolute; right: 0; bottom: 0;
+}
+.hero_img_stacked_header{
+  font-family: "Changa One", sans-serif; color: blue;
+}
+.hero_img_stacked_txt_wrapper{
+  background-color: rgba(0, 0, 0, 0.211); border: 1px solid white;
+  border-radius: 9px; height: 100%; 
+}
+.hero_img_stacked_img_memo{
+  display: flex; width: 100%; justify-content: end; 
+}
 
