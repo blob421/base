@@ -14,10 +14,14 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
 
 .banner_medium{
     display: flex; justify-content: center; align-items: center;
+    position: relative; overflow: hidden;
   
 }
 .banner_inner{
     width: 90vw !important;
+}
+.banner_bg_image{
+    min-width: 1024px;
 }
 /*************************** SMALLER *************************/
 

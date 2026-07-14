@@ -14,10 +14,10 @@ export type LinkProps = {
 
 export type BannerProps = {
     text: string, img?: string , bgColor?:string , color?:string,  
-    shape?: "square" | "round"
+    shape?: "square" | "round", fontFam?: string
     height?: "small" | "medium" | "large",
     fontSize?: "txt_xl" | "txt_lg" | "txt_md" | "txt_sm" | string
-    link?: { href: string , word:string}
+    link?: { href: string , word:string}, bgImg?:string
 }
 export type VertSlideBanner = {
     text:string, image?: string, bgColor?:string, color?:string, persistence?: "long" | "short",

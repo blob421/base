@@ -4,10 +4,11 @@ import { useEffect, useState } from "react"
 import SideHamMenu from "./menus/side_ham_menu"
 
 type nav = {
-    nav_sections: string[], logo: string, bgColor: string, hamStyle:string
+    nav_sections: string[], logo: string, bgColor: string, hamStyle:string, 
+    hamIconColor?:string
 }
 
-export default function NavModern({nav_sections, logo, bgColor}:nav){
+export default function NavModern({nav_sections, logo, bgColor, hamIconColor}:nav){
 
    const [hamTriggered, setHamTriggered] = useState(false)
    const [hamEnlarging, setHamEnlarging] = useState(false)
@@ -69,8 +70,10 @@ export default function NavModern({nav_sections, logo, bgColor}:nav){
                 })}
 
               
-                    <img src='/hamburger_menu_black.png' className="nav2_ham_icon_image"
-                    onClick={() => setHamTriggered(true)}/>
+                    <img src={hamIconColor ? "/hamIconEmpty.png":'/hamburger_menu_black.png'} 
+                    className="nav2_ham_icon_image"
+                    onClick={() => setHamTriggered(true)} 
+                    style={{backgroundColor: hamIconColor? hamIconColor: ''}}/>
                   
                  
             </div>

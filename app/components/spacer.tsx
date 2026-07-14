@@ -1,10 +1,10 @@
 
 type spacer = {
-    h: number
+    h: number, color?:string
 }
 
-export default function Spacer({h}:spacer){
+export default function Spacer({h, color}:spacer){
     return (
-        <div style={{height:`${h}vh`}}></div>
+        <div style={{height:`${h}vh`, backgroundColor: color ? color : 'none'}}></div>
     )
 }

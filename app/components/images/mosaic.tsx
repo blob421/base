@@ -4,10 +4,10 @@
 import { useEffect, useState, useRef } from "react"
 type ImageMosaic = {
     images: string[], style?: 'round' | 'square', size?: 'big' | 'small'
-    imageRatio?: '1/1' | '16/9'
+    imageRatio?: '1/1' | '16/9', bgColor?:string
 }
 
-export default function ImageMosaic({images, style, size, imageRatio}:ImageMosaic){
+export default function ImageMosaic({images, style, size, imageRatio, bgColor}:ImageMosaic){
 
     const scroll_factor = useRef(0.0)
     const mosaic_row = useRef<HTMLElement | null>(null)
@@ -60,8 +60,8 @@ export default function ImageMosaic({images, style, size, imageRatio}:ImageMosai
 
     return(
         <>
-        <div className="img_mosaic_row ms-3 me-3" 
-                        >
+        <div className="img_mosaic_row p-0 m-0 ms-3 me-3" 
+        style={{backgroundColor: bgColor? bgColor: 'none'}}>
              {images && images.map((i, idx) => {
                 return (
                      

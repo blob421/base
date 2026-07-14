@@ -58,7 +58,7 @@ export default function RootLayout({
         <div className="container-fluid p-0">
           
             <NavModern nav_sections={nav_modern_s} logo="/avatar.png" bgColor="rgb(58, 41, 116)"
-            hamStyle="drop"/>
+            hamStyle="drop" hamIconColor="blue"/>
      
             <div style={{height: '0.5vh', backgroundColor:'grey'}}></div>
             {children}

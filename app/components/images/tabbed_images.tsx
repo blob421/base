@@ -4,10 +4,10 @@ import { useState, useEffect, useRef } from "react"
 
 type img = {
     images: {url:string, name:string, title?:string , text?:string, txtColor?:string}[],
-    rowColor?: string
+    rowColor?: string, shape?: 'round' | 'square'
 }
 
-export default function TabbedImages({images, rowColor}:img){
+export default function TabbedImages({images, rowColor, shape}:img){
     const [cI, setCi] = useState(0)
     const [useClickedTab , setTabClicked] = useState(false)
     const iRef = useRef(0)
@@ -52,11 +52,15 @@ export default function TabbedImages({images, rowColor}:img){
 
     
     return (
-        <div className="row tabbed_img_row m-0 p-0 pt-3 pb-2" 
+        <>
+        <div className="w-100" 
+        style={{height: 'max(2vw, 2vh)', backgroundColor:rowColor? rowColor: '', 
+        borderTop: '2px solid black'}}/>
+        <div className="row tabbed_img_row m-0 p-0" 
              style={{backgroundColor: rowColor? rowColor: 'none'}}>
                 
             <div className="col-12 col-md-10 g-0">
-               <div className="col_img_cont_tabbed_img">
+               <div className="col_img_cont_tabbed_img" style={{borderRadius: shape == 'square'? '0px': '25px'}}>
             
                     <div className="ps-3 img_tabbed_tabs_cont txt_sm p-1 mb-0">
                         {images.map((i, idx)=>{
@@ -100,5 +104,10 @@ export default function TabbedImages({images, rowColor}:img){
                 </div>
             </div>
         </div>
+
+        <div className="w-100" 
+        style={{height: '2vh', backgroundColor:rowColor? rowColor: ''}}/>
+
+        </>
     )
 }
