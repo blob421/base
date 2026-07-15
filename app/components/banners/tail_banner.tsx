@@ -35,7 +35,7 @@ export default function Tail_banner_image({text, img, color, bgColor, height, fo
                                                     : "12vh",
                         borderTop: '2px solid black'
          }}>
-            <div className="col-12 d-flex ps-5 ps-md-0 tail_banner_inner justify-content-center align-items-center"
+            <div className="col-12 d-flex ps-3 ps-sm-5 ps-lg-0 tail_banner_inner justify-content-center align-items-center"
            >
                 <div className={height == 'small'? "tail_banner_text" 
                                                  : "tail_banner_text"}>

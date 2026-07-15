@@ -80,12 +80,12 @@ export default function NavModern({nav_sections, logo, bgColor, hamIconColor}:na
         </div>
 
     
-        {hamTriggered && 
+  
 
                 <SideHamMenu categories={nav_sections.filter(n => !n.includes('.png'))} 
                             setTriggered={(bool) => setHamTriggered(bool)}
                             triggered={hamTriggered}/>
-                    }
+                    
            </>
     )
 }

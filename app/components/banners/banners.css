@@ -18,10 +18,17 @@ display: flex; font-size: larger; gap: max(0.3vw, 1.8vh);
   
 }
 .banner_inner{
-    width: 90vw !important;
+    width: 90vw !important; display: flex; justify-content: center;
+    height: 100%; align-items: center;
 }
 .banner_bg_image{
     min-width: 1024px;
+}
+.tail_banner_text a {
+    color: white;
+}
+.tail_banner_text{
+    max-width: 90%;
 }
 /*************************** SMALLER *************************/
 

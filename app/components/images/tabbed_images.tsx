@@ -54,13 +54,14 @@ export default function TabbedImages({images, rowColor, shape}:img){
     return (
         <>
         <div className="w-100" 
-        style={{height: 'max(2vw, 2vh)', backgroundColor:rowColor? rowColor: '', 
-        borderTop: '2px solid black'}}/>
+        style={{height: 'max(8vw, 8vh)', backgroundColor:rowColor? rowColor: '', 
+        }}/>
         <div className="row tabbed_img_row m-0 p-0" 
              style={{backgroundColor: rowColor? rowColor: 'none'}}>
                 
             <div className="col-12 col-md-10 g-0">
-               <div className="col_img_cont_tabbed_img" style={{borderRadius: shape == 'square'? '0px': '25px'}}>
+               <div className="col_img_cont_tabbed_img" 
+               style={{borderRadius: shape == 'square'? '4px': '25px'}}>
             
                     <div className="ps-3 img_tabbed_tabs_cont txt_sm p-1 mb-0">
                         {images.map((i, idx)=>{
@@ -106,7 +107,7 @@ export default function TabbedImages({images, rowColor, shape}:img){
         </div>
 
         <div className="w-100" 
-        style={{height: '2vh', backgroundColor:rowColor? rowColor: ''}}/>
+        style={{height: 'max(9vw, 9vh)', backgroundColor:rowColor? rowColor: ''}}/>
 
         </>
     )

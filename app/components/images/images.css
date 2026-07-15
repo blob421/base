@@ -55,10 +55,11 @@ transform: translateY(calc(min(-13vh, -13vw) * var(--mosaic-scroll-factor))) ;
 
 .tabbed_img_row{
  display: flex; justify-content: center; min-height: 30vh;
+ 
 
 }
 .col_img_cont_tabbed_img{
-  overflow: hidden; position: relative; border: 2px solid black;
+  overflow: hidden; position: relative; border: 3px solid black;
   width: 100%; height: 100%;
 }
 .img_tabbed_tabs_cont{

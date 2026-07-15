@@ -229,3 +229,28 @@ height: 100%; position: absolute; right: 15px;
 .slid_out_vert_acc_text{
     transform: translateY(-100%)
 }
+
+/************************* Cards row ***********************/
+
+.cards_row_card{
+  height: 50vh ; border-radius: 15px; transition: transform 1s ease;
+  cursor: pointer;
+  
+  
+}
+.cards_row_card_header{
+    height: 30%; position: relative; align-items: center;
+    pointer-events: none;
+}
+.cards_row_card_header img{
+    height: 90%; position: absolute; right: 0;
+    pointer-events: none; 
+}
+.cards_row_card_header_text{
+    width: 70%;
+    pointer-events: none;
+}
+.cards_row_card_body{
+    height: 70%; line-height: 1.7;
+    pointer-events: none;
+}

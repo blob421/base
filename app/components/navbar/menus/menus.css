@@ -1,12 +1,13 @@
 .side_ham_menu_main{
-    position: fixed; height: 100vh; width: 60vw; background-color: rgba(17, 17, 17, 0.97);
-    right: -100vw; transition: right 2s ease; top: 0; z-index: 10000000; color: white;
+    position: fixed; height: 100vh; width: 90vw; background-color: rgba(17, 17, 17, 0.97);
+    right: -100vw; transition: right 1s ease-in-out; top: 0; z-index: 10000000; color: white;
     border: 2px solid rgb(84, 84, 84);
     display: flex; flex-direction: column; align-items: center;
+    
 }
 
 .side_ham_menu_show {
-    right: 0 !important;
+    right: 0 !important; 
 }
 .title_div_side_ham{
     display: flex; justify-content: center; height: 14vh; align-items: center;

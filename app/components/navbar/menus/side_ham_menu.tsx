@@ -7,7 +7,7 @@ type sideHam = {
 export default function SideHamMenu({categories, triggered, setTriggered}:sideHam){
 
     return (
-       <div className={triggered? 'side_ham_menu_show side_ham_menu_main': 'side_ham_menu_main'}>
+       <div className={triggered? 'side_ham_menu_main side_ham_menu_show': 'side_ham_menu_main'}>
           
            <div className="title_div_side_ham txt_lg d-flex justify-content-center">
             Navigation

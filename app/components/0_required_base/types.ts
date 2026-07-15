@@ -14,8 +14,8 @@ export type LinkProps = {
 
 export type BannerProps = {
     text: string, img?: string , bgColor?:string , color?:string,  
-    shape?: "square" | "round", fontFam?: string
-    height?: "small" | "medium" | "large",
+    shape?: "round" | 'round-right', fontFam?: string
+    height?: "small" | "medium" | "large" | 'x-large',
     fontSize?: "txt_xl" | "txt_lg" | "txt_md" | "txt_sm" | string
     link?: { href: string , word:string}, bgImg?:string
 }

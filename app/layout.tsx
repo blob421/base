@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./components/shapes/divs/shaped_divs.css"
 import "./components/images/images.css"
 import './components/navbar/menus/menus.css'
+import './components/buttons/buttons.css'
 
 import BootstrapClient from "./components/0_required_base/bootstrap_js";
 import Navbar_Left from "./components/navbar/navbar_content_left";

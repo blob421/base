@@ -127,7 +127,7 @@ font-size: max(1.1vw, 2vh) !important;
     }
 
     .tabbed_img_row > [class*='col-md']{
-        flex: 0 0 98%;
+        flex: 0 0 99%;
     }
     .img_tabbed_tabs_cont{
         visibility: hidden !important;
@@ -153,6 +153,10 @@ font-size: max(1.1vw, 2vh) !important;
     .row_bottom_hero_img_stacked > [class*='col-md']{
         flex: 0 0 100% !important; margin-top: 1vh !important;
     }
+
+    .col-cards-row{
+        flex: 0 0 95% !important; 
+    }
  
 }
 
@@ -163,6 +167,12 @@ font-size: max(1.1vw, 2vh) !important;
     }
     .text_img_tab_container{
         width: 50% !important; 
+    }
+    .col-cards-row{
+        flex: 0 0 80% !important; padding-bottom: 3vh !important;
+    }
+    .row_cards_row{
+        padding-top: 2vh !important;
     }
    
 }

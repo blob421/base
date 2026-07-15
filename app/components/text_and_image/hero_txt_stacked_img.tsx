@@ -63,7 +63,7 @@ export default function HeroTxtImgStacked({header, subHeaders, image, hColor, su
         <div className="row p-0 m-0 p-4 pt-5 pb-5 pt-2 d-flex gap-5 gap-md-4 align-items-start 
             justify-content-center justify-content-lg-end row_bottom_hero_img_stacked" 
              style={{backgroundColor: 'rgba(42, 205, 242, 0.54)', 
-             borderTop: '1px solid black' , borderBottom: '1px solid black'}}>
+             borderTop: '1px solid black' }}>
 
                  <h1 style={{width:'100%', textAlign: 'center', color:'white'}} 
                  className="txt_xl pb-0 pb-md-4 pt-1 col-md-12">

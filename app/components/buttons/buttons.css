@@ -1,0 +1,10 @@
+.row_buttons{
+    min-height: 10vh;
+}
+.row_buttons button{
+    border-radius: 100px; padding: 2%; min-width: 10.5em;
+    border: 1px solid black; aspect-ratio: 5/2;
+}
+.btn_href_buttons{
+    transition: transform 1s ease;
+}
