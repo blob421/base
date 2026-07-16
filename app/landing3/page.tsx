@@ -68,7 +68,7 @@ export default function Landing3(){
                        {text: 'Sign up for free', href: '/sign_up'}
     ]} 
     bgColor="white" color="black" bgColor2="black" color2="white"
-    rowColor="rgb(71, 171, 234)" 
+    rowColor='rgba(42, 205, 242, 0.54)' 
     hoverColor={'white'}
     hoverBgColor="rgb(67, 33, 169)"
     paddingStart={5}/>
@@ -80,7 +80,8 @@ export default function Landing3(){
 
   
   
-    <TabbedImages images={tabbed_images} rowColor="rgb(39, 118, 236)" shape="round"/>
+    <TabbedImages images={tabbed_images} rowColor="rgb(39, 118, 236)" shape="square"/>
+   
 
 
     <Banner text="Pick your adventure" fontSize="txt_xl" height="large"
@@ -100,7 +101,7 @@ export default function Landing3(){
 
     <Tail_banner_image text={'Book your adventure today . Are you ready adventurer ?'} 
     height="large" fontSize="txt_sm_wide" bgColor="rgb(80, 134, 214)"
-    link={{'href': '/', 'word': 'today'}}/>
+    link={{'href': '/', 'word': 'today'}} color="white"/>
   
        </>
 

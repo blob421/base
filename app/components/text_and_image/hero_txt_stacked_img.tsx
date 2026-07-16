@@ -60,8 +60,8 @@ export default function HeroTxtImgStacked({header, subHeaders, image, hColor, su
                 </div>
         </div>
 
-        <div className="row p-0 m-0 p-4 pt-5 pb-5 pt-2 d-flex gap-5 gap-md-4 align-items-start 
-            justify-content-center justify-content-lg-end row_bottom_hero_img_stacked" 
+        <div className="row p-0 m-0 p-4 pb-1 pt-5 pb-lg-5 pt-2 d-flex gap-5 gap-md-5 align-items-start 
+            justify-content-center row_bottom_hero_img_stacked" 
              style={{backgroundColor: 'rgba(42, 205, 242, 0.54)', 
              borderTop: '1px solid black' }}>
 
@@ -70,15 +70,15 @@ export default function HeroTxtImgStacked({header, subHeaders, image, hColor, su
                     Brave the dangers
                     </h1>
 
-            <div className="col-12 col-md-5 ms-lg-5 hero_img_stacked_txt_wrapper 
-            txt_md pe-md-5 p-5 p-md-5 order-2 order-lg-1">
+            <div className="col-12 col-md-5 hero_img_stacked_txt_wrapper 
+            txt_md p-5 p-md-5 order-2 order-lg-1">
                    
 
                    
                     <div className="hero_img_stacked_text" style={{color:txtColor}}>
                         
                     </div>
-                    <ul className="txt_lg mt-5" style={{color: 'white', listStyleType: 'circle'}}>
+                    <ul className="txt_lg mt-5" style={{color: 'white'}}>
                         <li>Ride uncharted areas</li>
                         <li>Get transported in heli-transporter</li>
                         
@@ -87,7 +87,7 @@ export default function HeroTxtImgStacked({header, subHeaders, image, hColor, su
 
             </div>
 
-            <div className="col-12 col-md-6 g-0 pe-md-0 pt-0 order-1 order-lg-2">
+            <div className="col-12 col-md-5 g-0 pe-md-0 pt-0 order-1 order-lg-2">
                    <div className="hero_img_stacked_imgs_cont">
                     
                      

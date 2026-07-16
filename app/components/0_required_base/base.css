@@ -3,8 +3,14 @@ html, body {
 }
 
 body {
-  background-color: rgb(240, 240, 226) !important;
+   background-color: rgb(35, 84, 175) !important;
 }
+
+/***** For landing 1-2  
+  background-color: rgb(240, 240, 226) !important;
+
+
+*******/
 
 .txt_lg{
     font-size: max(1.5vw, 2.7vh) !important; 
@@ -127,7 +133,7 @@ font-size: max(1.1vw, 2vh) !important;
     }
 
     .tabbed_img_row > [class*='col-md']{
-        flex: 0 0 99%;
+        flex: 0 0 95%; padding-top: 3vh !important;
     }
     .img_tabbed_tabs_cont{
         visibility: hidden !important;
@@ -157,6 +163,13 @@ font-size: max(1.1vw, 2vh) !important;
     .col-cards-row{
         flex: 0 0 95% !important; 
     }
+       .rounded_banner{
+        margin-top: 4vh !important;
+    }
+    .row_buttons > [class*='col']{
+        flex: 0 0 80% !important;
+    }
+    
  
 }
 
@@ -173,6 +186,12 @@ font-size: max(1.1vw, 2vh) !important;
     }
     .row_cards_row{
         padding-top: 2vh !important;
+    }
+    .rounded_banner{
+        margin-top: 5vh !important;
+    }
+        .tabbed_img_row > [class*='col-md']{
+        flex: 0 0 90%; 
     }
    
 }

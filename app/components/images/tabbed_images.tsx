@@ -53,10 +53,8 @@ export default function TabbedImages({images, rowColor, shape}:img){
     
     return (
         <>
-        <div className="w-100" 
-        style={{height: 'max(8vw, 8vh)', backgroundColor:rowColor? rowColor: '', 
-        }}/>
-        <div className="row tabbed_img_row m-0 p-0" 
+   
+        <div className="row tabbed_img_row m-0 p-0 pt-3 pt-lg-5" 
              style={{backgroundColor: rowColor? rowColor: 'none'}}>
                 
             <div className="col-12 col-md-10 g-0">
@@ -106,9 +104,7 @@ export default function TabbedImages({images, rowColor, shape}:img){
             </div>
         </div>
 
-        <div className="w-100" 
-        style={{height: 'max(9vw, 9vh)', backgroundColor:rowColor? rowColor: ''}}/>
-
+  
         </>
     )
 }

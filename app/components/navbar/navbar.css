@@ -93,8 +93,8 @@
      height: 6vh; display: none;  position: absolute; right: 2vw; 
   }
   .nav2_ham_icon_image{
-     visibility: hidden;  max-height: 5.3vh; display: none; border-radius: 10px;
-     border: 2px solid white;
+     visibility: hidden;  max-height: 5.8vh; display: none; border-radius: 10px;
+     border: 1px solid white;
   }
 @media (max-width:450px){
      .nav2_logo{
@@ -107,7 +107,7 @@
           display: flex !important; align-items: center; 
      }
      .nav2_ham_icon_image{
-            max-height: 5.3vh; display: flex !important;
+            max-height: 5.8vh; display: flex !important;
      }
 }
 
@@ -258,7 +258,8 @@ align-self: center; justify-content: center; display: flex; flex-direction: colu
 
 .nav_modern_row{
      position: relative;
-     height: 9vh; width: 100vw; z-index: 100000;
+     height: 11vh; width: 100vw; z-index: 100000;
+     border-bottom: 2px solid rgb(255, 255, 255);
    
 }
 
@@ -270,5 +271,5 @@ align-self: center; justify-content: center; display: flex; flex-direction: colu
      border: 1px solid white;cursor: pointer;
 }
 .logo_nav_modern{
-     height: 50%; position: absolute; left: 0;
+     height: 5.8vh; position: absolute; left: 0;
 }

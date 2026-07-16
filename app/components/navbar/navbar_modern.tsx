@@ -5,10 +5,10 @@ import SideHamMenu from "./menus/side_ham_menu"
 
 type nav = {
     nav_sections: string[], logo: string, bgColor: string, hamStyle:string, 
-    hamIconColor?:string
+    hamIconColor?:string, contours: string, borderBottom: boolean
 }
 
-export default function NavModern({nav_sections, logo, bgColor, hamIconColor}:nav){
+export default function NavModern({nav_sections, logo, bgColor, hamIconColor, contours, borderBottom}:nav){
 
    const [hamTriggered, setHamTriggered] = useState(false)
    const [hamEnlarging, setHamEnlarging] = useState(false)
@@ -46,9 +46,9 @@ export default function NavModern({nav_sections, logo, bgColor, hamIconColor}:na
     
     return (
         <>
-        <div className="row nav_modern_row m-0 p-0" style={{backgroundColor: bgColor}}>
+        <div className="row nav_modern_row m-0 p-0" style={{backgroundColor: bgColor, borderBottom: borderBottom? `1px solid ${contours}` :'0px'}}>
             <div className="col-12 d-flex gap-1 gap-md-5 align-items-center 
-            justify-content-end pe-2 pe-sm-3 pe-md-5 position-relative">
+            justify-content-end pe-0 pe-sm-3 pe-md-5 position-relative">
            
 
                 <img className="logo_nav_modern ms-3" src={logo}></img>
@@ -73,7 +73,7 @@ export default function NavModern({nav_sections, logo, bgColor, hamIconColor}:na
                     <img src={hamIconColor ? "/hamIconEmpty.png":'/hamburger_menu_black.png'} 
                     className="nav2_ham_icon_image"
                     onClick={() => setHamTriggered(true)} 
-                    style={{backgroundColor: hamIconColor? hamIconColor: ''}}/>
+                    style={{backgroundColor: hamIconColor? hamIconColor: '', border: `1px solid ${contours}`}}/>
                   
                  
             </div>

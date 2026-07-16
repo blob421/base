@@ -7,17 +7,18 @@ export default function Banner({text, color, bgColor, height, fontSize, fontFam,
     return (
         <>
       
-        <div className={`row banner_medium ${fontSize? fontSize: 'txtlg'}`}
+        <div className={`row banner_medium text-center ${fontSize? fontSize: 'txtlg'}
+        ${shape && ['round', 'round-right'].includes(shape)? 'mt-lg-5 rounded_banner': ''}`}
              
          
           style={{color: color? color: "black", fontFamily: fontFam? fontFam : '',
                   backgroundColor: bgColor? bgColor: "white", 
-                  borderTop: bgImg ?  '1px solid black': 
-                            shape =="round" || shape == 'round-right' ? '2px solid black':'',
-                  borderBottom: bgImg ? '1px solid black' : '',
+                  borderTop: bgImg ?  `2px solid ${color}`: 
+                            shape =="round" || shape == 'round-right' ? `2px solid  ${color}`:'',
+                  borderBottom: bgImg ? `2px solid  ${color}` : '',
                   borderTopLeftRadius: shape =="round" ? '45%': 'unset',
                   borderTopRightRadius: shape =="round" || shape == 'round-right' ? '45%': 'unset',
-                 
+               
                   height: height == 'small' ? 'max(12vh, 8vw)'
                         : height == 'medium' ? 'max(16vh, 10vw)'
                         : height == 'large' ? 'max(18vh, 12vw)'

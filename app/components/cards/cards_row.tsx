@@ -22,7 +22,7 @@ export default function CardsRow({cards, color, cardBg, cardGlow, rowColor, card
 
 
     return (
-        <div className="row m-0 p-lg-2 pt-lg-5 pb-5 pb-lg-5 d-flex justify-content-center row_cards_row" 
+        <div className="row m-0 p-lg-2 pt-5 pt-lg-5 pb-5 pb-lg-5 d-flex justify-content-center row_cards_row" 
         style={{backgroundColor: rowColor? rowColor : 'none'}}>
 
            {cards.map((c, idx) => {
