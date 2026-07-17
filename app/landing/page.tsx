@@ -4,8 +4,11 @@ import Tail_banner_image from "../components/banners/tail_banner"
 import HeroText from "../components/text/hero_text"
 import BgImage from "../components/images/BgImage"
 import Banner from "../components/banners/banner"
-import StackedCardsCarousel from "../components/carousel/car_stacked_cards"
+import StackedCardsCarousel from "../components/carousel/product_carousel"
 import InfoBanner from "../components/banners/info_banner"
+import Spacer from "../components/spacer"
+import Buttons from "../components/buttons/buttons"
+
 
 export default function Landing(){
     const products = [
@@ -49,15 +52,27 @@ export default function Landing(){
                  Our models are tested and prooved and the best in the market.`
     return (
         <>
-         <BgImage img="/july_gen_7_2.png" imgMob="/july_gen_7_mob.png"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap');
+            
+        </style>
+         <BgImage img="/july_gen_7.png" imgMob="/july_gen_7_mob.png"/>
       
          <HeroText header={hero_head} subHeaders={hero_subhaders} 
          callToAction={callToAction} colorDelimiters={['make', 'move', "tested", "best"]} 
          delColor="orange"/>
+      
+         <Buttons buttons={[{text: 'Family deals', href: '/'}, {text: 'Our selection', href: '/'}]} 
+         color="white" bgColor="blue" color2="white" bgColor2="black"
+         hoverBgColor="purple" hoverColor="white" paddingStart={5}/>
+         <Spacer h={10}/>
 
-         <Banner text="Always a huge selection" bgColor="none" color="white" fontSize="txt_xl"
-         height="large"/>
-         <StackedCardsCarousel products={products}/>
+         <Banner text="Always a huge selection" bgColor="rgb(248, 241, 223)" color="rgb(107, 76, 39)"
+         fontSize="txt_xl" height="large" border="rgb(255, 255, 255)"
+         fontFam='"Bevan", serif'/>
+
+         <StackedCardsCarousel products={products} cardsBgColor="rgba(0, 0, 0, 0.43)"
+         cardsColor="white" borderImg="black" rowColor="white" outline="rgb(161, 120, 86);"/>
          <Tail_banner_image text="Don't miss our last updates on products" 
          fontSize="txt_sm" bgColor="rgb(84, 122, 192)" color="white"/>
         </>

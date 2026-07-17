@@ -48,7 +48,7 @@ transform: translateY(calc(min(-13vh, -13vw) * var(--mosaic-scroll-factor))) ;
 /*************** Bg image ********************/
 
 .img_full_hero_txt{
-  opacity: 0.8;position: absolute; z-index: -10;
+  opacity: 1;position: absolute; z-index: -10;
 }
 
 /*************** Tabbed images comp ***************/

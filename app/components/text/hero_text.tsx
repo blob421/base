@@ -31,15 +31,18 @@ useLayoutEffect(()=>{
           @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
          </style>
 
-        <div className="row p-0 m-0 row_full_size_img_hero_txt h-100 w-100 mb-5 pt-3 pt-sm-4
-        pt-xxl-5 pb-xxl-5 ps-xxl-5 mt-xxl-5">
+        <div className="row p-0 m-0 row_full_size_img_hero_txt h-100 w-100
+        ps-xxl-5 pt-4 pt-lg-5 pb-0 pb-sm-4 pb-lg-0 d-flex justify-content-center ps-4 pe-5
+        ps-sm-5 pe-lg-4
+        justify-content-lg-start">
 
-            <div className="col-12 col-md-6 hero_txt_full h-100 g-0">
+            <div className="col-12 col-lg-6 p-2 p-sm-3 pt-sm-5 p-lg-2 pt-lg-0 pb-lg-0 
+             hero_txt_full h-100 g-0">
 
-                    <div className="p-4 pb-5 pb-md-4 mb-md-3">
+                    <div>
 
                     
-                        <div className="text_0 txt_xl">
+                        <div className="text_0 txt_xl pb-2 pb-sm-3">
                             {header}
                         </div>
 
@@ -56,8 +59,8 @@ useLayoutEffect(()=>{
               
             </div>
 
-            < div className="col-12 col-md-6 p-4 pb-2 pb-md-5 p-md-5 pt-0 pt-md-5">
-                 <div className="text_right txt_sm_wide ps-md-3">
+            < div className="col-12 col-lg-6 p-2 p-sm-3 pb-2 pb-md-5 pt-4 pt-md-5">
+                 <div className="text_right txt_sm_wide" style={{lineHeight: 1.7}}>
                   
                  </div>
             </div>

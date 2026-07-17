@@ -17,7 +17,7 @@ export type BannerProps = {
     shape?: "round" | 'round-right', fontFam?: string
     height?: "small" | "medium" | "large" | 'x-large',
     fontSize?: "txt_xl" | "txt_lg" | "txt_md" | "txt_sm" | string
-    link?: { href: string , word:string}, bgImg?:string
+    link?: { href: string , word:string}, bgImg?:string, border?: string
 }
 export type VertSlideBanner = {
     text:string, image?: string, bgColor?:string, color?:string, persistence?: "long" | "short",

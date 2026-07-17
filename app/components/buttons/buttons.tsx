@@ -1,14 +1,14 @@
-
+'use client'
 type buttons = {
-    buttons: {text: string, href:string}[], color: string, color2: string, bgColor: string
-    bgColor2:string, rowColor?: string, hoverColor: string, hoverBgColor: string,
-    paddingStart: number
+    buttons: {text: string, href:string}[], color: string, color2?: string, bgColor: string
+    bgColor2?:string, rowColor?: string, hoverColor: string, hoverBgColor: string,
+    paddingStart?: number, extraMargin?: number
 }
 
 
 
 export default function Buttons({buttons, bgColor, bgColor2, color, color2, rowColor,
-    hoverColor, hoverBgColor, paddingStart
+    hoverColor, hoverBgColor, paddingStart, extraMargin
 }:buttons){
 
 
@@ -32,16 +32,16 @@ export default function Buttons({buttons, bgColor, bgColor2, color, color2, rowC
     }
 
     return (
-        <div className={`row p-0 m-0 ps-lg-${paddingStart} 
-        row_buttons pt-4 pb-4 pt-lg-0 pb-lg-0  
-        ${buttons.length > 1 && 'justify-content-center ps-0 ps-sm-3 ps-md-5 ps-lg-3 justify-content-sm-start'}
+        <div className={`row p-0 m-0 ps-sm-${paddingStart} 
+        row_buttons pt-4 pb-4 pt-lg-0 pb-lg-0 
+        ${buttons.length > 1 && `justify-content-center ps-0 justify-content-sm-start`}
         ${buttons.length == 1 && 'justify-content-start ps-3 ps-sm-4 ps-md-5 ps-lg-4'}
         `}
         
         style={{backgroundColor: rowColor? rowColor : 'none'}}>
-            <div className={`col-1 d-flex gap-2 d-flex  
-                ${buttons.length > 1 && 'justify-content-center'} justify-content-sm-start g-0 ps-lg-${paddingStart} 
-                pt-4 pb-4 ms-lg-1`}>
+            <div className={`col-1 d-flex gap-2 d-flex ${extraMargin && `ms-lg-${extraMargin}`}
+                ${buttons.length > 1 && 'justify-content-center'} justify-content-sm-start g-0 
+                pt-4 pb-4`}>
 
               {buttons.map((b, idx)=> {
                 return (

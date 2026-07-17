@@ -5,6 +5,6 @@ type spacer = {
 
 export default function Spacer({h, color}:spacer){
     return (
-        <div style={{height:`${h}vh`, backgroundColor: color ? color : 'none'}}></div>
+        <div style={{height:`min(${h}vh, ${h}vw)`, backgroundColor: color ? color : 'none'}}></div>
     )
 }

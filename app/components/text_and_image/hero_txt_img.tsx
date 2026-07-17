@@ -2,13 +2,14 @@
 type props = {
     header: string , subHeaders: string[], image: string, 
     hColor:string, delimiters: string[], altColor: string,
-    subHColor:string, text: string, txtColor:string, imageText?: string
+    subHColor:string, text: string, txtColor:string, imageText?: string,
+    rowcolor? : string
 }
 import addColor from "../1_utilities/addColor"
 import { useEffect, useLayoutEffect, useState } from "react"
 
 export default function HeroTxtImgStacked({header, subHeaders, image, hColor, subHColor,
-     delimiters, txtColor, altColor, text, imageText}:props){
+     delimiters, txtColor, altColor, text, imageText, rowcolor}:props){
 
 
 
@@ -70,7 +71,7 @@ export default function HeroTxtImgStacked({header, subHeaders, image, hColor, su
                     Brave the dangers
                     </h1>
 
-            <div className="col-12 col-md-5 hero_img_stacked_txt_wrapper 
+            <div className="col-12 col-sm-11 col-md-5 hero_img_stacked_txt_wrapper 
             txt_md p-5 p-md-5 order-2 order-lg-1">
                    
 
@@ -78,7 +79,7 @@ export default function HeroTxtImgStacked({header, subHeaders, image, hColor, su
                     <div className="hero_img_stacked_text" style={{color:txtColor}}>
                         
                     </div>
-                    <ul className="txt_lg mt-5" style={{color: 'white'}}>
+                    <ul className="txt_lg mt-5 ps-3" style={{color: 'white'}}>
                         <li>Ride uncharted areas</li>
                         <li>Get transported in heli-transporter</li>
                         
@@ -87,7 +88,7 @@ export default function HeroTxtImgStacked({header, subHeaders, image, hColor, su
 
             </div>
 
-            <div className="col-12 col-md-5 g-0 pe-md-0 pt-0 order-1 order-lg-2">
+            <div className="col-12 col-sm-11 col-md-5 g-0 pe-md-0 pt-0 order-1 order-lg-2">
                    <div className="hero_img_stacked_imgs_cont">
                     
                      

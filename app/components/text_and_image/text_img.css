@@ -157,10 +157,11 @@ border: 2px solid black; width: 85%; position: absolute; top: 0;
   font-family: "Changa One", sans-serif; color: blue;
 }
 .hero_img_stacked_txt_wrapper{
-  background-color: rgba(0, 0, 0, 0.211); border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.274); border: 1px solid white;
   border-radius: 9px; height: 100%; 
 }
 .hero_img_stacked_img_memo{
   display: flex; width: 100%; justify-content: end; 
 }
+
 

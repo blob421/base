@@ -46,7 +46,8 @@ export default function NavModern({nav_sections, logo, bgColor, hamIconColor, co
     
     return (
         <>
-        <div className="row nav_modern_row m-0 p-0" style={{backgroundColor: bgColor, borderBottom: borderBottom? `1px solid ${contours}` :'0px'}}>
+        <div className="row nav_modern_row m-0 p-0" 
+        style={{backgroundColor: bgColor, borderBottom: borderBottom? `1px solid ${contours}` :'0px'}}>
             <div className="col-12 d-flex gap-1 gap-md-5 align-items-center 
             justify-content-end pe-0 pe-sm-3 pe-md-5 position-relative">
            

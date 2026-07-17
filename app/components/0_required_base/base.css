@@ -1,7 +1,9 @@
 html, body {
     user-select: none;
 }
-
+a {
+    color: black !important;
+}
 body {
    background-color: rgb(35, 84, 175) !important;
 }
@@ -27,7 +29,9 @@ font-size: max(1.1vw, 2vh) !important;
 .txt_md_wide {
     font-size: max(1.5vw, 2.4vh) !important;
 }
-
+.txt_lg_wide {
+    font-size: max(2.7vh, 2.1vw) !important;
+}
 .txt_xs{
     font-size: max(1vw, 1.5vh) !important;
 }
@@ -120,7 +124,7 @@ font-size: max(1.1vw, 2vh) !important;
     }
 
     .nav_modern_row > [class*='col-12']{
-      gap: 2.5% !important; padding-right: 3% !important;
+      gap: 2.5% !important; padding-right: 2.5% !important;
     }
     .img_full_hero_txt{
         height:  100% !important; aspect-ratio: 16/9 !important; width: unset !important;
@@ -157,7 +161,7 @@ font-size: max(1.1vw, 2vh) !important;
         margin-top: 0 !important;
     }
     .row_bottom_hero_img_stacked > [class*='col-md']{
-        flex: 0 0 100% !important; margin-top: 1vh !important;
+         margin-top: 1vh !important;
     }
 
     .col-cards-row{
@@ -169,6 +173,7 @@ font-size: max(1.1vw, 2vh) !important;
     .row_buttons > [class*='col']{
         flex: 0 0 80% !important;
     }
+
     
  
 }
@@ -191,7 +196,13 @@ font-size: max(1.1vw, 2vh) !important;
         margin-top: 5vh !important;
     }
         .tabbed_img_row > [class*='col-md']{
-        flex: 0 0 90%; 
+        flex: 0 0 87%; padding-top: 4.5vh !important; 
+    }
+        .product_row{
+        padding-top: 15vh !important;
+    }
+    .nav_car{
+        padding-top: 5vh !important;
     }
    
 }

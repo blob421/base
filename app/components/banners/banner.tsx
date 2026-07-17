@@ -3,7 +3,7 @@ import type { BannerProps } from "@/app/components/0_required_base/types"
 import BgImage from "../images/BgImage"
 
 export default function Banner({text, color, bgColor, height, fontSize, fontFam, 
-    bgImg, shape}:BannerProps){
+    bgImg, shape, border}:BannerProps){
     return (
         <>
       
@@ -13,9 +13,9 @@ export default function Banner({text, color, bgColor, height, fontSize, fontFam,
          
           style={{color: color? color: "black", fontFamily: fontFam? fontFam : '',
                   backgroundColor: bgColor? bgColor: "white", 
-                  borderTop: bgImg ?  `2px solid ${color}`: 
+                  borderTop: bgImg || border ?  `2px solid ${border ?? color}`: 
                             shape =="round" || shape == 'round-right' ? `2px solid  ${color}`:'',
-                  borderBottom: bgImg ? `2px solid  ${color}` : '',
+                  borderBottom: bgImg || border ? `2px solid  ${border ?? color}` : '',
                   borderTopLeftRadius: shape =="round" ? '45%': 'unset',
                   borderTopRightRadius: shape =="round" || shape == 'round-right' ? '45%': 'unset',
                

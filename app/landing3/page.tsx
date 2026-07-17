@@ -2,7 +2,7 @@
 
 import Banner from "../components/banners/banner"
 import BgImage from "../components/images/BgImage"
-import HeroTxtImgStacked from "../components/text_and_image/hero_txt_stacked_img"
+import HeroTxtImgStacked from "../components/text_and_image/hero_txt_img"
 import Text_image_float from "../components/text_and_image/text_image_float"
 import TabbedImages from "../components/images/tabbed_images"
 import Spacer from "../components/spacer"
@@ -71,7 +71,7 @@ export default function Landing3(){
     rowColor='rgba(42, 205, 242, 0.54)' 
     hoverColor={'white'}
     hoverBgColor="rgb(67, 33, 169)"
-    paddingStart={5}/>
+    paddingStart={5} extraMargin={5}/>
 
 
     <Banner text="Venture into uncharted territories" color="rgb(237, 241, 249)" 

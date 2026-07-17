@@ -59,7 +59,8 @@ export default function RootLayout({
         <div className="container-fluid p-0">
           
             <NavModern nav_sections={nav_modern_s} logo="/avatar.png" bgColor="rgb(58, 41, 116)"
-            hamStyle="drop" hamIconColor="rgb(35, 83, 172)" contours="white" borderBottom={false}/>
+            hamStyle="drop" hamIconColor="rgb(35, 83, 172)" 
+            contours="black" borderBottom={true}/>
      
          
             {children}
