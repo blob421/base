@@ -4,7 +4,7 @@
 export default function addColor(text:string, delimiters: string[], color:string){
 
      let  deletemited_text = text.split(' ')
-    deletemited_text = deletemited_text.filter(c => c !== '' && !c.includes('\n') )
+    deletemited_text = deletemited_text.filter(c => c !== '' && c !== '\n' )
     
     const idx:number[] = []
 
@@ -18,19 +18,26 @@ export default function addColor(text:string, delimiters: string[], color:string
     let finalStr = ''
 
     if (idx.length > 0){
+ 
+        for (let i = 0; i < deletemited_text.length; i++){
+             
+            if (idx.includes(i)) {
 
-        deletemited_text.forEach((w, i)=> {
+      
+                if (idx.indexOf(i) % 2 == 0){
 
-            if (idx.includes(i) && (idx.indexOf(i)) % 2 == 0){
-               finalStr += `<span style='color: ${color}'> ` +  w + " "
-            }
-            else if ((idx.includes(i) && (idx.indexOf(i)) % 2 == 1)){
-               finalStr += w + ' </span>'
+                    finalStr += `<span style='color: ${color}'> ` +  deletemited_text[i] + " "
+                }
+
+                else {
+                    finalStr +=  deletemited_text[i] + ' </span>'
+                }
             }
             else {
-                finalStr += w + ' '
+                finalStr += deletemited_text[i] + ' '
             }
-        })
+       
+        }
 
           
             

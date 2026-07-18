@@ -61,7 +61,7 @@ useLayoutEffect(()=>{
 
             < div className="col-12 col-lg-6 p-2 p-sm-3 pb-2 pb-md-5 pt-4 pt-md-5">
                  <div className="text_right txt_sm_wide" style={{lineHeight: 1.7}}>
-                  
+                   {callToAction}
                  </div>
             </div>
 

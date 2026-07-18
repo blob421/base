@@ -8,7 +8,7 @@ import StackedCardsCarousel from "../components/carousel/product_carousel"
 import InfoBanner from "../components/banners/info_banner"
 import Spacer from "../components/spacer"
 import Buttons from "../components/buttons/buttons"
-
+import SvgBanner from "../components/banners/svg_banner"
 
 export default function Landing(){
     const products = [
@@ -52,6 +52,10 @@ export default function Landing(){
                  Our models are tested and prooved and the best in the market.`
     return (
         <>
+        <SvgBanner shape="lightning" text="Feel the lightning" fill="yellow"
+        fontFam='"Bevan", cursive' color="blue" rowColor="skyblue" strokeColor="black"
+        strokeWidth={2}/>
+
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap');
             
@@ -70,6 +74,8 @@ export default function Landing(){
          <Banner text="Always a huge selection" bgColor="rgb(248, 241, 223)" color="rgb(107, 76, 39)"
          fontSize="txt_xl" height="large" border="rgb(255, 255, 255)"
          fontFam='"Bevan", serif'/>
+
+
 
          <StackedCardsCarousel products={products} cardsBgColor="rgba(0, 0, 0, 0.43)"
          cardsColor="white" borderImg="black" rowColor="white" outline="rgb(161, 120, 86);"/>

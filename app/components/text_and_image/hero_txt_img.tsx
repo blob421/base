@@ -6,7 +6,7 @@ type props = {
     rowcolor? : string
 }
 import addColor from "../1_utilities/addColor"
-import { useEffect, useLayoutEffect, useState } from "react"
+import {useLayoutEffect} from "react"
 
 export default function HeroTxtImgStacked({header, subHeaders, image, hColor, subHColor,
      delimiters, txtColor, altColor, text, imageText, rowcolor}:props){
@@ -15,20 +15,19 @@ export default function HeroTxtImgStacked({header, subHeaders, image, hColor, su
 
     useLayoutEffect(()=>{
     
-        const ctaDivs = document.querySelectorAll('.hero_img_stacked_text')
+        const ctaDiv = document.querySelector('.hero_img_stacked_text')
 
-        if (delimiters && altColor && ctaDivs){
+
+        if (delimiters && altColor && ctaDiv){
             const new_txt = addColor(text, delimiters, altColor)
             if (new_txt)
-                ctaDivs.forEach(d=> {
-                 d.innerHTML = new_txt
-            })
-                 
+             
+                 ctaDiv.innerHTML = new_txt
+        
         }
-        else if (ctaDivs){
-               ctaDivs.forEach(d=> {
-                 d.innerHTML = text
-            })
+        else if (ctaDiv){
+               ctaDiv.innerHTML = text
+        
         }
     
         },[])
@@ -77,7 +76,7 @@ export default function HeroTxtImgStacked({header, subHeaders, image, hColor, su
 
                    
                     <div className="hero_img_stacked_text" style={{color:txtColor}}>
-                        
+                        {text}
                     </div>
                     <ul className="txt_lg mt-5 ps-3" style={{color: 'white'}}>
                         <li>Ride uncharted areas</li>
